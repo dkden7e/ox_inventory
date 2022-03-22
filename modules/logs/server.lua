@@ -19,7 +19,7 @@ if key ~= '' then
 	function server.logs(message, source, ...)
 		local ddtags = string.strjoin(',', string.tostringall(...))
 		PerformHttpRequest(site, function(status)
-			if status ~= 202 then
+			if status ~= "202" then
 				print(('unable to submit logs to %s (%s)'):format(site, response[status]))
 			end
 		end, 'POST', json.encode({
