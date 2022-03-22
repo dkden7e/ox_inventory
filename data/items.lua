@@ -184,4 +184,244 @@ return {
             usetime = 3500
 		}
 	},
+
+	['spray'] = {
+		label = 'spray',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['spray_remover'] = {
+		label = 'spray remover',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['boombox'] = {
+		label = 'boombox',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['neonbox'] = {
+		label = 'neon box',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['neoncontroller'] = {
+		label = 'neon controller',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['fakeplate'] = {
+		label = 'fake vehicle plate',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['remote'] = {
+		label = 'remote',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_bcloth'] = {
+		label = 'cuchara rota con tela mojada',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_bladle'] = {
+		label = 'cucharón roto',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_booze'] = {
+		label = 'licor',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_bottle'] = {
+		label = 'botella',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_cleaner'] = {
+		label = 'limpiador',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_cloth'] = {
+		label = 'tela',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_dliquid'] = {
+		label = 'líquido sucio',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_file'] = {
+		label = 'archivo',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_fpacket'] = {
+		label = 'sobre saborizante',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_grease'] = {
+		label = 'grasa',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_iheat'] = {
+		label = 'calentador de inmersión',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_jspoon'] = {
+		label = 'cuchara rota',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_ladle'] = {
+		label = 'cucharón',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_metal'] = {
+		label = 'metal',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_minih'] = {
+		label = 'mini martillo',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_plug'] = {
+		label = 'enchufe',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_ppunch'] = {
+		label = 'puño de prisión',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_rock'] = {
+		label = 'piedra',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_schange'] = {
+		label = 'repuesto',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_shank'] = {
+		label = 'caña',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_smetal'] = {
+		label = 'metal afilado',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_spoon'] = {
+		label = 'cuchara',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['hd_wcloth'] = {
+		label = 'tela mojada',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
 }
