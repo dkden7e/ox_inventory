@@ -11,24 +11,24 @@ local function openStash(data, player)
 		if stash.jobs then stash.groups = stash.jobs end
 		if player and stash.groups and not server.hasGroup(player, stash.groups) then return end
 
-		local owner = (player and stash.owner) and player.owner or stash.owner
+		local owner
 
-		if player and (stash.owner == true or data.owner == true) then
-			owner = player.owner
-		elseif stash.owner then
-			owner = stash.owner
-		elseif data.owner then
-			owner = data.owner
+		if stash.owner then
+			if player and (stash.owner == true or data.owner == true) then
+				owner = player.owner
+			elseif stash.owner then
+				owner = stash.owner or data.owner
+			end
 		end
 
 		local inventory = Inventories[owner and ('%s:%s'):format(stash.name, owner) or stash.name]
 
 		if not inventory then
-			inventory = Inventory.Create(stash.name, stash.label or stash.name, inv, stash.slots, 0, stash.weight, owner or false, false, stash.groups)
+			inventory = Inventory.Create(stash.name, stash.label or stash.name, 'stash', stash.slots, 0, stash.weight, owner, false, stash.groups)
 		end
 
 		return inventory
-	end
+	else return false end
 end
 
 setmetatable(Inventory, {
@@ -561,21 +561,24 @@ function Inventory.AddItem(inv, item, count, metadata, slot, cb)
 				slot = toSlot
 			end
 
-			Inventory.SetSlot(inv, item, count, metadata, slot)
-			inv.weight = inv.weight + (item.weight + (metadata?.weight or 0)) * count
+			if slot then
+				Inventory.SetSlot(inv, item, count, metadata, slot)
+				inv.weight = inv.weight + (item.weight + (metadata?.weight or 0)) * count
 
-			if inv.type == 'player' then
-				if shared.framework == 'esx' then Inventory.SyncInventory(inv) end
-				TriggerClientEvent('ox_inventory:updateSlots', inv.id, {{item = inv.items[slot], inventory = inv.type}}, {left=inv.weight, right=inv.open and Inventories[inv.open]?.weight}, count, false)
+				if inv.type == 'player' then
+					if shared.framework == 'esx' then Inventory.SyncInventory(inv) end
+					TriggerClientEvent('ox_inventory:updateSlots', inv.id, {{item = inv.items[slot], inventory = inv.type}}, {left=inv.weight, right=inv.open and Inventories[inv.open]?.weight}, count, false)
+				end
+			else
+				reason = 'inventory_full'
 			end
 		else
-			success = false
 			reason = 'invalid_inventory'
 		end
 	else
-		success = false
 		reason = 'invalid_item'
 	end
+
 	if cb then cb(success, reason) end
 end
 exports('AddItem', Inventory.AddItem)
