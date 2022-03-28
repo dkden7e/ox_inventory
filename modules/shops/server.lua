@@ -74,7 +74,9 @@ lib.callback.register('ox_inventory:openShop', function(source, data)
 	if data then
 		shop = data.id and Shops[data.type][data.id] or Shops[data.type]
 
-		if shop.groups then
+		if data.type == "admin" and not IsPlayerAceAllowed(source, "command.items") then
+			return
+		elseif shop.groups then
 			local group = server.hasGroup(left, shop.groups)
 			if not group then return end
 		end
@@ -110,9 +112,9 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 
 		if fromData then
 			if fromData.count then
-				if fromData.count == 0 then
+				if fromData.count == 0 or not data.count > fromData.count then
 					return false, false, {type = 'error', text = shared.locale('shop_nostock')}
-				elseif data.count > fromData.count then
+				else
 					data.count = fromData.count
 				end
 
@@ -123,6 +125,11 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 				local _, rank = server.hasGroup(playerInv, shop.groups)
 				if fromData.grade > rank then
 					return false, false, {type = 'error', text = shared.locale('stash_lowgrade')}
+				end
+			elseif shop.id == "admin" then
+				if not IsPlayerAceAllowed(source, "command.items") then
+					print("Alguien que no es del staff (" .. GetPlayerName(source) .. " [ID: " .. source .. "]" .. ") ha intentado coger " .. data.count .. "x " .. fromData.name .. " de la tienda del staff")
+					return false, false, {type = 'error', text = "No puedes hacer esto"}
 				end
 			end
 
@@ -169,6 +176,70 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 			return false, false, {type = 'error', text = shared.locale('unable_stack_items')}
 		end
 	end
+end)
+
+AddEventHandler('ox_inventory:itemList', function(ItemList)
+
+	local allItemsShop, excluded, step = {}, { money = true, black_money = true }, 0
+	repeat
+		local temp = {}
+		for _, v in pairs(ItemList) do
+			if (step == 0 and v.type == "Items" and not excluded[v.name]) or (step == 1 and v.type == "Ammo") or (step == 2 and (v.type == "Components" or string.lower(v.type) == "skin" or string.lower(v.type) == "barrel" or string.lower(v.type) == "sight" or string.lower(v.type) == "magazine" or string.lower(v.type) == "grip")) or (step == 3 and v.type == "Weapons" and not v.throwable and not v.ammo) or (step == 4 and v.type == "Weapons" and v.ammo) or (step == 5 and v.type == "Weapons" and v.throwable) then
+				table.insert(temp, v.name )
+			end
+		end
+
+		table.sort(temp)
+
+		for i = 1, #temp do
+			allItemsShop[#allItemsShop+1] = temp[i]
+		end
+
+		step += 1
+	until step > 5
+
+	Shops['admin'] = {
+		label = 'Admin item shop',
+		id = 'admin',
+		jobs = nil,
+		items = allItemsShop,
+		slots = #allItemsShop,
+		type = 'shop',
+	}
+
+	for i=1, Shops['admin'].slots do
+		local slot = Shops['admin'].items[i]
+		local Item = Items(slot)
+		if Item then
+			slot = {
+				name = Item.name,
+				slot = i,
+				weight = Item.weight,
+				count = slot.count,
+				price = 0,
+				metadata = slot.metadata,
+				license = slot.license,
+				currency = slot.currency,
+				grade = slot.grade
+			}
+			Shops['admin'].items[i] = slot
+		end
+	end
+
+	--[[local res = GetCurrentResourceName()
+	for _, v in ipairs(allItemsShop) do
+		local name = v.name
+		local png = LoadResourceFile(res, "web/build/images/" .. name .. ".png")
+		if png then
+			--print("^2" .. name)
+		else
+			print("^1" .. name)
+		end
+	end]]
+
+	allItemsShop = nil
+	Citizen.Wait(0)
+	collectgarbage('collect')
 end)
 
 server.shops = Shops

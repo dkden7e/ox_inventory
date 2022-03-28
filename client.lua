@@ -331,6 +331,8 @@ local function useSlot(slot)
 				for componentIndex = 1, #weaponComponents do
 					if componentType == Items[weaponComponents[componentIndex]].type then
 						-- todo: Update locale?
+						--DK DEBUG-- print("weaponComponents", json.encode(weaponComponents)	)
+						--DK DEBUG-- print("componentType == Items[weaponComponents[componentIndex]].type", componentType, Items[weaponComponents[componentIndex]].type	)
 						return Utils.Notify({type = 'error', text = shared.locale('component_has', data.label)})
 					end
 				end

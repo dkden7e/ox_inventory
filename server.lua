@@ -224,3 +224,22 @@ lib.callback.register('ox_inventory:useItem', function(source, item, slot, metad
 		end
 	end
 end)
+
+RegisterCommand("items", function(source)
+	TriggerClientEvent("ox_inventory:openInventory", source, "shop", {type = "admin", id = "admin"})
+end, true)
+
+RegisterCommand("openinventory", function(source, args, rawCommand)
+	--if IsPlayerAceAllowed(source, "command.dvall") then
+		local target = (args[1] and args[1] == "me") and source or tonumber(args[1])
+		local targetXPlayer = server.GetPlayerFromId(target)
+
+		if targetXPlayer ~= nil then
+			TriggerClientEvent("ox_inventory:openInventory", source, "player", target)
+		else
+			TriggerClientEvent("chat:chatMessage", source, { args = {"^1^*SISTEMA: ^0", "^1ID de jugador inexistente." } } )
+		end
+	--else
+	--	TriggerClientEvent("chat:addMessage", source, { args = {"^1^*SISTEMA: ^0", "^1permisos insuficienttes" } } )
+	--end
+end, true)

@@ -25,6 +25,8 @@ do
 
 	for type, data in pairs(data('weapons')) do
 		for k, v in pairs(data) do
+			v.type = v.type and v.type or type
+			print(v.name, v.type)
 			v.name = k
 			v.close = type == 'Ammo' and true or false
 			if type == 'Weapons' then
@@ -47,6 +49,7 @@ do
 	shared.items = ItemList
 
 	for k, v in pairs(data 'items') do
+		v.type = v.type and v.type or "Items"
 		v.name = k
 		newItem(v)
 	end
