@@ -424,4 +424,52 @@ return {
 		close = true,
 		description = ''
 	},
+
+	['bodycam'] = {
+		label = 'Bodycam',
+		weight = 1000,
+		stack = false,
+		consume = 0,
+		allowArmed = true
+	},
+
+	['firework'] = {
+		label = 'firework',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['fireworks'] = {
+		label = 'fireworks launcher',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['notepad'] = {
+		label = 'notepad',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['walking_stick'] = {
+		label = 'walking stick',
+		weight = 5,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+	['stretcher'] = {
+		label = 'camilla plegable',
+		weight = 5,
+		stack = true,
+		close = true,
+		description = ''
+	},
 }
