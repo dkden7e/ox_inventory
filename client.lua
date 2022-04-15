@@ -59,6 +59,7 @@ local plyState = LocalPlayer.state
 ---@param data table id and owner
 ---@return boolean
 local function openInventory(inv, data)
+	print(inv, json.encode(data))
 	if invOpen then
 		if not inv and currentInventory.type == 'newdrop' then
 			return TriggerEvent('ox_inventory:closeInventory')
@@ -131,6 +132,7 @@ local function openInventory(inv, data)
 			return true
 		else
 			-- Stash does not exist
+			print("Stash does not exist")
 			if left == false then return false end
 			if invOpen == false then Utils.Notify({type = 'error', text = shared.locale('inventory_right_access'), duration = 2500}) end
 			if invOpen then TriggerEvent('ox_inventory:closeInventory') end
@@ -1163,32 +1165,124 @@ end)
 
 RegisterNUICallback('giveItem', function(data, cb)
 	cb(1)
+	giveItemToPlayerMenu(data)
+end)
+
+giveItemToPlayerMenu = function(_data)
+	local _data = _data
+	TriggerEvent('ox_inventory:closeInventory')
+	local coords = GetEntityCoords(cache.ped)
+	local players, nearbyPlayer = ESX.Game.GetPlayersInArea(coords, cache.vehicle and 1.4 or 2.3)
+	local foundPlayers = false
+	local elements = {}
+
 	if cache.vehicle then
-		local seats = GetVehicleMaxNumberOfPassengers(cache.vehicle) - 1
-
-		if seats >= 0 then
-			local passenger = GetPedInVehicleSeat(cache.seat - 2 * (cache.seat % 2) + 1)
-
-			if passenger ~= 0 then
-				passenger = GetPlayerServerId(NetworkGetPlayerIndexFromPed(passenger))
-				TriggerServerEvent('ox_inventory:giveItem', data.slot, passenger, data.count)
-				if data.slot == currentWeapon?.slot then currentWeapon = Utils.Disarm(currentWeapon) end
-			end
-		end
-	else
-		local target = Utils.Raycast(12)
-
-		if target and IsPedAPlayer(target) and #(GetEntityCoords(cache.ped, true) - GetEntityCoords(target, true)) < 2.3 then
-			target = GetPlayerServerId(NetworkGetPlayerIndexFromPed(target))
-			Utils.PlayAnim(2000, 'mp_common', 'givetake1_a', 1.0, 1.0, -1, 50, 0.0, 0, 0, 0)
-			TriggerServerEvent('ox_inventory:giveItem', data.slot, target, data.count)
-
-			if data.slot == currentWeapon?.slot then
-				currentWeapon = Utils.Disarm(currentWeapon)
+		local seats = GetVehicleMaxNumberOfPassengers(cache.vehicle)
+		for i = -1, seats, 1 do
+			if i ~= cache.seat then
+				local pedInSeat = GetPedInVehicleSeat(cache.vehicle, i)
+				if pedInSeat and pedInSeat > 0 and IsPedAPlayer(pedInSeat) and (#(coords - GetEntityCoords(pedInSeat, true)) < 2.4) then
+					local target = NetworkGetPlayerIndexFromPed(pedInSeat)
+					foundPlayers = true
+					table.insert(
+						elements,
+						{
+							label = sanitize(GetPlayerName(target)),
+							action = GetPlayerServerId(target)
+						}
+					)
+				end
 			end
 		end
 	end
-end)
+
+	for i = 1, #players, 1 do
+		if players[i] ~= PlayerId() then
+			local already = false
+			for x = 1, #elements, 1 do
+				if elements[x].player == players[i] then
+					already = true
+					break
+				end
+			end
+			if not already then
+				foundPlayers = true
+				table.insert(
+					elements,
+					{
+						label = sanitize(GetPlayerName(players[i])),
+						action = GetPlayerServerId(players[i])
+					}
+				)
+			end
+		end
+	end
+
+	if foundPlayers then
+
+		local itemName = PlayerData.inventory[_data.slot].label
+
+		ESX.UI.Menu.CloseAll()
+	
+		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'givetoplayer_picklist', {
+			title    = "¿A quién quieres dar " .. ((_data.count == 0) and 1 or _data.count) .. "x " .. itemName .. "?",
+			align    = 'center',
+			elements = elements
+		}, function(data, menu)
+			menu.close()
+			local name, target = data.current.label, data.current.action
+			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'givetoplayer_confirm', {
+				title    = "¿Seguro que quieres dar " .. ((_data.count == 0) and 1 or _data.count) .. "x " .. itemName .. " a " .. name .. " (" .. target .. ")?",
+				align    = 'center',
+				elements = { { label = "Confirmar", action = "confirm" }, { label = "Cancelar", action = "cancel" } }
+			}, function(data, menu)
+				if data.current.action == "confirm" then
+					if GetResourceState("okokRequests") == "started" then
+						Citizen.CreateThread(function()
+							local cooldown = 15000
+							math.randomseed(GetGameTimer())
+							local eventName = "ox_inventory:confirmGive" .. tostring(math.random(1000000000000, 9999999999999))
+							RegisterNetEvent(eventName)
+							local eventData = AddEventHandler(eventName, function()
+								local slot, target, count, itemType = _data.slot, target, _data.count, itemName
+								if itemType == PlayerData.inventory[slot].label then
+									local targetPed = GetPlayerPed(GetPlayerFromServerId(target))
+									if DoesEntityExist(targetPed) and (#(GetEntityCoords(cache.ped, true) - GetEntityCoords(targetPed, true)) < 4) then
+										if not cache.vehicle then
+											Utils.PlayAnim(2000, 'mp_common', 'givetake1_a', 1.0, 1.0, -1, 50, 0.0, 0, 0, 0)
+										end
+										TriggerServerEvent('ox_inventory:giveItem', slot, target, count)
+									else
+										Utils.Notify({type = 'error', text = "El receptor se alejó demasiado o desconectó"})
+									end
+								else
+									Utils.Notify({type = 'error', text = "No cambies el ítem de slot antes de ser aceptado"})
+								end
+							end)
+							exports['okokRequests']:requestMenu(target, cooldown, "<i class='fas fa-question-circle'></i>&nbsp;Quieren darte algo", GetPlayerName(PlayerId()) .. " (" .. GetPlayerServerId(PlayerId()) .. ")  quiere darte " .. _data.count .. "x " .. itemName .. ".", eventName, "client", "", 0)
+							Citizen.Wait(cooldown+3000)
+							RemoveEventHandler(eventData)
+						end)
+					else
+						if not cache.vehicle then
+							Utils.PlayAnim(2000, 'mp_common', 'givetake1_a', 1.0, 1.0, -1, 50, 0.0, 0, 0, 0)
+						end
+						TriggerServerEvent('ox_inventory:giveItem', _data.slot, target, _data.count)
+					end
+					menu.close()
+				else
+					giveItemToPlayerMenu(_data)
+				end
+			end, function(data, menu)
+				giveItemToPlayerMenu(_data)
+			end)
+		end, function(data, menu)
+			menu.close()
+		end)
+	else
+		Utils.Notify({type = 'error', text = shared.locale('nobody_nearby')})
+	end
+end
 
 RegisterNUICallback('useButton', function(data, cb)
 	useButton(data.id, data.slot)
@@ -1239,3 +1333,15 @@ RegisterNUICallback('buyItem', function(data, cb)
 	if message then Utils.Notify(message) end
 	cb(response)
 end)
+
+function sanitize(txt)
+    local replacements = {
+        ['&' ] = '&amp;', 
+        ['<' ] = '&lt;', 
+        ['>' ] = '&gt;', 
+        ['\n'] = '<br/>'
+    }
+    return txt
+        :gsub('[&<>\n]', replacements)
+        :gsub(' +', function(s) return ' '..('&nbsp;'):rep(#s-1) end)
+end

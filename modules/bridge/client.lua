@@ -41,12 +41,12 @@ end
 if shared.framework == 'ox' then
 	RegisterNetEvent('ox:playerLogout', onLogout)
 elseif shared.framework == 'esx' then
-	local ESX = exports.es_extended:getSharedObject()
+	ESX = exports.es_extended:getSharedObject()
 
-	ESX = {
-		SetPlayerData = ESX.SetPlayerData,
-		PlayerLoaded = ESX.PlayerLoaded
-	}
+	--ESX = {
+	--	SetPlayerData = ESX.SetPlayerData,
+	--	PlayerLoaded = ESX.PlayerLoaded
+	--}
 
 	function client.setPlayerData(key, value)
 		PlayerData[key] = value
