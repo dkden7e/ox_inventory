@@ -3,8 +3,6 @@ if not lib then return end
 local Items = {}
 local ItemList = shared.items
 
-TriggerEvent('ox_inventory:itemList', ItemList)
-
 -- Slot count and maximum weight for containers
 -- Whitelist and blacklist: ['item_name'] = true
 Items.containers = {

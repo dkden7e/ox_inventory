@@ -178,7 +178,9 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 	end
 end)
 
-AddEventHandler('ox_inventory:itemList', function(ItemList)
+Citizen.CreateThread(function()
+	Citizen.Wait(0)
+	local ItemList = shared.items
 
 	local allItemsShop, excluded, step = {}, { money = true, black_money = true }, 0
 	repeat
