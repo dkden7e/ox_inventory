@@ -473,4 +473,92 @@ return {
 		close = true,
 		description = ''
 	},
+
+	['casino_chips'] = {
+		label = 'fichas del diamond',
+		weight = 0,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['casino_ticket'] = {
+		label = 'tícket de la suerte diamond',
+		weight = 0,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['burncream'] = {
+		label = 'pomada (quemaduras)',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['defib'] = {
+		label = 'desfibrilador',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['medbag'] = {
+		label = 'bolsa médica',
+		weight = 3,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['medikit'] = {
+		label = 'kit médico',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['sedative'] = {
+		label = 'sedante',
+		weight = 0,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['suturekit'] = {
+		label = 'kit de sutura',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['tweezers'] = {
+		label = 'pinzas',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['wheelchair'] = {
+		label = 'silla de ruedas',
+		weight = 15,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['photo'] = {
+		label = 'foto',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
 }

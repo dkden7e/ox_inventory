@@ -43,7 +43,7 @@ do
 	for type, data in pairs(data('weapons')) do
 		for k, v in pairs(data) do
 			v.type = v.type and v.type or type
-			print(v.name, v.type)
+			--print(v.name, v.type)
 			v.name = k
 			v.close = type == 'Ammo' and true or false
 
