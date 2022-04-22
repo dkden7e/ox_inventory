@@ -561,4 +561,20 @@ return {
 		close = true,
 		description = nil
 	},
+
+	['skateboard'] = {
+		label = 'monopatín',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['rccar'] = {
+		label = 'coche rc',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
 }
