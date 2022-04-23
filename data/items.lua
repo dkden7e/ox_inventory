@@ -31,7 +31,7 @@ return {
 	},
 
 	['bandage'] = {
-		label = 'Bandage',
+		label = 'Vendas',
 		weight = 115,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -42,35 +42,35 @@ return {
 	},
 
 	['black_money'] = {
-		label = 'Dirty Money',
+		label = 'Dinero Negro',
 	},
 
 	['burger'] = {
-		label = 'Burger',
+		label = 'Hamburguesa',
 		weight = 220,
 		client = {
 			status = { hunger = 200000 },
 			anim = 'eating',
 			prop = 'burger',
 			usetime = 2500,
-			notification = 'You ate a delicious burger'
+			notification = 'Te has comido una deliciosa hamburguesa'
 		},
 	},
 
 	['cola'] = {
-		label = 'eCola',
+		label = 'DinoCola',
 		weight = 350,
 		client = {
 			status = { thirst = 200000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
-			notification = 'You quenched your thirst with cola'
+			notification = 'Has saciado tu sed con una rica DinoCola'
 		}
 	},
 
 	['parachute'] = {
-		label = 'Parachute',
+		label = 'Paracaidas',
 		weight = 8000,
 		stack = false,
 		client = {
@@ -108,7 +108,7 @@ return {
 	},
 
 	['lockpick'] = {
-		label = 'Lockpick',
+		label = 'Ganzúa',
 		weight = 160,
 		consume = 0,
 		client = {
@@ -120,7 +120,7 @@ return {
 	},
 
 	['phone'] = {
-		label = 'Phone',
+		label = 'Teléfono Móvil',
 		weight = 190,
 		stack = false,
 		consume = 0,
@@ -140,7 +140,7 @@ return {
 	},
 
 	['money'] = {
-		label = 'Money',
+		label = 'Dinero',
 	},
 
 	['mustard'] = {
@@ -156,7 +156,7 @@ return {
 	},
 
 	['water'] = {
-		label = 'Water',
+		label = 'Agua',
 		weight = 500,
 		client = {
 			status = { thirst = 200000 },
@@ -164,12 +164,12 @@ return {
 			prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
 			usetime = 2500,
 			cancel = true,
-			notification = 'You drank some refreshing water'
+			notification = 'Te has bebido una botella de agua'
 		}
 	},
 
 	['radio'] = {
-		label = 'Radio',
+		label = 'Walkie Talkie',
 		weight = 1000,
 		stack = false,
 		consume = 0,
@@ -203,7 +203,7 @@ return {
 	},
 
 	['boombox'] = {
-		label = 'boombox',
+		label = 'Radio caset',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -459,7 +459,7 @@ return {
 	},
 
 	['walking_stick'] = {
-		label = 'walking stick',
+		label = 'Bastón',
 		weight = 5,
 		stack = true,
 		close = true,
@@ -467,7 +467,7 @@ return {
 	},
 
 	['stretcher'] = {
-		label = 'camilla plegable',
+		label = 'Camilla plegable',
 		weight = 5,
 		stack = true,
 		close = true,
@@ -547,7 +547,7 @@ return {
 	},
 
 	['wheelchair'] = {
-		label = 'silla de ruedas',
+		label = 'Silla de ruedas',
 		weight = 15,
 		stack = true,
 		close = true,

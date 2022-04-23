@@ -1,14 +1,18 @@
 return {
 	General = {
-		name = 'Shop',
+		name = '24/7',
 		blip = {
 			id = 59, colour = 69, scale = 0.8
 		}, inventory = {
 			{ name = 'burger', price = 10 },
 			{ name = 'water', price = 10 },
 			{ name = 'cola', price = 10 },
+			{ name = 'phone', price = 500 },
+			{ name = 'boombox', price = 5000 },
+			{ name = 'radio', price = 5000 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
+			vec3(190.21, -889.55, 30.71),
 			vec3(-3038.71, 585.9, 7.9),
 			vec3(-3241.47, 1001.14, 12.83),
 			vec3(1728.66, 6414.16, 35.03),
@@ -20,6 +24,7 @@ return {
 			vec3(373.55, 325.56, 103.56),
 		}, targets = {
 			{ loc = vec3(25.06, -1347.32, 29.5), length = 0.7, width = 0.5, heading = 0.0, minZ = 29.5, maxZ = 29.9, distance = 1.5 },
+			{ loc = vec3(189.36, -889.35, 31.71), length = 0.7, width = 0.5, heading = 63.0, minZ = 29.5, maxZ = 29.9, distance = 1.5 },
 			{ loc = vec3(-3039.18, 585.13, 7.91), length = 0.6, width = 0.5, heading = 15.0, minZ = 7.91, maxZ = 8.31, distance = 1.5 },
 			{ loc = vec3(-3242.2, 1000.58, 12.83), length = 0.6, width = 0.6, heading = 175.0, minZ = 12.83, maxZ = 13.23, distance = 1.5 },
 			{ loc = vec3(1728.39, 6414.95, 35.04), length = 0.6, width = 0.6, heading = 65.0, minZ = 35.04, maxZ = 35.44, distance = 1.5 },
@@ -32,8 +37,22 @@ return {
 		}
 	},
 
+	Ortopedia = {
+		name = 'Ortopedia',
+		blip = {
+			id = 280, colour = 26, scale = 1.0
+		}, inventory = {
+			{ name = 'walking_stick', price = 500 },
+			{ name = 'wheelchair', price = 5000 },
+			{ name = 'stretcher', price = 10000 },
+		}, locations = {
+			vec3(-172.91, 239.42, 93.19),
+		}, targets = {
+		}
+	},
+
 	Liquor = {
-		name = 'Liquor Store',
+		name = 'Licorería',
 		blip = {
 			id = 93, colour = 69, scale = 0.8
 		}, inventory = {
@@ -58,8 +77,19 @@ return {
 		}
 	},
 
+	DKthlon = {
+		name = 'DKthlon',
+		blip = {
+			id = 122, colour = 69, scale = 0.8
+		}, inventory = {
+		}, locations = {
+			vec3(-762.06, -618.04, 30.46),
+		}, targets = {
+		}
+	},
+
 	YouTool = {
-		name = 'YouTool',
+		name = 'Ferretería',
 		blip = {
 			id = 402, colour = 69, scale = 0.8
 		}, inventory = {
@@ -73,14 +103,14 @@ return {
 	},
 
 	Ammunation = {
-		name = 'Ammunation',
+		name = 'Armería',
 		blip = {
 			id = 110, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'WEAPON_KNIFE', price = 200 },
-			{ name = 'WEAPON_BAT', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 1000, metadata = { registered = true }, license = 'weapon' }
+--			{ name = 'ammo-9', price = 5, },
+--			{ name = 'WEAPON_KNIFE', price = 200 },
+--			{ name = 'WEAPON_BAT', price = 100 },
+--			{ name = 'WEAPON_PISTOL', price = 1000, metadata = { registered = true }, license = 'weapon' }
 		}, locations = {
 			vec3(-662.180, -934.961, 21.829),
 			vec3(810.25, -2157.60, 29.62),
@@ -105,7 +135,7 @@ return {
 	},
 
 	PoliceArmoury = {
-		name = 'Police Armoury',
+		name = 'Armería Policial',
 		groups = shared.police,
 		blip = {
 			id = 110, colour = 84, scale = 0.8
@@ -157,7 +187,7 @@ return {
 	},
 
 	VendingMachineDrinks = {
-		name = 'Vending Machine',
+		name = 'Maquina exprendedora',
 		inventory = {
 			{ name = 'water', price = 10 },
 			{ name = 'cola', price = 10 },
