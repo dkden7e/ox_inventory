@@ -24,15 +24,15 @@ const InfoScreen: React.FC<{
         className="info-exit-icon"
       />
       <h2>{Locale.ui_usefulcontrols}</h2>
-      <p>[RMB] - {Locale.ui_rmb}</p>
-      <p>[CTRL + LMB] - {Locale.ui_ctrl_lmb}</p>
-      <p>[SHIFT + Drag] - {Locale.ui_shift_drag}</p>
-      <p>[CTRL + SHIFT + LMB] - {Locale.ui_ctrl_shift_lmb}</p>
-      <p>[ALT + LMB] - {Locale.ui_alt_lmb}</p>
+      <p>[CLIC IZQ.] - {Locale.ui_rmb}</p>
+      <p>[CTRL + CLIC DCH.] - {Locale.ui_ctrl_lmb}</p>
+      <p>[MAYÚS + ARRASTRAR] - {Locale.ui_shift_drag}</p>
+      <p>[CTRL + MAYÚS + CLIC IZQ.] - {Locale.ui_ctrl_shift_lmb}</p>
+      <p>[ALT + CLIC IZQ.] - {Locale.ui_alt_lmb}</p>
       <p>[CTRL + C] - {Locale.ui_ctrl_c}</p>
       <span
         className="info-ox"
-        onClick={() => Notify({ text: 'Made with 🐂 by the Overextended team' })}
+        onClick={() => Notify({ text: 'Hecho con 🐂 por el equipo de Overextended (modificado por DK_Den7e para Mancos V3 y TendereteCity)' })}
       >
         🐂
       </span>

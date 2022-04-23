@@ -1,12 +1,27 @@
 return {
+	-- Buttons, context menu
 	['ui_use'] = "Usar",
 	['ui_give'] = "Dar",
 	['ui_close'] = "Cerrar",
 	['ui_drop'] = "Tirar",
-	['ui_copy'] = "Copy serial number",
-	['ui_removeattachments'] = "Remover accesorio",
-	['ui_ctrl_c'] = "When hovering over a weapon, copies it's serial number",
-	['$'] = "$",
+	['ui_copy'] = "Copiar nº de serie",
+	['ui_removeattachments'] = "Retirar accesorio",
+	-- Tooltip	
+	['ui_durability'] = "Durabilidad",	
+	['ui_ammo'] = "Munición",	
+	['ui_serial'] = "Nº de serie",	
+	['ui_components'] = "Componentes",	
+	['ui_tint'] = "Skin",	
+	-- Useful controls	
+	['ui_usefulcontrols'] = "Controles útiles",	
+	['ui_rmb'] = "Abrir menú contextual del elemento",	
+	['ui_ctrl_lmb'] = "Mover rápidamente un stack de ítems a otro inventario",	
+	['ui_shift_drag'] = "Dividir a la mitad",	
+	['ui_ctrl_shift_lmb'] = "Mover rápidamente medio stack de ítems a otro inventario",	
+	['ui_alt_lmb'] = "Utilizar rápidamente un ítem",
+	--
+	['ui_ctrl_c'] = "Al pasar por encima de un arma, copia su nº de serie",
+	['$'] = "€",
 	['male'] = "Hombre",
 	['female'] = "Mujer",
 	['used'] = "Usado",
@@ -15,6 +30,7 @@ return {
 	['holstered'] = "Guardado",
 	['equipped'] = "Equipado",
 	['inventory_setup'] = "El inventario está disponible",
+	['using'] = "Usando %s",
 	['inventory_player_access'] = "No puedes abrir el inventario en este momento",
 	['inventory_right_access'] = "No puedes abrir este inventario",
 	['inventory_lost_access'] = "Ya no tienes acceso a este inventario",
@@ -36,8 +52,8 @@ return {
 	['cannot_perform'] = "No puedes hacer eso o no lo estás haciendo bien",
 	['cannot_carry'] = "No puedes cargar tanto",
 	['cannot_carry_other'] = "No cabe en ese inventario",
-	['cannot_carry_limit'] = "You cannot carry more than %s %s",
-	['cannot_carry_limit_other'] = "Target cannot carry more than %s %s",
+	['cannot_carry_limit'] = "No puede llevar más de %s %s",
+	['cannot_carry_limit_other'] = "El objetivo no puede llevar más de %s %s",
 	['items_confiscated'] = "Tus items han sido confiscadas",
 	['items_returned'] = "Tus items te han sido devueltos",
 	['item_unauthorised'] = "No estás autorizado para comprar este item",
@@ -50,12 +66,12 @@ return {
 	['identification'] = "Sexo: %s  \nFecha de Nacimiento: %s",
 	['search_dumpster'] = "Buscar en el Basurero",
 	['open_shop'] = "Abrir %s",
-	['purchased_for'] = "Comprar %s %s por %s%s",
+	['purchased_for'] = "Has comprado %s %s por %s%s",
 	['unable_stack_items'] = "¡No puedes apilar estos items!",
 	['police_evidence'] = "Evidencia Policial",
-	['open_police_evidence'] = "Open Police Evidence",
-	['open_stash'] = "Open Stash",
-	['locker_number'] = "Número de Casillero",
+	['open_police_evidence'] = "Abrir depósito de evidencias",
+	['open_stash'] = "Abrir alijo",
+	['locker_number'] = "Nº de casillero",
 	['locker_no_value'] = "¡Debe contener un valor para abrir el casillero!",
 	['locker_must_number'] = "¡El casillero debe ser un número!",
 	['weapon_hand_required'] = "¡Debes tener un arma en la mano!",
@@ -67,6 +83,6 @@ return {
 	['use_hotbar'] = "Usar item de la barra de acceso rápido %s~",
 	['no_durability'] = "¡La durabilidad del item se ha agotado!",
 	['cannot_give'] = "No se pudo dar %s %s al objetivo",
-	['evidence_cannot_take'] = "No es una calificación lo suficientemente alta como para tomar de la evidencia", -- ACCURATE TRANSLATION NEEDED
-	['dumpster'] = "Contenedor"
+	['evidence_cannot_take'] = "Rango insuficiente para retirar evidencias", -- ACCURATE TRANSLATION NEEDED
+	['dumpster'] = "Contenedor de basura"
 }
