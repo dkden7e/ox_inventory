@@ -93,12 +93,53 @@ return {
 		blip = {
 			id = 402, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'lockpick', price = 10 }
+			{ name = 'lockpick', price = 3000 },
+			{ name = 'repairkit', price = 3000 },
+			{ name = 'neoncontroller', price = 5000 },
+			{ name = 'carjack', price = 5000 },
+			{ name = 'car_hood', price = 2000 },
+			{ name = 'car_trunk', price = 2000 },
+			{ name = 'car_door', price = 2000 },
+			{ name = 'car_wheel', price = 1500 },
+			{ name = 'scrap_metal', price = 1500 },
+			{ name = 'electric_scrap', price = 2000 },
 		}, locations = {
-			vec3(2748.0, 3473.0, 55.67),
+			vec3(2746.1895, 3468.6914, 55.6731),
 			vec3(342.99, -1298.26, 32.51)
 		}, targets = {
 			{ loc = vec3(2746.8, 3473.13, 55.67), length = 0.6, width = 3.0, heading = 65.0, minZ = 55.0, maxZ = 56.8, distance = 3.0 }
+		}
+	},
+
+	MechYouTool = {
+		name = 'Repuestos mecánicos',
+		groups = shared.mechanics,
+		blip = {
+			id = 402, colour = 40, scale = 0.8
+		}, inventory = {
+			{ name = 'lockpick', price = 500 },
+			{ name = 'repairkit', price = 1500 },
+			{ name = 'advrepairkit', price = 2500 },
+			{ name = 'neoncontroller', price = 2500 },
+			{ name = 'neonbox', price = 12000 },
+			{ name = 'carjack', price = 2500 },
+			{ name = 'car_hood', price = 1000 },
+			{ name = 'car_trunk', price = 1000 },
+			{ name = 'car_door', price = 1000 },
+			{ name = 'car_wheel', price = 800 },
+			{ name = 'scrap_metal', price = 800 },
+			{ name = 'rubber', price = 600 },
+			{ name = 'plastic', price = 500 },
+			{ name = 'electric_scrap', price = 1000 },
+			{ name = 'glass', price = 1000 },
+			{ name = 'aluminium', price = 1500 },
+			{ name = 'copper', price = 1500 },
+			{ name = 'steel', price = 1500 },
+		}, locations = {
+			vec3(2749.6907, 3476.9788, 55.6734),
+			vec3(340.5946, -1297.3885, 32.5105),
+			vec3(255.3045, -3057.5806, 5.7919)
+		}, targets = {
 		}
 	},
 

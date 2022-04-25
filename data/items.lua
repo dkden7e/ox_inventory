@@ -594,6 +594,14 @@ return {
 		description = nil
 	},
 
+	['car_door'] = {
+		label = 'puerta de coche',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
 	['car_hood'] = {
 		label = 'capó de coche',
 		weight = 1,
