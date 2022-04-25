@@ -577,4 +577,124 @@ return {
 		close = true,
 		description = nil
 	},
+
+	['advrepairkit'] = {
+		label = 'kit de reparación avanzado',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['aluminium'] = {
+		label = 'aluminio',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['car_hood'] = {
+		label = 'capó de coche',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['car_trunk'] = {
+		label = 'puerta de maletero',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['car_wheel'] = {
+		label = 'rueda de coche',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['carjack'] = {
+		label = 'gato hidráulico',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['copper'] = {
+		label = 'cobre',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['electric_scrap'] = {
+		label = 'chatarra eléctrica',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['glass'] = {
+		label = 'vidrio',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['plastic'] = {
+		label = 'plástico',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['puerta_de_coche'] = {
+		label = 'puerta de coche',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['repairkit'] = {
+		label = 'kit de reparación',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['rubber'] = {
+		label = 'goma',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['scrap_metal'] = {
+		label = 'chatarra',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['steel'] = {
+		label = 'acero',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
 }

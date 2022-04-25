@@ -9,6 +9,7 @@ shared = {
 	trimplate = GetConvar('inventory:trimplate', 'true') == 'true',
 	qtarget = GetConvar('inventory:qtarget', 'false') == 'true',
 	police = json.decode(GetConvar('inventory:police', '["police", "sheriff"]')),
+	mechanics = json.decode(GetConvar('inventory:mechanics', '["mechanic", "mechanic1", "mechanic2", "sabanda", "bennys", "mecagm"]')),
 }
 
 do
@@ -19,9 +20,22 @@ do
 	local police = table.create(0, #shared.police)
 
 	for i = 1, #shared.police do
-		police[shared.police[i]] = 0
+		police[shared.police[i]] = 1
 	end
 	shared.police = police
+end
+
+do
+	if type(shared.mechanics) == 'string' then
+		shared.mechanics = {shared.mechanics}
+	end
+
+	local mechanics = table.create(0, #shared.mechanics)
+
+	for i = 1, #shared.mechanics do
+		mechanics[shared.mechanics[i]] = 1
+	end
+	shared.mechanics = mechanics
 end
 
 if IsDuplicityVersion then
