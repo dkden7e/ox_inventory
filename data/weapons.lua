@@ -200,14 +200,13 @@ return {
 			label = 'Bidón de fertilizante',
 			description = 'Huele mal, pero a las plantas parece que les encanta, deberías probarlo?',
 			weight = 1500,
-			durability = 1,
-			ammoname = '????'
+			durability = 1.0,
 		},
 		['WEAPON_FIREEXTINGUISHER'] = {
 			label = 'Extintor',
 			description = 'Un fantástico y humeante extintor convencional, creo que todo el mundo sabe para qué sirve.',
 			weight = 8616,
-			durability = '????',
+			durability = 0.8,
 		},
 		['WEAPON_FIREWORK'] = {
 			label = 'Cañón de pirotecnia',
@@ -290,7 +289,6 @@ return {
 			label = 'Bidón de químicos peligrosos',
 			description = '',
 			weight = 12000,
-			durability = '????',
 		},
 		['WEAPON_HEAVYPISTOL'] = {
 			label = 'Pistola pesada',
@@ -445,7 +443,7 @@ return {
 			label = 'Bidón de gasolina',
 			description = 'Bidón especialmente diseñado para cargar combustible de forma segura y fácil de llevar.',
 			weight = 5000,
-			durability = '????',
+			durability = 0.9,
 		},
 		['WEAPON_PIPEBOMB'] = {
 			label = 'Bomba casera',
@@ -505,7 +503,7 @@ return {
 			description = 'Lo único que necesitas saber es que usa imanes y que hace cosas horribles a lo que apuntas.',
 			weight = 1100,
 			durability = 0.1,
-			ammoname = '????'
+			ammoname = 'ammo-railgunslugs'
 		},
 		['WEAPON_REVOLVER'] = {
 			label = 'Revólver pesado',
@@ -1224,7 +1222,25 @@ return {
 			label = 'Proyectil 40mm (fumígeno)',
 			description = 'Granada de humo preparada para ser lanzada por un lanzagranadas.',
 			weight = 150,
-			},
+		},
+
+		['ammo-railgunslugs'] = {
+			label = 'Munición railgun',
+			description = 'Sistema autocontenido de proyectil metálico de alta velocidad + supercondensador de alta concentración energética.',
+			weight = 200,
+		},
+
+		['ammo-fuel'] = {
+			label = 'Combustible',
+			description = '100ml de combustible. Puede ser gasolina, diésel, queroseno u otros combustibles espeicales, según el rol (roléalo apropiadamente y no saques combustibles especiales de la nada ni sin autorización).',
+			weight = 200,
+		},
+
+		['ammo-extinguisher'] = {
+			label = 'Material extintor (SOLO RELLENABLE CON MÁQUINAS INDUSTRIALES ESPECIALES)',
+			description = '.',
+			weight = 1000,
+		},
 	}
 
 }
