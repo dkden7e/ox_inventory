@@ -165,6 +165,7 @@ local function useItem(data, cb)
 
 			if data.usetime then
 				p = promise.new()
+				if data.command then ExecuteCommand(data.command) end
 				Interface.Progress({
 					duration = data.usetime,
 					label = data.label or shared.locale('using', result.label),

@@ -120,7 +120,7 @@ return {
 	},
 
 	['phone'] = {
-		label = 'Teléfono Móvil',
+		label = 'Teléfono móvil',
 		weight = 190,
 		stack = false,
 		consume = 0,
@@ -705,4 +705,1999 @@ return {
 		close = true,
 		description = nil
 	},
+
+	['cerdoagridulce'] = {
+		label = 'Cerdo Agridulce',
+		weight = 220,
+		client = {
+			status = {hunger = 500000, thirst = -30000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Cerdo Agridulce',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908815460352090/cerdoagridulce.png?width=625&height=416',
+		},
+	},
+
+	['cupcakebean'] = {
+		label = 'magdalena bean especial',
+		weight = 220,
+		client = {
+			status = {hunger = 70000, drunk = -75000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `v_res_cakedome`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x magdalena bean especial'
+		},
+	},
+
+	['milk'] = {
+		label = 'leche',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = 100000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_milk_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x leche'
+		},
+	},
+
+	['anacardos'] = {
+		label = 'anacardos',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `ng_proc_food_chips01c`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x anacardos'
+		},
+	},
+
+	['coffe'] = {
+		label = 'café',
+		weight = 220,
+		client = {
+			status = {hunger = 85000, thirst = 20000, drunk = -30000, },
+			anim = 'eating',
+			prop = { model = `p_ing_coffeecup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x café'
+		},
+	},
+
+	['fooddogp'] = {
+		label = 'comida para perros premium',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_hotdog_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x comida para perros premium'
+		},
+	},
+
+	['beer'] = {
+		label = 'cerveza',
+		weight = 220,
+		client = {
+			status = {hunger = -25000, thirst = 200000, drunk = 100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_beer_logopen`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x cerveza'
+		},
+	},
+
+	['queque'] = {
+		label = 'Queque',
+		weight = 220,
+		client = {
+			status = {hunger = 300000, thirst = -30000, drunk = -50000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Queque',
+			image = '',
+		},
+	},
+
+	['almogrote'] = {
+		label = 'almogrote gomero',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = -50000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x almogrote gomero'
+		},
+	},
+
+	['polvito_uruguayo'] = {
+		label = 'Polvito uruguayo',
+		weight = 220,
+		client = {
+			status = {hunger = 300000, thirst = -50000, drunk = -75000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Polvito uruguayo',
+			image = 'https://cdn.discordapp.com/attachments/902127023948955648/968908294297116672/polvito.png',
+		},
+	},
+
+	['champagne'] = {
+		label = 'copa de champán',
+		weight = 220,
+		client = {
+			status = {hunger = -10000, thirst = 200000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_champ`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de champán'
+		},
+	},
+
+	['jusfruit'] = {
+		label = 'jugo de frutas',
+		weight = 220,
+		client = {
+			status = {hunger = 150000, thirst = 20000, drunk = -25000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_paper_cup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x jugo de frutas'
+		},
+	},
+
+	['heladobean'] = {
+		label = 'helado bean especial',
+		weight = 220,
+		client = {
+			status = {hunger = 60000, thirst = 25000, drunk = -90000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_whiskey_bot_stop`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x helado bean especial'
+		},
+	},
+
+	['cervezasin'] = {
+		label = 'Cerveza Sin',
+		weight = 220,
+		client = {
+			status = {hunger = 5000, thirst = 25000, drunk = -80000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_amb_beer_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Cerveza Sin',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968909091655254016/dinocervezasin.jpg',
+		},
+	},
+
+	['wantan'] = {
+		label = 'Wantan',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = -25000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Wantan',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908901653291028/wantan.png?width=748&height=416',
+		},
+	},
+
+	['water'] = {
+		label = 'botella de agua',
+		weight = 220,
+		client = {
+			status = {thirst = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x botella de agua'
+		},
+	},
+
+	['absinthe'] = {
+		label = 'absenta',
+		weight = 220,
+		client = {
+			status = {hunger = -40000, thirst = 200000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_champ`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x absenta'
+		},
+	},
+
+	['gominolas'] = {
+		label = 'gominolas',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_candy_pqs`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x gominolas'
+		},
+	},
+
+	['moussedegofio'] = {
+		label = 'mousse de gofio',
+		weight = 220,
+		client = {
+			status = {hunger = 400000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x mousse de gofio'
+		},
+	},
+
+	['donutbean'] = {
+		label = 'dona bean especial',
+		weight = 220,
+		client = {
+			status = {hunger = 70000, drunk = -75000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_donut_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x dona bean especial'
+		},
+	},
+
+	['bolnoixcajou'] = {
+		label = 'anacardos',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `ng_proc_food_chips01c`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x anacardos'
+		},
+	},
+
+	['bolcacahuetes'] = {
+		label = 'cacahuetes',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `ng_proc_food_chips01c`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x cacahuetes'
+		},
+	},
+
+	['fanta'] = {
+		label = 'fanta',
+		weight = 220,
+		client = {
+			status = {hunger = 20000, thirst = 100000, drunk = -100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ng_proc_sodacup_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x fanta'
+		},
+	},
+
+	['cocacola'] = {
+		label = 'cocacola',
+		weight = 220,
+		client = {
+			status = {hunger = 20000, thirst = 100000, drunk = -100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ng_proc_sodacup_01c`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x cocacola'
+		},
+	},
+
+	['sangria'] = {
+		label = 'vaso de sangría',
+		weight = 220,
+		client = {
+			status = {hunger = -10000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de sangría'
+		},
+	},
+
+	['virgin'] = {
+		label = 'vaso de Virgin-la',
+		weight = 220,
+		client = {
+			status = {hunger = -10000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de Virgin-la'
+		},
+	},
+
+	['carne_fiesta'] = {
+		label = 'Carne fiesta',
+		weight = 220,
+		client = {
+			status = {hunger = 750000, thirst = -40000, drunk = -100000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Carne fiesta',
+			image = '',
+		},
+	},
+
+	['arepa'] = {
+		label = 'Arepa Reina Pepiada',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Arepa Reina Pepiada',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908975355621406/pepiada.png',
+		},
+	},
+
+	['quesofrito'] = {
+		label = 'queso frito',
+		weight = 220,
+		client = {
+			status = {hunger = 350000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x queso frito'
+		},
+	},
+
+	['whisky'] = {
+		label = 'vaso de whisky',
+		weight = 220,
+		client = {
+			status = {hunger = -35000, thirst = 200000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de whisky'
+		},
+	},
+
+	['sandwichhot'] = {
+		label = 'sandwich picante',
+		weight = 220,
+		client = {
+			status = {hunger = 175000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_sandwich_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x sandwich picante'
+		},
+	},
+
+	['fooddog'] = {
+		label = 'comida para perros',
+		weight = 220,
+		client = {
+			status = {hunger = 150000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x comida para perros'
+		},
+	},
+
+	['helado'] = {
+		label = 'helado',
+		weight = 220,
+		client = {
+			status = {hunger = 50000, thirst = 10000, drunk = -75000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_whiskey_bot_stop`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x helado'
+		},
+	},
+
+	['kalimotxo'] = {
+		label = 'Vaso de Kalimotxo',
+		weight = 220,
+		client = {
+			status = {hunger = -30000, thirst = 200000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Vaso de Kalimotxo'
+		},
+	},
+
+	['energy'] = {
+		label = 'Monster',
+		weight = 220,
+		client = {
+			status = {hunger = 30000, thirst = 125000, drunk = -120000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `g_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Monster'
+		},
+	},
+
+	['durum'] = {
+		label = 'Dürüm',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, },
+			anim = 'eating',
+			prop = { model = `prop_food_bs_burger2`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Dürüm'
+		},
+	},
+
+	['rhumcoca'] = {
+		label = 'roncola',
+		weight = 220,
+		client = {
+			status = {hunger = -25000, thirst = 200000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_beer_logopen`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x roncola'
+		},
+	},
+
+	['carnecabra'] = {
+		label = 'carne de cabra',
+		weight = 220,
+		client = {
+			status = {hunger = 600000, thirst = -40000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x carne de cabra'
+		},
+	},
+
+	['quesadillas'] = {
+		label = 'quesadilla herreña',
+		weight = 220,
+		client = {
+			status = {hunger = 350000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x quesadilla herreña'
+		},
+	},
+
+	['papasarrugadas'] = {
+		label = 'papas arrugadas',
+		weight = 220,
+		client = {
+			status = {hunger = 400000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x papas arrugadas'
+		},
+	},
+
+	['croissant'] = {
+		label = 'croissant',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, },
+			anim = 'eating',
+			prop = { model = `ng_proc_food_nana2a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x croissant'
+		},
+	},
+
+	['tacofarmer'] = {
+		label = 'taco',
+		weight = 220,
+		client = {
+			status = {hunger = 125000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_taco_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x taco'
+		},
+	},
+
+	['vodka_redbull'] = {
+		label = 'vaso de vodka con Red Bull',
+		weight = 220,
+		client = {
+			status = {hunger = -80000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de vodka con Red Bull'
+		},
+	},
+
+	['orgasmo_vanilla'] = {
+		label = 'Orgasmo del vanilla',
+		weight = 220,
+		client = {
+			status = {hunger = -70000, thirst = -9000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_pinacolada`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Orgasmo del vanilla'
+		},
+	},
+
+	['powerade'] = {
+		label = 'Powerade',
+		weight = 220,
+		client = {
+			status = {hunger = 15000, thirst = 300000, drunk = -150000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_energy_drink`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Powerade'
+		},
+	},
+
+	['meloun'] = {
+		label = 'vaso de zumo de sandía',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, thirst = 180000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de zumo de sandía'
+		},
+	},
+
+	['long'] = {
+		label = 'vaso de Long Island',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de Long Island'
+		},
+	},
+
+	['cosmopolitan'] = {
+		label = 'copa de Cosmopolitan',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_whtwine`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de Cosmopolitan'
+		},
+	},
+
+	['limonade'] = {
+		label = 'limonada',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = 120000, },
+			anim = 'eating',
+			prop = { model = `ng_proc_sodacup_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x limonada'
+		},
+	},
+
+	['tacohot'] = {
+		label = 'taco picante',
+		weight = 220,
+		client = {
+			status = {hunger = 125000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_taco_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x taco picante'
+		},
+	},
+
+	['svarak'] = {
+		label = 'copa de Svarak Malina',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_whtwine`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de Svarak Malina'
+		},
+	},
+
+	['costillas'] = {
+		label = 'costillas',
+		weight = 220,
+		client = {
+			status = {hunger = 750000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x costillas'
+		},
+	},
+
+	['barbadragon'] = {
+		label = 'Barba de Dragón',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Barba de Dragón',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908853175533609/heladofrito.png?width=365&height=416',
+		},
+	},
+
+	['white_wine'] = {
+		label = 'Vino blanco',
+		weight = 220,
+		client = {
+			status = {thirst = 150000, drunk = 100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_whtwine`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Vino blanco',
+			image = 'https://cdn.discordapp.com/attachments/902127023948955648/968908295609909278/vinoblanco.png',
+		},
+	},
+
+	['moussemango'] = {
+		label = 'Mousse de Mango',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Mousse de Mango',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908997451194458/postremango.png?width=960&height=403',
+		},
+	},
+
+	['takishot'] = {
+		label = 'bolsa de chips picante',
+		weight = 220,
+		client = {
+			status = {hunger = 90000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `v_ret_ml_chips2`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x bolsa de chips picante'
+		},
+	},
+
+	['vodka'] = {
+		label = 'vaso de vodka',
+		weight = 220,
+		client = {
+			status = {hunger = -25000, thirst = 200000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_vodka_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de vodka'
+		},
+	},
+
+	['quesadilla'] = {
+		label = 'quesadilla',
+		weight = 220,
+		client = {
+			status = {hunger = 140000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_food_bs_chips`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x quesadilla'
+		},
+	},
+
+	['ron'] = {
+		label = 'vaso de ron',
+		weight = 220,
+		client = {
+			status = {hunger = -35000, thirst = 200000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de ron'
+		},
+	},
+
+	['pastelluna'] = {
+		label = 'Pastel de Luna',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Pastel de Luna',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908874713301072/pastelluna.png?width=416&height=416',
+		},
+	},
+
+	['sexbeach'] = {
+		label = 'copa de Sex on the Beach',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_pinacolada`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de Sex on the Beach'
+		},
+	},
+
+	['tamal'] = {
+		label = 'tamal',
+		weight = 220,
+		client = {
+			status = {hunger = 120000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `ng_proc_food_nana1a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x tamal'
+		},
+	},
+
+	['monster'] = {
+		label = 'Monster',
+		weight = 220,
+		client = {
+			status = {hunger = 30000, thirst = 125000, drunk = -120000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `g_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Monster'
+		},
+	},
+
+	['ensaladilla'] = {
+		label = 'Ensaladilla',
+		weight = 220,
+		client = {
+			status = {hunger = 500000, thirst = -20000, drunk = -75000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Ensaladilla',
+			image = 'https://cdn.discordapp.com/attachments/902127023948955648/968908293080743946/ensaladilla.jpg',
+		},
+	},
+
+	['lapas'] = {
+		label = 'Lapas',
+		weight = 220,
+		client = {
+			status = {hunger = 500000, thirst = -20000, drunk = -75000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Lapas',
+			image = 'https://cdn.discordapp.com/attachments/902127023948955648/968908293667966986/lapas.jpg',
+		},
+	},
+
+	['platanos'] = {
+		label = 'platanos',
+		weight = 220,
+		client = {
+			status = {hunger = 50000, thirst = 10000, drunk = -50000, },
+			anim = 'eating',
+			prop = { model = `v_res_tre_banana`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x platanos'
+		},
+	},
+
+	['rollitos'] = {
+		label = 'Rollitos de Primavera',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Rollitos de Primavera',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908901175144468/rollitos.png?width=766&height=416',
+		},
+	},
+
+	['whiskey'] = {
+		label = 'vaso de whiskey',
+		weight = 220,
+		client = {
+			status = {hunger = -30000, thirst = 200000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de whiskey'
+		},
+	},
+
+	['takis'] = {
+		label = 'bolsa de chips al pastor',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -5000, },
+			anim = 'eating',
+			prop = { model = `vv_ret_ml_chips1`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x bolsa de chips al pastor'
+		},
+	},
+
+	['taco'] = {
+		label = 'taco',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, },
+			anim = 'eating',
+			prop = { model = `prop_taco_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x taco'
+		},
+	},
+
+	['garbanzas'] = {
+		label = 'garbanzas',
+		weight = 220,
+		client = {
+			status = {hunger = 500000, thirst = -50000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x garbanzas'
+		},
+	},
+
+	['principealberto'] = {
+		label = 'Príncipe Alberto',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Príncipe Alberto'
+		},
+	},
+
+	['oreo'] = {
+		label = 'oreo',
+		weight = 220,
+		client = {
+			status = {hunger = 50000, thirst = -5000, drunk = -75000, },
+			anim = 'eating',
+			prop = { model = `prop_candy_pqs`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x oreo'
+		},
+	},
+
+	['burritohot'] = {
+		label = 'burrito picante',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_food_burg2`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x burrito picante'
+		},
+	},
+
+	['gongbao'] = {
+		label = 'Pollo Gong Bao',
+		weight = 220,
+		client = {
+			status = {hunger = 500000, thirst = -30000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Pollo Gong Bao',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908874931372163/pollogong.png',
+		},
+	},
+
+	['mojorojo'] = {
+		label = 'mojo rojo',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -75000, },
+			anim = 'eating',
+			prop = { model = `prop_food_ketchup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x mojo rojo'
+		},
+	},
+
+	['empanada'] = {
+		label = 'empanada',
+		weight = 220,
+		client = {
+			status = {hunger = 130000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_food_chips`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x empanada'
+		},
+	},
+
+	['medagua'] = {
+		label = 'botella de agua vitaminada',
+		weight = 220,
+		client = {
+			status = {hunger = 10000, thirst = 250000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `p_amb_bag_bottle_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x botella de agua vitaminada'
+		},
+	},
+
+	['arroztres'] = {
+		label = 'Arroz Tres Delicias',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Arroz Tres Delicias',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908814831222864/arroztres.png',
+		},
+	},
+
+	['papas_arrugadas'] = {
+		label = 'Papas arrugadas',
+		weight = 220,
+		client = {
+			status = {hunger = 750000, thirst = -20000, drunk = -100000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Papas arrugadas',
+			image = '',
+		},
+	},
+
+	['bistec'] = {
+		label = 'bistec 100% Angus',
+		weight = 220,
+		client = {
+			status = {hunger = 650000, thirst = -40000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x bistec 100% Angus'
+		},
+	},
+
+	['nachoscan'] = {
+		label = 'Nachos Canarios',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Nachos Canarios',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968909016073912340/totopos.png',
+		},
+	},
+
+	['hongdou'] = {
+		label = 'Hong Dou Tang',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Hong Dou Tang',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908875141107772/hongdou.png',
+		},
+	},
+
+	['foodbird'] = {
+		label = 'comida para aves',
+		weight = 220,
+		client = {
+			status = {hunger = 150000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x comida para aves'
+		},
+	},
+
+	['foodcat'] = {
+		label = 'comida para gatos',
+		weight = 220,
+		client = {
+			status = {hunger = 150000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x comida para gatos'
+		},
+	},
+
+	['ensalada'] = {
+		label = 'ensalada',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = 15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x ensalada'
+		},
+	},
+
+	['foodfish'] = {
+		label = 'comida para peces',
+		weight = 220,
+		client = {
+			status = {hunger = 150000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x comida para peces'
+		},
+	},
+
+	['zumo_fruta'] = {
+		label = 'zumo de frutas',
+		weight = 220,
+		client = {
+			status = {hunger = 20000, thirst = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_cs_paper_cup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x zumo de frutas'
+		},
+	},
+
+	['icetea'] = {
+		label = 'té helado',
+		weight = 220,
+		client = {
+			status = {hunger = 20000, thirst = 100000, drunk = -100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `v_ret_fh_bscup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x té helado'
+		},
+	},
+
+	['pan'] = {
+		label = 'pan',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, },
+			anim = 'eating',
+			prop = { model = `v_ret_247_bread1`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x pan'
+		},
+	},
+
+	['foodfarm'] = {
+		label = 'comida para animales de granja',
+		weight = 220,
+		client = {
+			status = {hunger = 150000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x comida para animales de granja'
+		},
+	},
+
+	['manhattan'] = {
+		label = 'vaso de Manhattan',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de Manhattan'
+		},
+	},
+
+	['pulpo_gallega'] = {
+		label = 'Pulpo a la gallega',
+		weight = 220,
+		client = {
+			status = {hunger = 300000, thirst = -30000, drunk = -50000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Pulpo a la gallega',
+			image = 'https://cdn.discordapp.com/attachments/902127023948955648/968908294880133140/pulpo.jpg',
+		},
+	},
+
+	['matacitron'] = {
+		label = 'vaso de matacitron',
+		weight = 220,
+		client = {
+			status = {hunger = -10000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de matacitron'
+		},
+	},
+
+	['bread'] = {
+		label = 'bocadillo',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, },
+			anim = 'eating',
+			prop = { model = `prop_food_bs_burger2`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x bocadillo'
+		},
+	},
+
+	['calamares_romana'] = {
+		label = 'Calamares a la romana',
+		weight = 220,
+		client = {
+			status = {hunger = 300000, thirst = -20000, drunk = -50000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Calamares a la romana',
+			image = 'https://cdn.discordapp.com/attachments/902127023948955648/968908292749406249/calamares.png',
+		},
+	},
+
+	['adios_vanilla'] = {
+		label = 'Adiós Motherfucker',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Adiós Motherfucker'
+		},
+	},
+
+	['redbull'] = {
+		label = 'Red Bull',
+		weight = 220,
+		client = {
+			status = {hunger = 25000, thirst = 150000, drunk = -150000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_orang_can_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Red Bull'
+		},
+	},
+
+	['vieja_plancha'] = {
+		label = 'Vieja a la plancha',
+		weight = 220,
+		client = {
+			status = {hunger = 750000, thirst = -20000, drunk = -100000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Vieja a la plancha',
+			image = 'https://cdn.discordapp.com/attachments/902127023948955648/968908295245008996/viejaplancha.jpg',
+		},
+	},
+
+	['escaldon'] = {
+		label = 'escaldón de gofio',
+		weight = 220,
+		client = {
+			status = {hunger = 400000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x escaldón de gofio'
+		},
+	},
+
+	['tequipaf'] = {
+		label = 'copa de tequila paf recette',
+		weight = 220,
+		client = {
+			status = {hunger = -15000, thirst = 20000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_pinacolada`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de tequila paf recette'
+		},
+	},
+
+	['bizcochogofio'] = {
+		label = 'Bizcocho de Gofio con Bienmesabe',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Bizcocho de Gofio con Bienmesabe',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908975594688582/bizcocho.png?width=676&height=676',
+		},
+	},
+
+	['hotdog'] = {
+		label = 'perro caliente',
+		weight = 220,
+		client = {
+			status = {hunger = 90000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_hotdog_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x perro caliente'
+		},
+	},
+
+	['tartamaracuya'] = {
+		label = 'Tarta de Queso con Maracuyá',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Tarta de Queso con Maracuyá',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908975842144356/maracuya.png',
+		},
+	},
+
+	['tresleches'] = {
+		label = 'Torta Tres Leches',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Torta Tres Leches',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968909016484937768/tresleches.png?width=676&height=676',
+		},
+	},
+
+	['quesadillamex'] = {
+		label = 'Quesadilla',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Quesadilla',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908997711265932/quesadilla.png',
+		},
+	},
+
+	['nachosmex'] = {
+		label = 'Nachos Mexicanos',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Nachos Mexicanos',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908976286732338/nachos.png',
+		},
+	},
+
+	['tequeños'] = {
+		label = 'La Ruleta Tequeña',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x La Ruleta Tequeña',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968909015784493136/tequenos.png',
+		},
+	},
+
+	['chocolate'] = {
+		label = 'chocolate',
+		weight = 220,
+		client = {
+			status = {hunger = 75000, thirst = -10000, drunk = -80000, },
+			anim = 'eating',
+			prop = { model = `prop_choc_ego`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x chocolate'
+		},
+	},
+
+	['jiandui'] = {
+		label = 'Jian Dui',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Jian Dui',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908875359215636/jiandui.png?width=552&height=416',
+		},
+	},
+
+	['heladofrito'] = {
+		label = 'Helado Frito',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Helado Frito',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908814625697892/chowmein.png?width=768&height=330',
+		},
+	},
+
+	['chowmein'] = {
+		label = 'Chow Mein',
+		weight = 220,
+		client = {
+			status = {hunger = 500000, thirst = -30000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Chow Mein',
+			image = 'URL directa de la imagen',
+		},
+	},
+
+	['chips'] = {
+		label = 'bolsa de papas',
+		weight = 220,
+		client = {
+			status = {hunger = 75000, thirst = -10000, },
+			anim = 'eating',
+			prop = { model = `v_ret_ml_chips3`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x bolsa de papas'
+		},
+	},
+
+	['tofu'] = {
+		label = 'Tofu Mapo',
+		weight = 220,
+		client = {
+			status = {hunger = 500000, thirst = -30000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Tofu Mapo',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908901389066320/tofu.png?width=416&height=416',
+		},
+	},
+
+	['ensaladachina'] = {
+		label = 'Ensalada de Col China',
+		weight = 220,
+		client = {
+			status = {hunger = 195000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Ensalada de Col China',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908853410422875/ensaladacol.png?width=638&height=416',
+		},
+	},
+
+	['sopafideos'] = {
+		label = 'Sopa de Fideos Chinos',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Sopa de Fideos Chinos',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908853678837871/fideoschinos.png?width=766&height=416',
+		},
+	},
+
+	['mojito'] = {
+		label = 'mojito',
+		weight = 220,
+		client = {
+			status = {hunger = -35000, thirst = 200000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x mojito'
+		},
+	},
+
+	['rhum'] = {
+		label = 'vaso de ron reserva',
+		weight = 220,
+		client = {
+			status = {hunger = -35000, thirst = 200000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de ron reserva'
+		},
+	},
+
+	['vinodepata'] = {
+		label = 'vino de pata',
+		weight = 220,
+		client = {
+			status = {thirst = 150000, drunk = 100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_redwine`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vino de pata'
+		},
+	},
+
+	['mojoverde'] = {
+		label = 'mojo verde',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -50000, },
+			anim = 'eating',
+			prop = { model = `prop_food_mustard`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x mojo verde'
+		},
+	},
+
+	['roncoke'] = {
+		label = 'vaso de ron con cola',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de ron con cola'
+		},
+	},
+
+	['beerzero'] = {
+		label = 'cerveza sin alcohol',
+		weight = 220,
+		client = {
+			status = {hunger = -25000, thirst = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_beerdusche`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x cerveza sin alcohol'
+		},
+	},
+
+	['mimosa'] = {
+		label = 'copa de Mimosa-la',
+		weight = 220,
+		client = {
+			status = {thirst = -5000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_champ`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de Mimosa-la'
+		},
+	},
+
+	['vinoafrutado'] = {
+		label = 'vino afrutado',
+		weight = 220,
+		client = {
+			status = {thirst = 150000, drunk = 100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_redwine`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vino afrutado'
+		},
+	},
+
+	['polvitouruguayo'] = {
+		label = 'polvito uruguayo',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x polvito uruguayo'
+		},
+	},
+
+	['sandwichbean'] = {
+		label = 'sandwich bean especial',
+		weight = 220,
+		client = {
+			status = {hunger = 175000, thirst = -5000, },
+			anim = 'eating',
+			prop = { model = `prop_sandwich_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x sandwich bean especial'
+		},
+	},
+
+	['cupcake'] = {
+		label = 'magdalena',
+		weight = 220,
+		client = {
+			status = {hunger = 50000, thirst = -5000, drunk = -75000, },
+			anim = 'eating',
+			prop = { model = `v_res_cakedome`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x magdalena'
+		},
+	},
+
+	['solomillo'] = {
+		label = 'solomillo',
+		weight = 220,
+		client = {
+			status = {hunger = 750000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x solomillo'
+		},
+	},
+
+	['pocima'] = {
+		label = 'pócima',
+		weight = 220,
+		client = {
+			status = {hunger = -10000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x pócima'
+		},
+	},
+
+	['carnecochino'] = {
+		label = 'carne de cochino',
+		weight = 220,
+		client = {
+			status = {hunger = 600000, thirst = -40000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x carne de cochino'
+		},
+	},
+
+	['bienmesabe'] = {
+		label = 'bienmesabe palmero',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, thirst = -20000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x bienmesabe palmero'
+		},
+	},
+
+	['tequila'] = {
+		label = 'tequila',
+		weight = 220,
+		client = {
+			status = {hunger = -30000, thirst = 20000, drunk = 400000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x tequila'
+		},
+	},
+
+	['foodcatp'] = {
+		label = 'comida para gatos premium',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, },
+			anim = 'eating',
+			prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x comida para gatos premium'
+		},
+	},
+
+	['ruso'] = {
+		label = 'vaso de ruso blanco',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de ruso blanco'
+		},
+	},
+
+	['tequilala'] = {
+		label = 'copa de tequila 50 años',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_whtwine`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de tequila 50 años'
+		},
+	},
+
+	['cubata'] = {
+		label = 'cubata',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x cubata'
+		},
+	},
+
+	['sandwich'] = {
+		label = 'sandwich',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -10000, },
+			anim = 'eating',
+			prop = { model = `prop_sandwich_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x sandwich'
+		},
+	},
+
+	['medbocata'] = {
+		label = 'bocata integral especial',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, },
+			anim = 'eating',
+			prop = { model = `prop_food_bs_burger2`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x bocata integral especial'
+		},
+	},
+
+	['gintonic'] = {
+		label = 'gintonic',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_whtwine`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x gintonic'
+		},
+	},
+
+	['jagerbomb'] = {
+		label = 'vaso de Jäger Bomb',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de Jäger Bomb'
+		},
+	},
+
+	['paella_marisco'] = {
+		label = 'Paella de marisco',
+		weight = 220,
+		client = {
+			status = {hunger = 750000, thirst = -40000, drunk = -100000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Paella de marisco',
+			image = 'https://cdn.discordapp.com/attachments/902127023948955648/968908293944786964/paella.png',
+		},
+	},
+
+	['barraquito'] = {
+		label = 'Barraquito',
+		weight = 220,
+		client = {
+			status = {hunger = 10000, thirst = 15000, drunk = -80000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `v_club_vu_coffeecup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Barraquito',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968909091378458754/barraquito.png?width=312&height=675',
+		},
+	},
+
+	['frappuccinobean'] = {
+		label = 'frappuccino bean especial',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = 35000, drunk = -50000, },
+			anim = 'eating',
+			prop = { model = `v_ret_gc_cup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x frappuccino bean especial'
+		},
+	},
+
+	['coffebean'] = {
+		label = 'café bean  especial',
+		weight = 220,
+		client = {
+			status = {hunger = 90000, thirst = 30000, drunk = -50000, },
+			anim = 'eating',
+			prop = { model = `p_ing_coffeecup_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x café bean  especial'
+		},
+	},
+
+	['esquite'] = {
+		label = 'esquite',
+		weight = 220,
+		client = {
+			status = {hunger = 95000, thirst = 20000, },
+			anim = 'eating',
+			prop = { model = `prop_bar_measrjug`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x esquite'
+		},
+	},
+
+	['conhaque'] = {
+		label = 'copa de coñac',
+		weight = 220,
+		client = {
+			status = {hunger = -10000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_redwine`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de coñac'
+		},
+	},
+
+	['ananas'] = {
+		label = 'copa de Ananas Milk',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_pinacolada`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de Ananas Milk'
+		},
+	},
+
+	['ronzumo'] = {
+		label = 'vaso de ron con zumo',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de ron con zumo'
+		},
+	},
+
+	['ovocny'] = {
+		label = 'vaso de Ovocny',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de Ovocny'
+		},
+	},
+
+	['chicles'] = {
+		label = 'chicles',
+		weight = 220,
+		client = {
+			status = {hunger = 5000, thirst = 4000, drunk = -10000, stress = -120000 },
+			anim = 'eating',
+			prop = { model = `prop_candy_pqs`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x chicles'
+		},
+	},
+
+	['cigarett'] = {
+		label = 'cigarrillo',
+		weight = 220,
+		client = {
+			status = { stress = -250000 },
+			command = 'e smoke',
+			prop = { model = `ng_proc_cigarette01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x cigarrillo'
+		},
+	},
+
+	['joint'] = {
+		label = 'porro',
+		weight = 220,
+		client = {
+			status = {drunk = 75000, stress = -450000 },
+			command = 'e smokepot',
+			prop = { model = `p_cs_joint_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x porro'
+		},
+	},
+
+	['pizza'] = {
+		label = 'pizza',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -10000, },
+			anim = 'eating',
+			prop = { model = `prop_sandwich_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x pizza'
+		},
+	},
+
+	['martini'] = {
+		label = 'copa de Martini',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_whtwine`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de Martini'
+		},
+	},
+
+	['burritofarmer'] = {
+		label = 'burrito especial Taco Farmer',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, },
+			anim = 'eating',
+			prop = { model = `prop_food_burg2`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x burrito especial Taco Farmer'
+		},
+	},
+
+	['atole'] = {
+		label = 'atole',
+		weight = 220,
+		client = {
+			status = {hunger = 50000, thirst = 80000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x atole'
+		},
+	},
+
+	['generaltso'] = {
+		label = 'General TSO',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x General TSO',
+			image = 'https://media.discordapp.net/attachments/902127023948955648/968908852890316850/generaltso.png?width=473&height=416',
+		},
+	},
+
+	['wine'] = {
+		label = 'copa de vino',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, thirst = 200000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_drink_redwine`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x copa de vino'
+		},
+	},
+
+	['queso_asado'] = {
+		label = 'Queso Asado',
+		weight = 220,
+		client = {
+			status = {hunger = 500000, thirst = -20000, drunk = -75000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Queso Asado',
+			image = '',
+		},
+	},
+
+	['burrito'] = {
+		label = 'burrito',
+		weight = 220,
+		client = {
+			status = {hunger = 140000, },
+			anim = 'eating',
+			prop = { model = `prop_food_burg2`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x burrito'
+		},
+	},
+
+	['drpepper'] = {
+		label = 'soda Dr.Pepper',
+		weight = 220,
+		client = {
+			status = {hunger = 10000, thirst = 110000, drunk = -25000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x soda Dr.Pepper'
+		},
+	},
+
+	['burger'] = {
+		label = 'hamburguesa',
+		weight = 220,
+		client = {
+			status = {hunger = 250000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_cs_burger_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x hamburguesa'
+		},
+	},
+
+	['longla'] = {
+		label = 'vaso de Long Island-la-la',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de Long Island-la-la'
+		},
+	},
+
 }
