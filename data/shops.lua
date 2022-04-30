@@ -1,3 +1,6 @@
+QueServer = GetConvar("server_number", "1")
+isTencity = (QueServer == "TENCITY")
+
 return {
 	General = {
 		name = '24/7',
@@ -5,8 +8,15 @@ return {
 			id = 59, colour = 69, scale = 0.8
 		}, inventory = {
 			{ name = 'burger', price = 10 },
+			{ name = 'bread', price = 10 },
+			{ name = 'takis', price = 10 },
+			{ name = 'gominolas', price = 10 },
+			{ name = 'chicles', price = 10 },
+			{ name = 'bolcacahuetes', price = 10 },
 			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
+			{ name = (isTencity and 'cola' or 'cocacola'), price = 10 },
+			{ name = 'beer', price = 10 },
+			{ name = 'energy', price = 10 },
 			{ name = 'phone', price = 500 },
 			{ name = 'boombox', price = 5000 },
 			{ name = 'radio', price = 5000 },
@@ -43,6 +53,7 @@ return {
 			id = 280, colour = 26, scale = 1.0
 		}, inventory = {
 			{ name = 'walking_stick', price = 500 },
+			{ name = 'crutches', price = 500 },
 			{ name = 'wheelchair', price = 5000 },
 			{ name = 'stretcher', price = 10000 },
 		}, locations = {

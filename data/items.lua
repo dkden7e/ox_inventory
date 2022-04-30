@@ -466,6 +466,14 @@ return {
 		description = ''
 	},
 
+	['crutches'] = {
+		label = 'Muleta',
+		weight = 5,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
 	['stretcher'] = {
 		label = 'Camilla plegable',
 		weight = 5,
