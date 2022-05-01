@@ -15,7 +15,7 @@ if shared.qtarget then
 			SetNetworkIdCanMigrate(netId, true)
 		end
 
-		exports.ox_inventory:openInventory('dumpster', 'dumpster'..netId)
+		exports[shared.resource]:openInventory('dumpster', 'dumpster'..netId)
 	end
 
 	exports.qtarget:AddTargetModel(Inventory.Dumpsters, {
@@ -69,7 +69,7 @@ end
 exports('Search', Inventory.Search)
 
 local function OpenEvidence()
-	exports.ox_inventory:openInventory('policeevidence')
+	exports[shared.resource]:openInventory('policeevidence')
 end
 
 Inventory.Evidence = setmetatable(data('evidence'), {
@@ -103,7 +103,7 @@ Inventory.Evidence = setmetatable(data('evidence'), {
 })
 
 local function OpenStash(data)
-	exports.ox_inventory:openInventory('stash', data)
+	exports[shared.resource]:openInventory('stash', data)
 end
 
 Inventory.Stashes = setmetatable(data('stashes'), {

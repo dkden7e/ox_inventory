@@ -13,7 +13,7 @@ local function CreateLocationBlip(blipId, name, blip, location)
 end
 
 local function OpenShop(data)
-	exports.ox_inventory:openInventory('shop', data)
+	exports[shared.resource]:openInventory('shop', data)
 end
 
 client.shops = setmetatable(data('shops'), {
@@ -37,7 +37,7 @@ client.shops = setmetatable(data('shops'), {
 									icon = 'fas fa-shopping-basket',
 									label = shop.label or shared.locale('open_shop', shop.name),
 									action = function()
-										exports.ox_inventory:openInventory('shop', {type=type})
+										exports[shared.resource]:openInventory('shop', {type=type})
 									end
 								},
 							},

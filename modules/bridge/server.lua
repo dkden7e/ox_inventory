@@ -70,7 +70,7 @@ if shared.framework == 'esx' then
 		local player = server.GetPlayerFromId(source)
 
 		if player then
-			exports.ox_inventory:setPlayerInventory(player, player?.inventory)
+			exports[shared.resource]:setPlayerInventory(player, player?.inventory)
 		end
 	end)
 end

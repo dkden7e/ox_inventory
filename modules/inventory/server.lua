@@ -195,7 +195,7 @@ end
 ---@param owner string
 ---@param items? table
 --- This should only be utilised internally!
---- To create a stash, please use `exports.ox_inventory:RegisterStash` instead.
+--- To create a stash, please use `exports[shared.resource]:RegisterStash` instead.
 function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, items, groups)
 	if maxWeight then
 		local self = {
@@ -530,7 +530,7 @@ exports('SetMetadata', Inventory.SetMetadata)
 -- todo: add parameter checks to remove need for nil args
 -- todo: add callback with several reasons for failure
 -- ```
--- exports.ox_inventory:AddItem(1, 'bread', 4, nil, nil, function(success, reason)
+-- exports[shared.resource]:AddItem(1, 'bread', 4, nil, nil, function(success, reason)
 -- if not success then
 -- 	if reason == 'overburdened' then
 -- 		TriggerClientEvent('ox_inventory:notify', source, {type = 'error', text = shared.locale('cannot_carry', count, data.label), duration = 2500})
