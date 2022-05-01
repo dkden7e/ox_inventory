@@ -2708,4 +2708,12 @@ return {
 		},
 	},
 
+
+	['cups'] = {
+		label = 'cups',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
 }
