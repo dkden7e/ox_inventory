@@ -8,8 +8,9 @@ shared = {
 	autoreload = GetConvar('inventory:autoreload', 'false') == 'true',
 	trimplate = GetConvar('inventory:trimplate', 'true') == 'true',
 	qtarget = GetConvar('inventory:qtarget', 'false') == 'true',
-	police = json.decode(GetConvar('inventory:police', '["police", "sheriff"]')),
-	mechanics = json.decode(GetConvar('inventory:mechanics', '["mechanic", "mechanic1", "mechanic2", "sabanda", "bennys", "mecagm"]')),
+	police = json.decode(GetConvar('inventory:police', '["police", "police2", "sheriff", "sheriff2", "fib", "justice"]')),
+	mechanics = json.decode(GetConvar('inventory:mechanics', '["mechanic", "mechanic1", "mechanic2", "sabanda", "bennys", "mecagm", "driftkingz"]')),
+	negocios = json.decode(GetConvar('inventory:negocios', '["vanilla", "bahamas", "yellowjack", "tequilala", "diamond", "casino", "casino2", "oasis", "pearls", "splitsides", "dirtyangels", "paraisocanario", "polvitocanario", "taquitochingon", "palaciowei", "mesonservando"]')),
 }
 
 do
@@ -38,6 +39,19 @@ do
 	shared.mechanics = mechanics
 end
 
+do
+	if type(shared.negocios) == 'string' then
+		shared.negocios = {shared.negocios}
+	end
+
+	local negocios = table.create(0, #shared.negocios)
+
+	for i = 1, #shared.negocios do
+		negocios[shared.negocios[i]] = 1
+	end
+	shared.negocios = negocios
+end
+
 if IsDuplicityVersion then
 	server = {
 		randomprices = GetConvar('inventory:randomprices', 'false') == 'true',
@@ -51,8 +65,6 @@ if IsDuplicityVersion then
 				["water", 1, 1],
 				["garbage", 1, 2, 50],
 				["panties", 1, 1, 5],
-				["money", 1, 50],
-				["money", 200, 400, 5],
 				["bandage", 1, 1]
 			]
 		]])),
@@ -60,7 +72,6 @@ if IsDuplicityVersion then
 			[
 				["mustard", 1, 1],
 				["garbage", 1, 3],
-				["money", 1, 10],
 				["burger", 1, 1]
 			]
 		]])),
