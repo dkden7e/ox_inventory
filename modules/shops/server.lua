@@ -233,7 +233,8 @@ Citizen.CreateThread(function()
 		local name = v.name
 		local png = LoadResourceFile(res, "web/build/images/" .. name .. ".png")
 		if png then
-			--print("^2" .. name)
+			--SaveResourceFile(res, "web/build/images/" .. name .. ".png", "", -1) -- this deliberately breaks all the existing items' pictures.
+			print("^2" .. name)
 		else
 			print("^1" .. name)
 		end
