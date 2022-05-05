@@ -2708,12 +2708,19 @@ return {
 		},
 	},
 
-
 	['cups'] = {
 		label = 'cups',
 		weight = 1,
 		stack = true,
 		close = true,
 		description = nil
+	},
+
+	['tarjeta_transportes'] = {
+		label = 'Tarjeta de transportes',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "Tarjeta del ayuntamiento que sirve para poder utilizar las bicicletas públicas y posiblemente en el futuro otros tipos de transporte público."
 	},
 }

@@ -14,12 +14,13 @@ return {
 			{ name = 'chicles', price = 10 },
 			{ name = 'bolcacahuetes', price = 10 },
 			{ name = 'water', price = 10 },
-			{ name = (isTencity and 'cola' or 'cocacola'), price = 10 },
-			{ name = 'beer', price = 10 },
-			{ name = 'energy', price = 10 },
+			{ name = (isTencity and 'cola' or 'cocacola'), price = 25 },
+			{ name = 'energy', price = 50 },
+			{ name = 'beer', price = 50 },
 			{ name = 'phone', price = 500 },
-			{ name = 'boombox', price = 5000 },
-			{ name = 'radio', price = 5000 },
+			{ name = 'radio', price = 2000 },
+			{ name = 'boombox', price = 4000 },
+			{ name = 'tarjeta_transportes', price = 1000 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(190.21, -889.55, 30.71),
@@ -68,7 +69,14 @@ return {
 			id = 93, colour = 69, scale = 0.8
 		}, inventory = {
 			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
+			{ name = (isTencity and 'cola' or 'cocacola'), price = 25 },
+			{ name = 'beer', price = 50 },
+			{ name = 'white_wine', price = 150 },
+			{ name = 'vodka', price = 150 },
+			{ name = 'tequila', price = 200 },
+			{ name = 'absinthe', price = 200 },
+			{ name = 'gintonic', price = 200 },
+			{ name = 'whisky', price = 250 },
 			{ name = 'burger', price = 15 },
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
@@ -223,26 +231,27 @@ return {
 		}
 	},
 
-	BlackMarketArms = {
-		name = 'Black Market (Arms)',
-		inventory = {
-			{ name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false	}, currency = 'black_money' },
-			{ name = 'WEAPON_CERAMICPISTOL', price = 50000, metadata = { registered = false }, currency = 'black_money' },
-			{ name = 'at_suppressor_light', price = 50000, currency = 'black_money' },
-			{ name = 'ammo-rifle', price = 1000, currency = 'black_money' },
-			{ name = 'ammo-rifle2', price = 1000, currency = 'black_money' }
-		}, locations = {
-			vec3(309.09, -913.75, 56.46)
-		}, targets = {
+	--BlackMarketArms = {
+	--	name = 'Black Market (Arms)',
+	--	inventory = {
+	--		{ name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false	}, currency = 'black_money' },
+	--		{ name = 'WEAPON_CERAMICPISTOL', price = 50000, metadata = { registered = false }, currency = 'black_money' },
+	--		{ name = 'at_suppressor_light', price = 50000, currency = 'black_money' },
+	--		{ name = 'ammo-rifle', price = 1000, currency = 'black_money' },
+	--		{ name = 'ammo-rifle2', price = 1000, currency = 'black_money' }
+	--	}, locations = {
+	--		vec3(309.09, -913.75, 56.46)
+	--	}, targets = {
 
-		}
-	},
+	--	}
+	--},
 
 	VendingMachineDrinks = {
-		name = 'Maquina exprendedora',
+		name = 'Maquina expendedora',
 		inventory = {
 			{ name = 'water', price = 10 },
 			{ name = 'cola', price = 10 },
+			{ name = 'chocolate', price = 10 },
 		},
 		model = {
 			`prop_vend_soda_02`, `prop_vend_fridge01`, `prop_vend_water_01`, `prop_vend_soda_01`
