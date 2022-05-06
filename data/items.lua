@@ -1550,7 +1550,7 @@ return {
 		client = {
 			status = {hunger = 100000, thirst = -5000, },
 			anim = 'eating',
-			prop = { model = `vv_ret_ml_chips1`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			prop = { model = `v_ret_ml_chips1`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
 			notification = 'Consumiste 1x bolsa de chips al pastor'
 		},
