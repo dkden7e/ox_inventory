@@ -215,7 +215,7 @@ return {
 	},
 
 	Medicine = {
-		name = 'Medicine Cabinet',
+		name = 'Taquilla de medicinas',
 		groups = {
 			['ambulance'] = 0
 		},

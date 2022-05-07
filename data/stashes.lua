@@ -1,3 +1,6 @@
+QueServer = GetConvar("server_number", "1")
+isTencity = (QueServer == "TENCITY")
+
 return {
 	{
 		coords = vec3(452.3, -991.4, 30.7),
@@ -8,10 +11,10 @@ return {
 			heading = 0,
 			minZ = 29.49,
 			maxZ = 32.09,
-			label = 'Open personal locker'
+			label = 'Abrir taquilla personal'
 		},
 		name = 'policelocker',
-		label = 'Personal locker',
+		label = 'Taquilla personal',
 		owner = true,
 		slots = 70,
 		weight = 70000,
@@ -27,13 +30,70 @@ return {
 			heading = 340,
 			minZ = 43.34,
 			maxZ = 44.74,
-			label = 'Open personal locker'
+			label = 'Abrir taquilla personal'
 		},
 		name = 'emslocker',
-		label = 'Personal Locker',
+		label = 'Taquilla personal',
 		owner = true,
 		slots = 70,
 		weight = 70000,
 		groups = {['ambulance'] = 0}
+	},
+
+	{
+		coords = vec3(-176.38, 311.27, 97.99),
+		target = {
+			loc = vec3(-176.38, 311.27, 97.99),
+			length = 0.6,
+			width = 1.8,
+			heading = 340,
+			minZ = 43.34,
+			maxZ = 44.74,
+			label = 'Abrir despensa'
+		},
+		name = 'palaciowei1',
+		label = 'Despensa del Palacio Wei',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['palaciowei'] = 0}
+	},
+
+	{
+		coords = vec3(826.66, -110.68, 79.77),
+		target = {
+			loc = vec3(826.66, -110.68, 79.77),
+			length = 0.6,
+			width = 1.8,
+			heading = 340,
+			minZ = 43.34,
+			maxZ = 44.74,
+			label = 'Abrir despensa'
+		},
+		name = 'cocktailbar1',
+		label = 'Despensa del Cocktail Bar',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['cocktailbar'] = 0}
+	},
+
+	{
+		coords = vec3(105.5206, -1303.0236, 28.7930),
+		target = {
+			loc = vec3(105.5206, -1303.0236, 28.7930),
+			length = 0.6,
+			width = 1.8,
+			heading = 340,
+			minZ = 43.34,
+			maxZ = 44.74,
+			label = 'Abrir despensa'
+		},
+		name =  (isTencity and 'paraisocanario1' or 'unicorn1'),
+		label = 'Despensa del ' .. (isTencity and 'Paraíso Canario' or 'Vanilla Unicorn'),
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['paraisocanario'] = 0, ['unicorn'] = 0}
 	},
 }
