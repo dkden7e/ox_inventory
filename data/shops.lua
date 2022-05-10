@@ -200,17 +200,70 @@ return {
 		blip = {
 			id = 110, colour = 84, scale = 0.8
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'ammo-rifle', price = 5, },
+			{ name = 'bandage', price = 50 },
+			{ name = 'medikit', price = 500 },
+			{ name = 'armour', price = 1000 },
+			{ name = 'radio', price = 1000 },
+			{ name = 'ammo-9', price = 5, license = 'weapon'},
+			{ name = 'ammo-45', price = 7, license = 'weapon', grade = 3 },
+			{ name = 'ammo-shotgun', price = 50, license = 'weapon', grade = 5 },
+			{ name = 'ammo-rifle', price = 20, license = 'weapon', grade = 6 },
 			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
 			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
+			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} },
 			{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
-			{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
-			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} }
+			{ name = 'WEAPON_G17', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
+			{ name = 'WEAPON_HEAVYPISTOL', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
+			{ name = 'WEAPON_PUMPSHOTGUN', price = 10000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 5 },
+			{ name = 'WEAPON_CARBINERIFLE', price = 15000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 6 },
+			{ name = 'WEAPON_SMOKE', price = 200, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
+			{ name = 'WEAPON_FLASHBANG', price = 10000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 7 },
+			{ name = 'WEAPON_SMOKEGRENADE', price = 10000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 7 },
 		}, locations = {
-			vec3(451.51, -979.44, 30.68)
+			vec3(486.1490, -995.8393, 30.6898), -- MRPD
+			vec3(-430.4039, 5999.2310, 31.7165), -- PALETO LSSD
+			vec3(1846.0941, 3692.8203, 34.2670), -- SANDY LSSD
+			vec3(28.48, -935.52, 29.9), -- FIB
 		}, targets = {
 			{ loc = vec3(453.21, -980.03, 30.68), length = 0.5, width = 3.0, heading = 270.0, minZ = 30.5, maxZ = 32.0, distance = 6 }
+		}
+	},
+
+	PoliceArmoury = {
+		name = 'Armería FIB',
+		groups = {
+			['justice'] = 0,
+			['fib'] = 0
+		},
+		blip = {
+			id = 110, colour = 84, scale = 0.8
+		}, inventory = {
+			{ name = 'bandage', price = 50 },
+			{ name = 'medikit', price = 500 },
+			{ name = 'armour', price = 1000 },
+			{ name = 'radio', price = 1000 },
+			{ name = 'ammo-9', price = 5, license = 'weapon'},
+			{ name = 'ammo-45', price = 7, license = 'weapon', grade = 3 },
+			{ name = 'ammo-shotgun', price = 50, license = 'weapon', grade = 3 },
+			{ name = 'ammo-rifle', price = 20, license = 'weapon', grade = 6 },
+			{ name = 'ammo-heavysniper', price = 250, license = 'weapon', grade = 9 },
+			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
+			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
+			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'FIB'} },
+			{ name = 'WEAPON_G17', price = 500, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 3 },
+			{ name = 'WEAPON_HEAVYPISTOL', price = 1000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 3 },
+			{ name = "WEAPON_PISTOL_MK2", price = 500, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 3 },
+			{ name = "WEAPON_COMBATPISTOL", price = 500, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 3 },
+			{ name = "WEAPON_PUMPSHOTGUN_MK2", price = 5000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 3 },
+			{ name = "WEAPON_CARBINERIFLE_MK2", price = 5000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 3 },
+			{ name = "WEAPON_HEAVYSHOTGUN", price = 50000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 9 },
+			{ name = "WEAPON_HEAVYSNIPER_MK2", price = 80000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 9 },
+			{ name = 'WEAPON_SMOKE', price = 200, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
+			{ name = 'WEAPON_FLASHBANG', price = 10000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 7 },
+			{ name = 'WEAPON_SMOKEGRENADE', price = 10000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 7 },
+		}, locations = {
+			vec3(28.48, -935.52, 29.9), -- FIB
+		}, targets = {
 		}
 	},
 
@@ -226,6 +279,23 @@ return {
 			{ name = 'bandage', price = 5 }
 		}, locations = {
 			vec3(306.3687, -601.5139, 43.28406)
+		}, targets = {
+
+		}
+	},
+
+	Weed = {
+		name = 'Tienda de productos de cultivo',
+		inventory = {
+			{ name = 'wateringcan', price = 100 },
+			{ name = 'plantpot', price = 100 },
+			{ name = 'lowgradefert', price = 100 },
+			{ name = 'highgradefert', price = 200 },
+			{ name = 'drugscales', price = 2500 },
+			{ name = 'ziplock', price = 20 },
+			{ name = 'seed_weed', price = 100 },
+		}, locations = {
+			(isTencity and vec3(2195.4587, 5603.1563, 53.5654) or vec3(2195.4587, 5603.1563, 1000.5654))
 		}, targets = {
 
 		}

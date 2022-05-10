@@ -41,6 +41,44 @@ return {
 	},
 
 	{
+		coords = vec3(18.6, -910.49, 33.9),
+		target = {
+			loc = vec3(18.6, -910.49, 33.9),
+			length = 0.6,
+			width = 1.8,
+			heading = 340,
+			minZ = 43.34,
+			maxZ = 44.74,
+			label = 'Abrir taquilla personal'
+		},
+		name = 'fiblocker',
+		label = 'Taquilla personal',
+		owner = true,
+		slots = 70,
+		weight = 70000,
+		groups = shared.police
+	},
+
+	{
+		coords = vec3(23.36, -937.71, 29.9),
+		target = {
+			loc = vec3(23.36, -937.71, 29.9),
+			length = 0.6,
+			width = 1.8,
+			heading = 340,
+			minZ = 43.34,
+			maxZ = 44.74,
+			label = 'Abrir almacén FIB'
+		},
+		name = 'fibstorage',
+		label = 'Almacén FIB',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = shared.police
+	},
+
+	{
 		coords = vec3(-176.38, 311.27, 97.99),
 		target = {
 			loc = vec3(-176.38, 311.27, 97.99),

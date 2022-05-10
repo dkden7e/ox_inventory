@@ -1,3 +1,6 @@
+local QueServer = GetConvar("server_number", "1")
+local isTencity = (QueServer == "TENCITY")
+
 return {
 	['testburger'] = {
 		label = 'Test Burger',
@@ -2479,7 +2482,7 @@ return {
 	},
 
 	['esquite'] = {
-		label = 'esquite',
+		label = 'Esquite',
 		weight = 220,
 		client = {
 			status = {hunger = 95000, thirst = 20000, },
@@ -2491,7 +2494,7 @@ return {
 	},
 
 	['conhaque'] = {
-		label = 'copa de coñac',
+		label = 'Copa de coñac',
 		weight = 220,
 		client = {
 			status = {hunger = -10000, drunk = 300000, },
@@ -2503,7 +2506,7 @@ return {
 	},
 
 	['ananas'] = {
-		label = 'copa de Ananas Milk',
+		label = 'Copa de Ananas Milk',
 		weight = 220,
 		client = {
 			status = {hunger = -20000, drunk = 200000, },
@@ -2515,7 +2518,7 @@ return {
 	},
 
 	['ronzumo'] = {
-		label = 'vaso de ron con zumo',
+		label = 'Vaso de ron con zumo',
 		weight = 220,
 		client = {
 			status = {hunger = -20000, drunk = 200000, },
@@ -2527,7 +2530,7 @@ return {
 	},
 
 	['ovocny'] = {
-		label = 'vaso de Ovocny',
+		label = 'Vaso de Ovocny',
 		weight = 220,
 		client = {
 			status = {hunger = -20000, drunk = 300000, },
@@ -2539,7 +2542,7 @@ return {
 	},
 
 	['chicles'] = {
-		label = 'chicles',
+		label = 'Chicles',
 		weight = 220,
 		client = {
 			status = {hunger = 5000, thirst = 4000, drunk = -10000, stress = -120000 },
@@ -2551,7 +2554,7 @@ return {
 	},
 
 	['cigarett'] = {
-		label = 'cigarrillo',
+		label = 'Cigarrillo',
 		weight = 220,
 		client = {
 			status = { stress = -250000 },
@@ -2563,7 +2566,7 @@ return {
 	},
 
 	['joint'] = {
-		label = 'porro',
+		label = 'Porro',
 		weight = 220,
 		client = {
 			status = {drunk = 75000, stress = -450000 },
@@ -2575,7 +2578,7 @@ return {
 	},
 
 	['pizza'] = {
-		label = 'pizza',
+		label = 'Pizza',
 		weight = 220,
 		client = {
 			status = {hunger = 100000, thirst = -10000, },
@@ -2587,7 +2590,7 @@ return {
 	},
 
 	['martini'] = {
-		label = 'copa de Martini',
+		label = 'Copa de Martini',
 		weight = 220,
 		client = {
 			status = {hunger = -20000, drunk = 300000, },
@@ -2599,7 +2602,7 @@ return {
 	},
 
 	['burritofarmer'] = {
-		label = 'burrito especial Taco Farmer',
+		label = 'Burrito especial Taco Farmer',
 		weight = 220,
 		client = {
 			status = {hunger = 200000, },
@@ -2611,7 +2614,7 @@ return {
 	},
 
 	['atole'] = {
-		label = 'atole',
+		label = 'Atole',
 		weight = 220,
 		client = {
 			status = {hunger = 50000, thirst = 80000, },
@@ -2636,7 +2639,7 @@ return {
 	},
 
 	['wine'] = {
-		label = 'copa de vino',
+		label = 'Copa de vino',
 		weight = 220,
 		client = {
 			status = {hunger = -20000, thirst = 200000, drunk = 200000, },
@@ -2648,7 +2651,7 @@ return {
 	},
 
 	['queso_asado'] = {
-		label = 'Queso Asado',
+		label = 'Queso asado',
 		weight = 220,
 		client = {
 			status = {hunger = 500000, thirst = -20000, drunk = -75000, },
@@ -2661,7 +2664,7 @@ return {
 	},
 
 	['burrito'] = {
-		label = 'burrito',
+		label = 'Burrito',
 		weight = 220,
 		client = {
 			status = {hunger = 140000, },
@@ -2673,7 +2676,7 @@ return {
 	},
 
 	['drpepper'] = {
-		label = 'soda Dr.Pepper',
+		label = 'Soda Dr.Pepper',
 		weight = 220,
 		client = {
 			status = {hunger = 10000, thirst = 110000, drunk = -25000, },
@@ -2685,7 +2688,7 @@ return {
 	},
 
 	['burger'] = {
-		label = 'hamburguesa',
+		label = 'Hamburguesa',
 		weight = 220,
 		client = {
 			status = {hunger = 250000, thirst = -15000, },
@@ -2722,5 +2725,117 @@ return {
 		stack = true,
 		close = true,
 		description = "Tarjeta del ayuntamiento que sirve para poder utilizar las bicicletas públicas y posiblemente en el futuro otros tipos de transporte público."
+	},
+
+	['bagofdope'] = {
+		label = 'Bolsa de ' .. (isTencity and 'tabaiguana' or 'cannabis') .. '',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['ziplock'] = {
+		label = 'Bolsa ziplock',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drugscales'] = {
+		label = 'Balanza de precisión',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['highgradefemaleseed'] = {
+		label = 'Semilla de ' .. (isTencity and 'tabaiguana' or 'cannabis') .. ' femenina+',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['highgradefert'] = {
+		label = 'Fertilizante de alto grado',
+		weight = 200,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['highgrademaleseed'] = {
+		label = 'Semilla de ' .. (isTencity and 'tabaiguana' or 'cannabis') .. ' masculina+',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['lowgradefemaleseed'] = {
+		label = 'Semilla de ' .. (isTencity and 'tabaiguana' or 'cannabis') .. ' femenina',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['lowgradefert'] = {
+		label = 'Fertilizante barato',
+		weight = 200,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['lowgrademaleseed'] = {
+		label = 'Semilla de ' .. (isTencity and 'tabaiguana' or 'cannabis') .. ' masculina',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['plantpot'] = {
+		label = 'Maceta',
+		weight = 250,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['purifiedwater'] = {
+		label = 'Agua purificada',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['trimmedweed'] = {
+		label = 'Hierba cortada',
+		weight = 10,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['wateringcan'] = {
+		label = 'Regadera',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['seed_weed'] = {
+		label = 'Semillas de ' .. (isTencity and 'tabaiguana' or 'cannabis'),
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
 	},
 }

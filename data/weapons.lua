@@ -247,8 +247,20 @@ return {
 			durability = 0.1,
 		},
 		['WEAPON_GRENADE'] = {
-			label = 'Granada',
+			label = 'Granada HE',
 			description = 'Quita la anilla, suéltala y corre, sencillo? más te vale que estes lejos cuando explote.',
+			weight = 600,
+			throwable = true,
+		},
+		['WEAPON_SMOK2GRENADE'] = {
+			label = 'Granada de humo',
+			description = 'Genera una gran cantidad de humo no tóxico que dificulta la visión.',
+			weight = 600,
+			throwable = true,
+		},
+		['WEAPON_FLASHBANG'] = {
+			label = 'Flashbang',
+			description = 'Genera un shock lumínico y sónico que causa aturdimiento temporal.',
 			weight = 600,
 			throwable = true,
 		},
@@ -630,6 +642,27 @@ return {
 			description = 'La favorita de los locos de la supervivencia apocalípticos y de todos los padres violentos. Al parecer, también hace las veces de herramienta.',
 			weight = 2500,
 			durability = 0.1,
+		},
+		['WEAPON_G17'] = {
+			label = 'Glock G17',
+			description = 'Oficiales de todo el mundo confían en ella para el cumplimiento de su deber cotidiano, a causa de su insuperada confiabilidad, excepcional capacidad del cargador estándar de 17 cartuchos, así como su reducido peso.',
+			weight = 900,
+			durability = 0.1,
+			ammoname = 'ammo-9'
+		},
+		['WEAPON_M4'] = {
+			label = 'Carabina M4',
+			description = 'Arma principal de infantería estándar del Ejército de los Estados Unidos, y suele ser utilizada por múltiples Ejércitos y numerosas unidades policiales de élite, como los SWAT.',
+			weight = 3600,
+			durability = 0.1,
+			ammoname = 'ammo-rifle'
+		},
+		['WEAPON_M870'] = {
+			label = 'Remington M870',
+			description = 'La M870 es ampliamente empleada por civiles para tiro deportivo, cacería y defensa personal. También es habitualmente empleada por agencias policiales y fuerzas armadas alrededor del mundo.',
+			weight = 3600,
+			durability = 0.1,
+			ammoname = 'ammo-shotgun'
 		},
 	},
 
