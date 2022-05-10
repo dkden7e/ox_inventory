@@ -693,7 +693,7 @@ function Inventory.RemoveItem(inv, item, count, metadata, slot)
 		local removed, total, slots = 0, count, {}
 		if slot and itemSlots[slot] then
 			removed = count
-			Inventory.SetSlot(inv, item, -count, metadata, slot)
+			Inventory.SetSlot(inv, item, -count, inv.items[slot].metadata, slot)
 			slots[#slots+1] = inv.items[slot] or slot
 		elseif itemSlots and totalCount > 0 then
 			for k, v in pairs(itemSlots) do
@@ -703,7 +703,7 @@ function Inventory.RemoveItem(inv, item, count, metadata, slot)
 						inv.items[k] = nil
 						slots[#slots+1] = inv.items[k] or k
 					elseif v > count then
-						Inventory.SetSlot(inv, item, -count, metadata, k)
+						Inventory.SetSlot(inv, item, -count, inv.items[k].metadata, k)
 						slots[#slots+1] = inv.items[k] or k
 						removed = total
 						count = v - count
@@ -1081,11 +1081,15 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 
 					if next(items) then
 						resp = { weight = playerInventory.weight, items = items }
-						if shared.framework == 'esx' and fromInventory.type == 'player' or fromInventory.type == 'otherplayer' then
-							Inventory.SyncInventory(fromInventory)
-						end
-						if shared.framework == 'esx' and not sameInventory and (toInventory.type == 'player' or toInventory.type == 'otherplayer') then
-							Inventory.SyncInventory(toInventory)
+
+						if shared.framework == 'esx' then
+							if fromInventory.player then
+								Inventory.SyncInventory(fromInventory)
+							end
+
+							if toInventory.player and not sameInventory then
+								Inventory.SyncInventory(toInventory)
+							end
 						end
 					end
 
