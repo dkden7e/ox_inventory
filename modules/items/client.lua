@@ -75,7 +75,8 @@ Item('parachute', function(data, slot)
 end)
 
 Item('phone', function(data, slot)
-	exports.npwd:setPhoneVisible(not exports.npwd:isPhoneVisible())
+	--exports.npwd:setPhoneVisible(not exports.npwd:isPhoneVisible())
+	ExecuteCommand("openphone")
 end)
 
 -----------------------------------------------------------------------------------------------
