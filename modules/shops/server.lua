@@ -183,19 +183,20 @@ Citizen.CreateThread(function()
 	Citizen.Wait(0)
 	local ItemList = shared.items
 
-	local allItemsShop, excluded, step = {}, { money = true, black_money = true }, 0
+	local allItemsShop, labelToName, excluded, step = {}, {}, { money = true, black_money = true }, 0
 	repeat
 		local temp = {}
 		for _, v in pairs(ItemList) do
 			if (step == 0 and v.type == "Items" and not excluded[v.name]) or (step == 1 and v.type == "Ammo") or (step == 2 and (v.type == "Components" or string.lower(v.type) == "skin" or string.lower(v.type) == "barrel" or string.lower(v.type) == "sight" or string.lower(v.type) == "magazine" or string.lower(v.type) == "grip")) or (step == 3 and v.type == "Weapons" and not v.throwable and not v.ammo) or (step == 4 and v.type == "Weapons" and v.ammo) or (step == 5 and v.type == "Weapons" and v.throwable) then
-				table.insert(temp, v.name )
+				table.insert(temp, v.label)
+				labelToName[v.label] = v.name
 			end
 		end
 
 		table.sort(temp)
 
 		for i = 1, #temp do
-			allItemsShop[#allItemsShop+1] = temp[i]
+			allItemsShop[#allItemsShop+1] = labelToName[temp[i]]
 		end
 
 		step += 1
