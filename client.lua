@@ -401,12 +401,15 @@ end
 ---@return boolean
 local function canOpenTarget(ped)
 	return IsPedFatallyInjured(ped)
+	or IsPlayerDead(ped)
 	or IsEntityPlayingAnim(ped, 'dead', 'dead_a', 3)
 	or GetPedConfigFlag(ped, 120, true)
 	or IsEntityPlayingAnim(ped, 'mp_arresting', 'idle', 3)
 	or IsEntityPlayingAnim(ped, 'missminuteman_1ig_2', 'handsup_base', 3)
 	or IsEntityPlayingAnim(ped, 'missminuteman_1ig_2', 'handsup_enter', 3)
 	or IsEntityPlayingAnim(ped, 'random@mugging3', 'handsup_standing_base', 3)
+	or IsEntityPlayingAnim(ped, "random@arrests@busted", "idle_a", 3)
+	or IsPedRagdoll(ped)
 end
 
 local function openNearbyInventory()
