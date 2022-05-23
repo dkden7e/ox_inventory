@@ -1138,7 +1138,7 @@ return {
 		client = {
 			status = {hunger = 30000, thirst = 125000, drunk = -120000, },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `g_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
 			notification = 'Consumiste 1x Monster'
 		},
@@ -1478,7 +1478,7 @@ return {
 		client = {
 			status = {hunger = 30000, thirst = 125000, drunk = -120000, },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `g_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
 			notification = 'Consumiste 1x Monster'
 		},
@@ -2656,7 +2656,7 @@ return {
 		client = {
 			status = {hunger = 500000, thirst = -20000, drunk = -75000, },
 			anim = 'eating',
-			prop = { model = `prop_cs_plate_03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
 			notification = 'Consumiste 1x Queso Asado',
 			image = '',
@@ -2849,7 +2849,7 @@ return {
 
 	['ladder'] = {
 		label = 'escalera de mano',
-		weight = 15,
+		weight = 10000,
 		stack = true,
 		close = true,
 		description = nil
@@ -2982,4 +2982,125 @@ return {
 		close = true,
 		description = nil
 	},
+
+	['sparewheel'] = {
+		label = 'rueda de repuesto',
+		weight = 15,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['fish'] = {
+		label = 'pescado',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['fishbait'] = {
+		label = 'cebo de pescado',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['fishingrod'] = {
+		label = 'caña de pescar',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['gym_membership'] = {
+		label = 'membresía gymrondón',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['protein_shake'] = {
+		label = 'batido de proteínas',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['shark'] = {
+		label = 'carne de tiburón',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['sportlunch'] = {
+		label = 'almuerzo deportivo',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['turtle'] = {
+		label = 'carne de tortuga',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['turtlebait'] = {
+		label = 'cebo de tortuga',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['gameboy'] = {
+		label = 'gameboy',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['rctransport'] = {
+		label = 'transporte vehículos aereos',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['scratchcard'] = {
+		label = 'rasca y gana 2',
+		weight = 15,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['parcel'] = {
+		label = 'Paquete de envío',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['letter'] = {
+		label = 'Carta certificada',
+		weight = 15,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
 }
