@@ -282,7 +282,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = ''
+		description = 'Producto de limpieza multiusos'
 	},
 
 	['hd_cloth'] = {
@@ -2722,14 +2722,14 @@ return {
 	['tarjeta_transportes'] = {
 		label = 'Tarjeta de transportes',
 		weight = 1,
-		stack = true,
+		stack = false,
 		close = true,
 		description = "Tarjeta del ayuntamiento que sirve para poder utilizar las bicicletas públicas y posiblemente en el futuro otros tipos de transporte público."
 	},
 
 	['bagofdope'] = {
 		label = 'Bolsa de ' .. (isTencity and 'tabaiguana' or 'cannabis') .. '',
-		weight = 1,
+		weight = 50,
 		stack = true,
 		close = true,
 		description = nil
@@ -2745,7 +2745,7 @@ return {
 
 	['drugscales'] = {
 		label = 'Balanza de precisión',
-		weight = 1,
+		weight = 250,
 		stack = true,
 		close = true,
 		description = nil
@@ -2834,6 +2834,150 @@ return {
 	['seed_weed'] = {
 		label = 'Semillas de ' .. (isTencity and 'tabaiguana' or 'cannabis'),
 		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['dopebag'] = {
+		label = 'bolsa ziplock',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['ladder'] = {
+		label = 'escalera de mano',
+		weight = 15,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['largebackpack'] = {
+		label = 'Mochila grande',
+		weight = 15,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['mediumbackpack'] = {
+		label = 'Mochila mediana',
+		weight = 10,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['smallbackpack'] = {
+		label = 'Mochila pequeña',
+		weight = 5,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['calculator'] = {
+		label = 'calculadora',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['campfire'] = {
+		label = 'campfire',
+		weight = 10,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['chair'] = {
+		label = 'chair',
+		weight = 10,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['chair2'] = {
+		label = 'chair 2',
+		weight = 10,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['comic_book_1'] = {
+		label = 'periódico',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['comic_book_2'] = {
+		label = 'comic de batman',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['comic_book_3'] = {
+		label = 'comic de legendary starlord',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['raspa'] = {
+		label = 'rasca y gana',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['sparewheel'] = {
+		label = 'rueda de repuesto',
+		weight = 15,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['table'] = {
+		label = 'table',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['tent'] = {
+		label = 'tent',
+		weight = 4,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['tent2'] = {
+		label = 'tent 2',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['tent3'] = {
+		label = 'tent 3',
+		weight = 10,
 		stack = true,
 		close = true,
 		description = nil
