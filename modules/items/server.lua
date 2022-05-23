@@ -177,11 +177,8 @@ local function GenerateText(num)
 end
 
 local function GenerateSerial(text)
-	if text and text:len() > 3 then
-		return text
-	end
-
-	return ('%s%s%s'):format(math.random(100000,999999), text == nil and GenerateText(3) or text, math.random(100000,999999))
+	math.randomseed(os.time()+GetGameTimer())
+	return ('%s%s%s'):format(text, math.random(100000000,9999999999), string.char(math.random(65, 90))..string.char(math.random(65, 90)))
 end
 
 local Inventory
