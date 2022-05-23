@@ -80,29 +80,29 @@ Inventory.Evidence = setmetatable(data('evidence'), {
 			end
 
 			if client.hasGroup(shared.police) then
-				if shared.qtarget then
-					if evidence.target then
-						exports.qtarget:RemoveZone(evidence.target.name)
-						exports.qtarget:AddBoxZone(evidence.target.name, evidence.target.loc, evidence.target.length or 0.5, evidence.target.width or 0.5,
-						{
-							name = evidence.target.name,
-							heading = evidence.target.heading or 0.0,
-							debugPoly = false,
-							minZ = evidence.target.minZ,
-							maxZ = evidence.target.maxZ
-						}, {
-							options = {
-								{
-									icon = 'fas fa-warehouse',
-									label = shared.locale('open_police_evidence'),
-									job = shared.police,
-									action = openEvidence
-								},
-							},
-							distance = evidence.target.distance or 2.0
-						})
-					end
-				else
+				-- if shared.qtarget then
+				-- 	if evidence.target then
+				-- 		exports.qtarget:RemoveZone(evidence.target.name)
+				-- 		exports.qtarget:AddBoxZone(evidence.target.name, evidence.target.loc, evidence.target.length or 0.5, evidence.target.width or 0.5,
+				-- 		{
+				-- 			name = evidence.target.name,
+				-- 			heading = evidence.target.heading or 0.0,
+				-- 			debugPoly = false,
+				-- 			minZ = evidence.target.minZ,
+				-- 			maxZ = evidence.target.maxZ
+				-- 		}, {
+				-- 			options = {
+				-- 				{
+				-- 					icon = 'fas fa-warehouse',
+				-- 					label = shared.locale('open_police_evidence'),
+				-- 					job = shared.police,
+				-- 					action = openEvidence
+				-- 				},
+				-- 			},
+				-- 			distance = evidence.target.distance or 2.0
+				-- 		})
+				-- 	end
+				-- else
 					local point = lib.points.new(evidence.coords, 16, { inv = 'policeevidence' })
 
 					function point:nearby()
@@ -115,7 +115,7 @@ Inventory.Evidence = setmetatable(data('evidence'), {
 
 					evidence.point = point
 					evidence.target = nil
-				end
+				-- end
 			end
 		end
 	end
@@ -135,30 +135,28 @@ Inventory.Stashes = setmetatable(data('stashes'), {
 			end
 
 			if not stash.groups or client.hasGroup(stash.groups) then
-				if shared.qtarget then
-					if stash.target then
-						exports.qtarget:RemoveZone(stash.name)
-						exports.qtarget:AddBoxZone(stash.name, stash.target.loc, stash.target.length or 0.5, stash.target.width or 0.5,
-						{
-							name = stash.name,
-							heading = stash.target.heading or 0.0,
-							debugPoly = false,
-							minZ = stash.target.minZ,
-							maxZ = stash.target.maxZ
-						}, {
-							options = {
-								{
-									icon = stash.target.icon or 'fas fa-warehouse',
-									label = stash.target.label or shared.locale('open_stash'),
-									job = stash.groups,
-									action = function()
-										OpenStash({id=id})
-									end
-								},
+				if shared.qtarget and stash.target then
+					exports.qtarget:RemoveZone(stash.name)
+					exports.qtarget:AddBoxZone(stash.name, stash.target.loc, stash.target.length or 0.5, stash.target.width or 0.5,
+					{
+						name = stash.name,
+						heading = stash.target.heading or 0.0,
+						debugPoly = false,
+						minZ = stash.target.minZ,
+						maxZ = stash.target.maxZ
+					}, {
+						options = {
+							{
+								icon = stash.target.icon or 'fas fa-warehouse',
+								label = stash.target.label or shared.locale('open_stash'),
+								job = stash.groups,
+								action = function()
+									OpenStash({id=id})
+								end
 							},
-							distance = stash.target.distance or 3.0
-						})
-					end
+						},
+						distance = stash.target.distance or 3.0
+					})
 				else
 					local point = lib.points.new(stash.coords, 16, { inv = 'stash', invId = id})
 
