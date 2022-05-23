@@ -22,5 +22,17 @@ return {
 			minZ = 29.09,
 			maxZ = 31.89
 		}
+	},
+	{
+		coords = vec3(-454.45, 6014.97, 31.72), -- LSSD Paleto
+		target = { -- qtarget support
+			name = 'lssd_evidence', -- name of zone must be uniuqe
+			loc = vec3(-454.45, 6014.97, 31.72),
+			length = 1.4,
+			width = 3.2,
+			heading = 0,
+			minZ = 29.09,
+			maxZ = 31.89
+		}
 	}
 }

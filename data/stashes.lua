@@ -79,6 +79,45 @@ return {
 	},
 
 	{
+		coords = vec3(-441.6, 6008.31, 36.69),
+		target = {
+			loc = vec3(-441.6, 6008.31, 36.69),
+			length = 0.6,
+			width = 1.8,
+			heading = 340,
+			minZ = 43.34,
+			maxZ = 44.74,
+			label = 'Abrir almacén LSSD'
+		},
+		name = 'lssdstorage',
+		label = 'Almacén LSSD',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = shared.police
+	},
+
+	{
+		coords = vec3(-453.08, 6010.96, 31.84),
+		target = {
+			loc = vec3(-453.08, 6010.96, 31.84),
+			length = 0.6,
+			width = 1.8,
+			heading = 340,
+			minZ = 43.34,
+			maxZ = 44.74,
+			label = 'Taquillas personales' -- LSSD
+		},
+		name = 'lssdlocker',
+		label = 'Taquilla personal',
+		owner = true,
+		slots = 70,
+		weight = 70000,
+		groups = shared.police
+	},
+
+
+	{
 		coords = vec3(-176.38, 311.27, 97.99),
 		target = {
 			loc = vec3(-176.38, 311.27, 97.99),
@@ -133,5 +172,24 @@ return {
 		slots = 70,
 		weight = 70000,
 		groups = {['paraisocanario'] = 0, ['unicorn'] = 0}
+	},
+
+	{
+		coords = vec3(-1844.05, -1189.74, 14.31),
+		target = {
+			loc = vec3(-1844.05, -1189.74, 14.31),
+			length = 0.6,
+			width = 1.8,
+			heading = 340,
+			minZ = 43.34,
+			maxZ = 44.74,
+			label = 'Abrir despensa'
+		},
+		name =  'mesonservando1',
+		label = 'Despensa del Mesón de Servando',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['mesonservando'] = 0}
 	},
 }
