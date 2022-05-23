@@ -33,18 +33,6 @@ return {
 			vec3(2679.25, 3280.12, 55.24),
 			vec3(2557.94, 382.05, 108.62),
 			vec3(373.55, 325.56, 103.56),
-		}, targets = {
-			{ loc = vec3(25.06, -1347.32, 29.5), length = 0.7, width = 0.5, heading = 0.0, minZ = 29.5, maxZ = 29.9, distance = 1.5 },
-			{ loc = vec3(189.36, -889.35, 31.71), length = 0.7, width = 0.5, heading = 63.0, minZ = 29.5, maxZ = 29.9, distance = 1.5 },
-			{ loc = vec3(-3039.18, 585.13, 7.91), length = 0.6, width = 0.5, heading = 15.0, minZ = 7.91, maxZ = 8.31, distance = 1.5 },
-			{ loc = vec3(-3242.2, 1000.58, 12.83), length = 0.6, width = 0.6, heading = 175.0, minZ = 12.83, maxZ = 13.23, distance = 1.5 },
-			{ loc = vec3(1728.39, 6414.95, 35.04), length = 0.6, width = 0.6, heading = 65.0, minZ = 35.04, maxZ = 35.44, distance = 1.5 },
-			{ loc = vec3(1698.37, 4923.43, 42.06), length = 0.5, width = 0.5, heading = 235.0, minZ = 42.06, maxZ = 42.46, distance = 1.5 },
-			{ loc = vec3(1960.54, 3740.28, 32.34), length = 0.6, width = 0.5, heading = 120.0, minZ = 32.34, maxZ = 32.74, distance = 1.5 },
-			{ loc = vec3(548.5, 2671.25, 42.16), length = 0.6, width = 0.5, heading = 10.0, minZ = 42.16, maxZ = 42.56, distance = 1.5 },
-			{ loc = vec3(2678.29, 3279.94, 55.24), length = 0.6, width = 0.5, heading = 330.0, minZ = 55.24, maxZ = 55.64, distance = 1.5 },
-			{ loc = vec3(2557.19, 381.4, 108.62), length = 0.6, width = 0.5, heading = 0.0, minZ = 108.62, maxZ = 109.02, distance = 1.5 },
-			{ loc = vec3(373.13, 326.29, 103.57), length = 0.6, width = 0.5, heading = 345.0, minZ = 103.57, maxZ = 103.97, distance = 1.5 },
 		}
 	},
 
@@ -59,7 +47,6 @@ return {
 			{ name = 'stretcher', price = 10000 },
 		}, locations = {
 			vec3(-172.91, 239.42, 93.19),
-		}, targets = {
 		}
 	},
 
@@ -85,14 +72,7 @@ return {
 			vec3(-2968.243, 390.910, 15.043),
 			vec3(1166.024, 2708.930, 38.157),
 			vec3(1392.562, 3604.684, 34.980),
-			vec3(-1393.409, -606.624, 30.319)
-		}, targets = {
-			{ loc = vec3(1134.9, -982.34, 46.41), length = 0.5, width = 0.5, heading = 96.0, minZ = 46.4, maxZ = 46.8, distance = 1.5 },
-			{ loc = vec3(-1222.33, -907.82, 12.43), length = 0.6, width = 0.5, heading = 32.7, minZ = 12.3, maxZ = 12.7, distance = 1.5 },
-			{ loc = vec3(-1486.67, -378.46, 40.26), length = 0.6, width = 0.5, heading = 133.77, minZ = 40.1, maxZ = 40.5, distance = 1.5 },
-			{ loc = vec3(-2967.0, 390.9, 15.14), length = 0.7, width = 0.5, heading = 85.23, minZ = 15.0, maxZ = 15.4, distance = 1.5 },
-			{ loc = vec3(1165.95, 2710.20, 38.26), length = 0.6, width = 0.5, heading = 178.84, minZ = 38.1, maxZ = 38.5, distance = 1.5 },
-			{ loc = vec3(1393.0, 3605.95, 35.11), length = 0.6, width = 0.6, heading = 200.0, minZ = 35.0, maxZ = 35.4, distance = 1.5 }
+			--vec3(-1393.409, -606.624, 30.319) -- BAHAMAS
 		}
 	},
 
@@ -103,7 +83,6 @@ return {
 		}, inventory = {
 		}, locations = {
 			vec3(-762.06, -618.04, 30.46),
-		}, targets = {
 		}
 	},
 
@@ -125,8 +104,6 @@ return {
 		}, locations = {
 			vec3(2746.1895, 3468.6914, 55.6731),
 			vec3(342.99, -1298.26, 32.51)
-		}, targets = {
-			{ loc = vec3(2746.8, 3473.13, 55.67), length = 0.6, width = 3.0, heading = 65.0, minZ = 55.0, maxZ = 56.8, distance = 3.0 }
 		}
 	},
 
@@ -142,23 +119,22 @@ return {
 			{ name = 'neoncontroller', price = 2500 },
 			{ name = 'neonbox', price = 12000 },
 			{ name = 'carjack', price = 2500 },
-			{ name = 'car_hood', price = 1000 },
-			{ name = 'car_trunk', price = 1000 },
-			{ name = 'car_door', price = 1000 },
-			{ name = 'car_wheel', price = 800 },
-			{ name = 'scrap_metal', price = 800 },
-			{ name = 'rubber', price = 600 },
-			{ name = 'plastic', price = 500 },
-			{ name = 'electric_scrap', price = 1000 },
-			{ name = 'glass', price = 1000 },
-			{ name = 'aluminium', price = 1500 },
-			{ name = 'copper', price = 1500 },
-			{ name = 'steel', price = 1500 },
+			{ name = 'car_hood', price = 150 },
+			{ name = 'car_trunk', price = 150 },
+			{ name = 'car_door', price = 120 },
+			{ name = 'car_wheel', price = 150 },
+			{ name = 'scrap_metal', price = 60 },
+			{ name = 'rubber', price = 50 },
+			{ name = 'plastic', price = 50 },
+			{ name = 'electric_scrap', price = 50 },
+			{ name = 'glass', price = 50 },
+			{ name = 'aluminium', price = 75 },
+			{ name = 'copper', price = 75 },
+			{ name = 'steel', price = 75 },
 		}, locations = {
 			vec3(2749.6907, 3476.9788, 55.6734),
 			vec3(340.5946, -1297.3885, 32.5105),
 			vec3(255.3045, -3057.5806, 5.7919)
-		}, targets = {
 		}
 	},
 
@@ -181,16 +157,6 @@ return {
 			vec3(2567.69, 294.38, 108.73),
 			vec3(-1117.58, 2698.61, 18.55),
 			vec3(842.44, -1033.42, 28.19)
-		}, targets = {
-			{ loc = vec3(-660.92, -934.10, 21.94), length = 0.6, width = 0.5, heading = 180.0, minZ = 21.8, maxZ = 22.2, distance = 2.0 },
-			{ loc = vec3(808.86, -2158.50, 29.73), length = 0.6, width = 0.5, heading = 360.0, minZ = 29.6, maxZ = 30.0, distance = 2.0 },
-			{ loc = vec3(1693.57, 3761.60, 34.82), length = 0.6, width = 0.5, heading = 227.39, minZ = 34.7, maxZ = 35.1, distance = 2.0 },
-			{ loc = vec3(-330.29, 6085.54, 31.57), length = 0.6, width = 0.5, heading = 225.0, minZ = 31.4, maxZ = 31.8, distance = 2.0 },
-			{ loc = vec3(252.85, -51.62, 70.0), length = 0.6, width = 0.5, heading = 70.0, minZ = 69.9, maxZ = 70.3, distance = 2.0 },
-			{ loc = vec3(23.68, -1106.46, 29.91), length = 0.6, width = 0.5, heading = 160.0, minZ = 29.8, maxZ = 30.2, distance = 2.0 },
-			{ loc = vec3(2566.59, 293.13, 108.85), length = 0.6, width = 0.5, heading = 360.0, minZ = 108.7, maxZ = 109.1, distance = 2.0 },
-			{ loc = vec3(-1117.61, 2700.26, 18.67), length = 0.6, width = 0.5, heading = 221.82, minZ = 18.5, maxZ = 18.9, distance = 2.0 },
-			{ loc = vec3(841.05, -1034.76, 28.31), length = 0.6, width = 0.5, heading = 360.0, minZ = 28.2, maxZ = 28.6, distance = 2.0 }
 		}
 	},
 
@@ -202,13 +168,22 @@ return {
 		}, inventory = {
 			{ name = 'bandage', price = 50 },
 			{ name = 'medikit', price = 500 },
-			{ name = 'armour', price = 1000 },
+			{ name = 'armour', price = 500 },
 			{ name = 'radio', price = 1000 },
 			{ name = 'ammo-9', price = 5, license = 'weapon'},
 			{ name = 'ammo-45', price = 7, license = 'weapon', grade = 3 },
 			{ name = 'ammo-shotgun', price = 50, license = 'weapon', grade = 5 },
 			{ name = 'ammo-rifle', price = 20, license = 'weapon', grade = 6 },
 			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
+			{ name = 'at_flashlight', price = 200, license = 'weapon', grade = 0 },
+			{ name = 'at_clip_extended_pistol', price = 800, license = 'weapon', grade = 3 },
+			{ name = 'at_clip_extended_shotgun', price = 1500, license = 'weapon', grade = 6 },
+			{ name = 'at_clip_extended_rifle', price = 3000, license = 'weapon', grade = 7 },
+			{ name = 'at_clip_drum_rifle', price = 5000, license = 'weapon', grade = 8 },
+			{ name = 'at_scope_small', price = 1200, license = 'weapon', grade = 5 },
+			{ name = 'at_scope_medium', price = 2500, license = 'weapon', grade = 6 },
+			{ name = 'at_scope_advanced', price = 8000, license = 'weapon', grade = 8 },
+			{ name = 'at_compensator', price = 1000, license = 'weapon', grade = 3 },
 			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
 			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} },
 			{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
@@ -223,9 +198,6 @@ return {
 			vec3(486.1490, -995.8393, 30.6898), -- MRPD
 			vec3(-430.4039, 5999.2310, 31.7165), -- PALETO LSSD
 			vec3(1846.0941, 3692.8203, 34.2670), -- SANDY LSSD
-			vec3(28.48, -935.52, 29.9), -- FIB
-		}, targets = {
-			{ loc = vec3(453.21, -980.03, 30.68), length = 0.5, width = 3.0, heading = 270.0, minZ = 30.5, maxZ = 32.0, distance = 6 }
 		}
 	},
 
@@ -240,7 +212,7 @@ return {
 		}, inventory = {
 			{ name = 'bandage', price = 50 },
 			{ name = 'medikit', price = 500 },
-			{ name = 'armour', price = 1000 },
+			{ name = 'armour', price = 500 },
 			{ name = 'radio', price = 1000 },
 			{ name = 'ammo-9', price = 5, license = 'weapon'},
 			{ name = 'ammo-45', price = 7, license = 'weapon', grade = 3 },
@@ -248,6 +220,15 @@ return {
 			{ name = 'ammo-rifle', price = 20, license = 'weapon', grade = 6 },
 			{ name = 'ammo-heavysniper', price = 250, license = 'weapon', grade = 9 },
 			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
+			{ name = 'at_flashlight', price = 200, license = 'weapon', grade = 0 },
+			{ name = 'at_clip_extended_pistol', price = 800, license = 'weapon', grade = 3 },
+			{ name = 'at_clip_extended_shotgun', price = 1500, license = 'weapon', grade = 6 },
+			{ name = 'at_clip_extended_rifle', price = 3000, license = 'weapon', grade = 7 },
+			{ name = 'at_clip_drum_rifle', price = 5000, license = 'weapon', grade = 8 },
+			{ name = 'at_scope_small', price = 1200, license = 'weapon', grade = 5 },
+			{ name = 'at_scope_medium', price = 2500, license = 'weapon', grade = 6 },
+			{ name = 'at_scope_advanced', price = 8000, license = 'weapon', grade = 8 },
+			{ name = 'at_compensator', price = 1000, license = 'weapon', grade = 3 },
 			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
 			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'FIB'} },
 			{ name = 'WEAPON_G17', price = 500, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 3 },
@@ -263,7 +244,6 @@ return {
 			{ name = 'WEAPON_SMOKEGRENADE', price = 10000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 7 },
 		}, locations = {
 			vec3(28.48, -935.52, 29.9), -- FIB
-		}, targets = {
 		}
 	},
 
@@ -281,12 +261,10 @@ return {
 			{ name = 'stretcher', price = 1500 },
 		}, locations = {
 			vec3(306.3687, -601.5139, 43.28406)
-		}, targets = {
-
 		}
 	},
 
-	Weed = {
+	Weed = (isTencity and {
 		name = 'Tienda de productos de cultivo',
 		inventory = {
 			{ name = 'wateringcan', price = 100 },
@@ -297,11 +275,69 @@ return {
 			{ name = 'ziplock', price = 20 },
 			{ name = 'seed_weed', price = 100 },
 		}, locations = {
-			(isTencity and vec3(2195.4587, 5603.1563, 53.5654) or vec3(2195.4587, 5603.1563, 1000.5654))
-		}, targets = {
+			vec3(2195.4587, 5603.1563, 53.5654)
+		}
+	} or {
+		name = 'Tienda de productos de cultivo',
+		inventory = {
+			{ name = 'wateringcan', price = 200 },
+			{ name = 'plantpot', price = 75 },
+			{ name = 'lowgradefert', price = 20 },
+			{ name = 'highgradefert', price = 60 },
+			{ name = 'drugscales', price = 2000 },
+			{ name = 'ziplock', price = 10 },
+		}, locations = {
+			vec3(-38.756, 1908.21, 195.28)
+		}
+	}),
 
+	HuntingStore = {
+		name = 'Bayview Lodge (tienda de caza)',
+		blip = {
+			id = 141, colour = 31, scale = 0.8
+		}, inventory = {
+			{ name = 'bandage', price = 50 },
+			{ name = 'medikit', price = 500 },
+			{ name = 'WEAPON_KNIFE', price = 500 },
+			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
+			{ name = 'radio', price = 800 },
+			{ name = 'ammo-shotgun', price = 50, license = 'weapon' },
+			{ name = 'ammo-flare', price = 200, license = 'weapon' },
+			{ name = 'WEAPON_FLARE', price = 250 },
+			{ name = 'WEAPON_FLAREGUN', price = 2500, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon' },
+			{ name = 'WEAPON_DOUBLEBARRELFM', price = 5000, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon' },
+			{ name = 'at_dbshotgunfm_barrel2', price = 5000, license = 'weapon' },
+			{ name = 'at_dbshotgunfm_barrel3', price = 4000, license = 'weapon' },
+			{ name = 'at_dbshotgunfm_barrel4', price = 3000, license = 'weapon' },
+			{ name = 'at_dbshotgunfm_barrel5', price = 2000, license = 'weapon' },
+		}, locations = {
+			vec3(-675.66, 5836.44, 17.34),
 		}
 	},
+	
+	--HuntingStore = {
+		--name = 'Bayview Lodge (tienda de caza)',
+		--blip = {
+			--id = 762, colour = 31, scale = 0.8
+		--}, inventory = {
+			--{ name = 'bandage', price = 50 },
+			--{ name = 'medikit', price = 500 },
+			--{ name = 'WEAPON_KNIFE', price = 500 },
+			--{ name = 'WEAPON_FLASHLIGHT', price = 200 },
+			--{ name = 'radio', price = 800 },
+			--{ name = 'ammo-shotgun', price = 50, license = 'weapon' },
+			--{ name = 'ammo-flare', price = 200, license = 'weapon' },
+			--{ name = 'WEAPON_FLARE', price = 250 },
+			--{ name = 'WEAPON_FLAREGUN', price = 2500, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon' },
+			--{ name = 'WEAPON_DOUBLEBARRELFM', price = 5000, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon' },
+			--{ name = 'at_dbshotgunfm_barrel2', price = 5000, license = 'weapon' },
+			--{ name = 'at_dbshotgunfm_barrel3', price = 4000, license = 'weapon' },
+			--{ name = 'at_dbshotgunfm_barrel4', price = 3000, license = 'weapon' },
+			--{ name = 'at_dbshotgunfm_barrel5', price = 2000, license = 'weapon' },
+		--}, locations = {
+			--vec3(-675.66, 5836.44, 17.34),
+		--}
+	--},
 
 	--BlackMarketArms = {
 	--	name = 'Black Market (Arms)',
@@ -313,115 +349,135 @@ return {
 	--		{ name = 'ammo-rifle2', price = 1000, currency = 'black_money' }
 	--	}, locations = {
 	--		vec3(309.09, -913.75, 56.46)
-	--	}, targets = {
-
 	--	}
 	--},
 
-	VendingMachineDrinks = {
-		name = 'Maquina expendedora (Bebida)',
-		inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'fanta', price = 10 },
-			{ name = 'cocacola', price = 10 },
-			{ name = 'energy', price = 10 },
-			{ name = 'redbull', price = 10 },
+    VendingMachineDrinks = {
+        name = 'Maquina expendedora (Bebida)',
+		isVending = true,
+        inventory = {
+            { name = 'water', price = 10 },
+            { name = 'fanta', price = 10 },
+            { name = 'cocacola', price = 10 },
+            { name = 'energy', price = 10 },
+            { name = 'redbull', price = 10 },
+        },
+        model = {
+            `prop_vend_soda_02`, `prop_vend_soda_01`
+        }
+    },
+
+    VendingMachineWater = {
+        name = 'Maquina expendedora (Agua)',
+		isVending = true,
+        inventory = {
+            { name = 'water', price = 10 }
+        },
+        model = {
+            `prop_vend_water_01`
+        }
+    },
+
+    VendingMachineCoffe = {
+        name = 'Maquina expendedora (Cafe)',
+		isVending = true,
+        inventory = {
+            { name = 'water', price = 10 },
+            { name = 'coffe', price = 10 },
+            { name = 'coffebean', price = 10 },
+            { name = 'frappuccinobean', price = 10 },
+            { name = 'milk', price = 10 },
+        },
+        model = {
+            `prop_vend_coffe_01`
+        }
+    },
+
+    VendingMachineGumballs = {
+        name = 'Maquina expendedora (Gominolas)',
+		isVending = true,
+        inventory = {
+            { name = 'gominolas', price = 10 },
+        },
+        model = {
+            `prop_gumball_01`, `prop_gumball_02`, `prop_gumball_03`
+        }
+    },
+
+    VendingMachineSnacks = {
+        name = 'Maquina expendedora (Snacks)',
+		isVending = true,
+        inventory = {
+            { name = 'anacardos', price = 10 },
+            { name = 'gominolas', price = 10 },
+            { name = 'bolcacahuetes', price = 10 },
+            { name = 'chocolate', price = 10 },
+            { name = 'chips', price = 10 },
+            { name = 'sandwichbean', price = 10 },
+            { name = 'sandwichhot', price = 10 },
+            { name = 'cupcakebean', price = 10 },
+            { name = 'chicles', price = 10 },
+            { name = 'donutbean', price = 10 },
+            { name = 'jusfruit', price = 10 },
+            { name = 'water', price = 10 },
+            { name = 'coffe', price = 10 },
+            { name = 'fanta', price = 10 },
+            { name = 'cocacola', price = 10 },
+            { name = 'energy', price = 10 },
+            { name = 'redbull', price = 10 },
+        },
+        model = {
+            `prop_vend_snak_01`, `prop_vend_snak_01_tu`
+        }
+    },
+
+    VendingMachineWatercooler = {
+        name = 'Dispensador de agua',
+		isVending = true,
+        inventory = {
+            { name = 'water', price = 10 },
+        },
+        model = {
+            `prop_watercooler`
+        }
+    },
+
+    VendingMachineNewspaper = {
+        name = 'Dispensador de periódicos',
+		isVending = true,
+        inventory = {
+            { name = 'comic_book_1', price = 10 },
+            { name = 'comic_book_2', price = 10 },
+
+        },
+        model = {
+            `prop_news_disp_01a`, `prop_news_disp_02a`, `prop_news_disp_02a_s`, `prop_news_disp_02b`, `prop_news_disp_02c`, `prop_news_disp_02d`, `prop_news_disp_02e`, `prop_news_disp_03a`, `prop_news_disp_03c`, `prop_news_disp_05a`, `prop_news_disp_06a`
+        }
+    },
+
+    VendingMachineTobacco = {
+        name = 'Maquina de tabaco',
+		isVending = true,
+        inventory = {
+            { name = 'cigarett', price = 10 },
+        },
+        model = {
+            `prop_vend_fags_01`
+        }
+    },
+
+	OneTravel = {
+		name = 'OneTravel',
+		groups = {
+			['onetravel'] = 0
 		},
-		model = {
-			`prop_vend_soda_02`, `prop_vend_soda_01`
+		blip = {
+			id = 402, colour = 40, scale = 0.8
+		}, inventory = {
+			{ name = 'bandage', price = 50 },
+		}, locations = {
+			vec3(-150.0, -634.4, 168.82),
 		}
 	},
 
-	VendingMachineWater = {
-		name = 'Maquina expendedora (Agua)',
-		inventory = {
-			{ name = 'water', price = 10 }
-		},
-		model = {
-			`prop_vend_water_01`
-		}
-	},
-
-	VendingMachineCoffe = {
-		name = 'Maquina expendedora (Cafe)',
-		inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'coffe', price = 10 },
-			{ name = 'coffebean', price = 10 },
-			{ name = 'frappuccinobean', price = 10 },
-			{ name = 'milk', price = 10 },
-		},
-		model = {
-			`prop_vend_coffe_01`
-		}
-	},
-
-	VendingMachineGumballs = {
-		name = 'Maquina expendedora (Gominolas)',
-		inventory = {
-			{ name = 'gominolas', price = 10 },
-		},
-		model = {
-			`prop_gumball_01`, `prop_gumball_02`, `prop_gumball_03`
-		}
-	},
-
-	VendingMachineSnacks = {
-		name = 'Maquina expendedora (Snacks)',
-		inventory = {
-			{ name = 'anacardos', price = 10 },
-			{ name = 'gominolas', price = 10 },
-			{ name = 'bolcacahuetes', price = 10 },
-			{ name = 'chocolate', price = 10 },
-			{ name = 'chips', price = 10 },
-			{ name = 'sandwichbean', price = 10 },
-			{ name = 'sandwichhot', price = 10 },
-			{ name = 'cupcakebean', price = 10 },
-			{ name = 'chicles', price = 10 },
-			{ name = 'donutbean', price = 10 },
-			{ name = 'jusfruit', price = 10 },
-			{ name = 'water', price = 10 },
-			{ name = 'coffe', price = 10 },
-			{ name = 'fanta', price = 10 },
-			{ name = 'cocacola', price = 10 },
-			{ name = 'energy', price = 10 },
-			{ name = 'redbull', price = 10 },
-		},
-		model = {
-			`prop_vend_snak_01`, `prop_vend_snak_01_tu`
-		}
-	},
-
-	VendingMachineWatercooler = {
-		name = 'Dispensador de agua',
-		inventory = {
-			{ name = 'water', price = 10 },
-		},
-		model = {
-			`prop_watercooler`
-		}
-	},
-
-	VendingMachineNewspaper = {
-		name = 'Dispensador de periódicos',
-		inventory = {
-			{ name = 'comic_book_1', price = 10 },
-			{ name = 'comic_book_2', price = 10 },
-
-		},
-		model = {
-			`prop_news_disp_01a`, `prop_news_disp_02a`, `prop_news_disp_02a_s`, `prop_news_disp_02b`, `prop_news_disp_02c`, `prop_news_disp_02d`, `prop_news_disp_02e`, `prop_news_disp_03a`, `prop_news_disp_03c`, `prop_news_disp_05a`, `prop_news_disp_06a`
-		}
-	},
-
-	VendingMachineTobacco = {
-		name = 'Maquina de tabaco',
-		inventory = {
-			{ name = 'cigarett', price = 10 },
-		},
-		model = {
-			`prop_vend_fags_01`
-		}
-	},
 }
-

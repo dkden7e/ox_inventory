@@ -21,7 +21,7 @@ return {
 	['ui_alt_lmb'] = "Utilizar rápidamente un ítem",
 	--
 	['ui_ctrl_c'] = "Al pasar por encima de un arma, copia su nº de serie",
-	['$'] = "€",
+	['$'] = GetConvar("server_divisa", "$"),
 	['male'] = "Hombre",
 	['female'] = "Mujer",
 	['used'] = "Usado",
@@ -66,6 +66,7 @@ return {
 	['identification'] = "Sexo: %s  \nFecha de Nacimiento: %s",
 	['search_dumpster'] = "Buscar en el Basurero",
 	['open_shop'] = "Abrir %s",
+	['open_shop_vending'] = "Usar %s",
 	['purchased_for'] = "Has comprado %s %s por %s%s",
 	['unable_stack_items'] = "¡No puedes apilar estos items!",
 	['police_evidence'] = "Evidencia policial",

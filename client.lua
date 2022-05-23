@@ -1300,6 +1300,24 @@ RegisterNUICallback('swapItems', function(data, cb)
 	cb(success or false)
 end)
 
+function ReqTheModel(model)
+	if IsModelValid(model) and IsModelInCdimage(model) then
+		RequestModel(model)
+		while not HasModelLoaded(model) do
+			Citizen.Wait(0)
+		end
+	else
+		return
+	end
+end
+
+function ReqAnimDict(animDict)
+	RequestAnimDict(animDict)
+	while not HasAnimDictLoaded(animDict) do
+		Citizen.Wait(0)
+	end
+end
+
 RegisterNUICallback('buyItem', function(data, cb)
 	local response, data, message = lib.callback.await('ox_inventory:buyItem', 100, data)
 	if data then
@@ -1307,6 +1325,56 @@ RegisterNUICallback('buyItem', function(data, cb)
 		client.setPlayerData('inventory', PlayerData.inventory)
 		client.setPlayerData('weight', data[3])
 		SendNUIMessage({ action = 'refreshSlots', data = {item = data[2]} })
+
+		if message.isVending then
+			local item = data[2] and Items[data[2].name]
+			if item and item.client.prop.model and vendingEntity and DoesEntityExist(vendingEntity) then
+				ReqTheModel(item.client.prop.model)
+				-- Utils.PlayAnimAdvanced(900, 'anim@heists@fleeca_bank@scope_out@return_case', 'trevor_action', coords.x, coords.y, coords.z, 0.0, 0.0, GetEntityHeading(cache.ped), 2.0, 2.0, 1000, 49, 0.25)
+				local ped = PlayerPedId()
+				local position = GetOffsetFromEntityInWorldCoords(vendingEntity, 0.0, -0.97, 0.05)
+				TaskTurnPedToFaceEntity(ped, vendingEntity, -1)
+				ReqAnimDict("mini@sprunk")
+				RequestAmbientAudioBank("VENDING_MACHINE")
+				HintAmbientAudioBank("VENDING_MACHINE", 0, -1)
+				SetPedCurrentWeaponVisible(ped, false, true, 1, 0)
+				SetPedResetFlag(ped, 322, true)
+				if not IsEntityAtCoord(ped, position, 0.1, 0.1, 0.1, false, true, 0) then
+					TaskGoStraightToCoord(ped, position, 1.0, 20000, GetEntityHeading(vendingEntity), 0.1)
+					Citizen.Wait(500)
+					for i = 1, 15, 1 do
+						if IsEntityAtCoord(ped, position, 0.2, 0.2, 0.2, false, true, 0) then
+							break
+						else
+							Citizen.Wait(200)
+						end
+					end
+				end
+				TaskTurnPedToFaceEntity(ped, vendingEntity, -1)
+				Citizen.Wait(1000)
+				TaskPlayAnim(ped, "mini@sprunk", "plyr_buy_drink_pt1", 8.0, 5.0, -1, true, 1, 0, 0, 0)
+				Citizen.Wait(2500)
+				local canModel = CreateObjectNoOffset(item.client.prop.model, position, true, false, false)
+				SetEntityAsMissionEntity(canModel, true, true)
+				SetEntityProofs(canModel, false, true, false, false, false, false, 0, false)
+				AttachEntityToEntity(canModel, ped, GetPedBoneIndex(ped, 28422), 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 1, 0, 0, 2, 1)
+				Citizen.Wait(1700)
+				ReqAnimDict("mp_common_miss")
+				TaskPlayAnim(ped, "mp_common_miss", "put_away_coke", 8.0, 5.0, -1, true, 1, 0, 0, 0)
+				Citizen.Wait(1000)
+				ClearPedTasks(ped)
+				ReleaseAmbientAudioBank()
+				RemoveAnimDict("mini@sprunk")
+				RemoveAnimDict("mp_common_miss")
+				if DoesEntityExist(canModel) then
+					DetachEntity(canModel, true, true)
+					DeleteEntity(canModel)
+				end
+				SetModelAsNoLongerNeeded(item.client.prop.model)
+			end
+		else
+			vendingEntity = nil
+		end
 	end
 
 	if message then
