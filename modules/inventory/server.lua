@@ -441,6 +441,7 @@ function Inventory.SetItem(inv, item, count, metadata)
 		inv = Inventory(inv)
 		if inv then
 			local itemCount = Inventory.GetItem(inv, item.name, metadata, true)
+			local diff = count - itemCount
 			if count > itemCount then
 				count -= itemCount
 				Inventory.AddItem(inv, item.name, count, metadata)
@@ -448,8 +449,10 @@ function Inventory.SetItem(inv, item, count, metadata)
 				itemCount -= count
 				Inventory.RemoveItem(inv, item.name, itemCount, metadata)
 			end
+			return diff
 		end
 	end
+	return false
 end
 
 ---@param inv string | number
@@ -870,6 +873,8 @@ local function dropItem(source, data)
 
 	TriggerClientEvent('ox_inventory:createDrop', -1, dropId, Inventory.Drops[dropId], playerInventory.open and source, slot)
 
+	server.loguearMySQL(false, playerInventory.owner, playerInventory.label, 0-data.count, Inventory.GetItem(playerInventory, toData.name, nil, true))
+	server.loguearMySQL(false, playerInventory.owner, inventory.label, data.count, Inventory.GetItem(inventory, toData.name, nil, true))
 	Log(('%sx %s transferred from %s to %s'):format(data.count, toData.name, playerInventory.label, dropId),
 		playerInventory.owner,
 		'swapSlots', playerInventory.owner, dropId
@@ -941,6 +946,12 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 
 								toData, fromData = Inventory.SwapSlots(fromInventory, toInventory, data.fromSlot, data.toSlot)
 
+								-- exchange this
+								server.loguearMySQL(false, ( fromInventory.owner and fromInventory.owner or 'container_'..fromInventory.id), fromData.name, 0-fromData.count, Inventory.GetItem(fromInventory, fromData.name, nil, true))
+								server.loguearMySQL(false, (toInventory.owner and toInventory.owner or 'container_'..toInventory.id), fromData.name, fromData.count, Inventory.GetItem(toInventory, fromData.name, nil, true))
+								-- for this
+								server.loguearMySQL(false, ( toInventory.owner and toInventory.owner or 'container_'..toInventory.id), toData.name, 0-toData.count, Inventory.GetItem(toInventory, toData.name, nil, true))
+								server.loguearMySQL(false, (fromInventory.owner and fromInventory.owner or 'container_'..fromInventory.id), toData.name, toData.count, Inventory.GetItem(fromInventory, toData.name, nil, true))
 								Log(('%sx %s transferred from %s to %s for %sx %s'):format(fromData.count, fromData.name, fromInventory.owner and fromInventory.label or fromInventory.id, toInventory.owner and toInventory.label or toInventory.id, toData.count, toData.name),
 									playerInventory.owner,
 									'swapSlots', fromInventory.owner or fromInventory.id, toInventory.owner or toInventory.id
@@ -967,6 +978,8 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 									Inventory.ContainerWeight(containerItem, toInventory.type == 'container' and toInventory.weight or fromInventory.weight, playerInventory)
 								end
 
+								server.loguearMySQL(false, ( fromInventory.owner and fromInventory.owner or 'container_'..fromInventory.id), fromData.name, 0-data.count, Inventory.GetItem(fromInventory, fromData.name, nil, true))
+								server.loguearMySQL(false, (toInventory.owner and toInventory.owner or 'container_'..toInventory.id), fromData.name, data.count, Inventory.GetItem(toInventory, fromData.name, nil, true))
 								Log(('%sx %s transferred from %s to %s'):format(data.count, fromData.name, fromInventory.owner and fromInventory.label or fromInventory.id, toInventory.owner and toInventory.label or toInventory.id),
 									playerInventory.owner,
 									'swapSlots', fromInventory.owner or fromInventory.id, toInventory.owner or toInventory.id
@@ -1007,6 +1020,8 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 									Inventory.ContainerWeight(containerItem, toContainer and toInventory.weight or fromInventory.weight, playerInventory)
 								end
 
+								server.loguearMySQL(false, ( fromInventory.owner and fromInventory.owner or 'container_'..fromInventory.id), fromData.name, 0-data.count, Inventory.GetItem(fromInventory, fromData.name, nil, true))
+								server.loguearMySQL(false, (toInventory.owner and toInventory.owner or 'container_'..toInventory.id), fromData.name, data.count, Inventory.GetItem(toInventory, fromData.name, nil, true))
 								Log(('%sx %s transferred from %s to %s'):format(data.count, fromData.name, fromInventory.owner and fromInventory.label or fromInventory.id, toInventory.owner and toInventory.label or toInventory.id),
 									playerInventory.owner,
 									'swapSlots', fromInventory.owner or fromInventory.id, toInventory.owner or toInventory.id
@@ -1312,11 +1327,12 @@ RegisterServerEvent('ox_inventory:giveItem', function(slot, target, count)
 				Inventory.RemoveItem(fromInventory, item, count, data.metadata, slot)
 				Inventory.AddItem(toInventory, item, count, data.metadata)
 
+				server.loguearMySQL(false, fromInventory.owner, data.name, 0-count, Inventory.GetItem(fromInventory, data.name, nil, true))
+				server.loguearMySQL(false, toInventory.owner, data.name, count, Inventory.GetItem(toInventory, data.name, nil, true))
 				Log(('%s gave %sx %s to %s'):format(fromInventory.label, count, data.name, toInventory.label),
 					fromInventory.owner,
 					'giveItem', toInventory.owner
 				)
-
 			end
 		else
 			TriggerClientEvent('ox_lib:notify', source, { type = 'error', description = shared.locale('cannot_give', count, data.label) })
@@ -1411,6 +1427,7 @@ lib.addCommand('group.admin', {'additem', 'giveitem'}, function(source, args)
 		local inventory = Inventories[args.target]
 		source = Inventories[source] or {label = 'console', owner = 'console'}
 
+		server.loguearMySQL(false, inventory.owner, args.item.name, args.count, Inventory.GetItem(inventory, args.item.name, nil, true))
 		Log(('%s gave %sx %s to %s'):format(source.label, args.count, args.item.name, inventory.label),
 			source.owner,
 			'admin', inventory.owner
@@ -1422,10 +1439,11 @@ end, {'target:number', 'item:string', 'count:number', 'metatype:?string'})
 lib.addCommand('group.admin', 'removeitem', function(source, args)
 	args.item = Items(args.item)
 	if args.item and args.count > 0 then
-		Inventory.RemoveItem(args.target, args.item.name, args.count, args.metaType)
+		local diff = Inventory.RemoveItem(args.target, args.item.name, args.count, args.metaType)
 		local inventory = Inventories[args.target]
 		source = Inventories[source] or {label = 'console', owner = 'console'}
 
+		server.loguearMySQL(false, inventory.owner, args.item.name, 0-args.count, Inventory.GetItem(inventory, args.item.name, nil, true))
 		Log(('%s took %sx %s from %s'):format(source.label, args.count, args.item.name, inventory.label),
 			source.owner,
 			'admin', inventory.owner
@@ -1437,10 +1455,11 @@ end, {'target:number', 'item:string', 'count:number', 'metatype:?string'})
 lib.addCommand('group.admin', 'setitem', function(source, args)
 	args.item = Items(args.item)
 	if args.item and args.count >= 0 then
-		Inventory.SetItem(args.target, args.item.name, args.count, args.metaType)
+		local diff = Inventory.SetItem(args.target, args.item.name, args.count, args.metaType)
 		local inventory = Inventories[args.target]
 		source = Inventories[source] or {label = 'console', owner = 'console'}
 
+		server.loguearMySQL(false, inventory.owner, args.item.name, (diff and diff or 0), args.count)
 		Log(('%s set %s\' %s count to %sx'):format(source.label, inventory.label, args.item.name, args.count),
 			source.owner,
 			'admin', inventory.owner
@@ -1551,3 +1570,86 @@ end
 exports('RegisterStash', RegisterStash)
 
 server.inventory = Inventory
+
+server.loguearMySQL = function(isMoney, steam, object, change, amount, extra)
+	local resource = function()
+		--[[local msg = "FUNCTION A: \n"; 
+		for i = 1, 999, 1 do; 
+			local current = debug.getinfo(i, "n").name; 
+			if current == nil then 
+				msg = msg .. "END" .. "(" .. i .. ")"; 
+				break; 
+			end; 
+			msg = msg .. current .. "\n"; 
+		end; 
+		print(msg);]]
+		return GetInvokingResource() or GetCurrentResourceName() or "desconocido" 
+	end
+	resource = tostring(resource()) or "desconocido"
+	local object = string.upper(object)
+	if isMoney then
+		MySQL.Async.execute('INSERT INTO `00_logs_money` (`identifier`, `coinType`, `change`, `amount`, `resource`, `extra`) VALUES (@identifier, @coinType, @change, @amount, @resource, @extra)', {
+			['@identifier']   = steam,
+			['@coinType']   = object,
+			['@change']   = change,
+			['@amount']   = amount,
+			['@resource']    = resource,
+			['@extra']    = extra or '{}',
+		})
+		--[[Citizen.CreateThread(function()
+			local change2 = change
+			if change2 < 0 then
+				change2 = 0-change2
+			end
+			self.antifloodData = { calls = { lastSecond = 0, lastMinute = 0, lastHour = 0, lastSession = 0 }, money = { lastSecond = 0, lastMinute = 0, lastHour = 0, lastSession = 0 } }
+			self.antifloodData = { 
+				calls = { 
+					lastSecond = self.antifloodData.calls.lastSecond + 1,
+					lastMinute = self.antifloodData.calls.lastMinute + 1,
+					lastHour = self.antifloodData.calls.lastHour + 1,
+					lastSession = self.antifloodData.calls.lastSession + 1,
+					lastSessionAveragePerSecond = math.ceil((self.antifloodData.calls.lastSession/(os.time()-ESX.Session.startTime))*10)/10
+				},
+				money = {
+					lastSecond = self.antifloodData.money.lastSecond + change2,
+					lastMinute = self.antifloodData.money.lastMinute + change2,
+					lastHour = self.antifloodData.money.lastHour + change2,
+					lastSession = self.antifloodData.money.lastSession + change2
+				}
+			}
+			if self.antifloodData.calls.lastSecond > 30 or
+			self.antifloodData.money.lastSecond > 999999 or
+			self.antifloodData.calls.lastMinute > 100 or
+			self.antifloodData.money.lastMinute > 999999 or
+			self.antifloodData.calls.lastHour > 30000 or
+			self.antifloodData.money.lastHour > 999999 or
+			self.antifloodData.calls.lastSessionAveragePerSecond > 5 or
+			self.antifloodData.money.lastSession > 2000000 then
+				print("El usuario " .. self.name .. "[ID:" .. self.playerId .. "] ha superado el umbral de sospecha, DATOS (JSON): " .. json.encode(self.antifloodData))
+			end
+			Citizen.Wait(1000)
+			self.antifloodData.calls.lastSecond = self.antifloodData.calls.lastSecond - 1
+			self.antifloodData.money.lastSecond = self.antifloodData.money.lastSecond - change2
+			Citizen.Wait(59000)
+			self.antifloodData.calls.lastMinute = self.antifloodData.calls.lastMinute - 1
+			self.antifloodData.money.lastMinute = self.antifloodData.money.lastMinute - change2
+			Citizen.Wait(3540000)
+			self.antifloodData.calls.lastHour = self.antifloodData.calls.lastHour - 1
+			self.antifloodData.money.lastHour = self.antifloodData.money.lastHour - change2
+		end)]]
+	else
+		local type = "ITEM"
+		if string.match(object, "WEAPON_") then
+			type = "WEAPON"
+		end
+		MySQL.Async.execute('INSERT INTO `00_logs_objects` (`identifier`, `type`, `object`, `change`, `amount`, `resource`, `extra`) VALUES (@identifier, @type, @object, @change, @amount, @resource, @extra)', {
+			['@identifier']   = steam,
+			['@type']   = type,
+			['@object']   = object,
+			['@change']   = change,
+			['@amount']   = amount,
+			['@resource']    = resource,
+			['@extra']    = extra or '{}',
+		})
+	end
+end
