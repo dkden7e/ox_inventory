@@ -20,6 +20,7 @@ for shopName, shopDetails in pairs(data('shops')) do
 				type = 'shop',
 				coords = shared.qtarget and shopDetails[locations][i].loc or shopDetails[locations][i],
 				distance = shared.qtarget and shopDetails[locations][i].distance + 1 or nil,
+				isVending = shopDetails.isVending
 			}
 			for j = 1, Shops[shopName][i].slots do
 				local slot = Shops[shopName][i].items[j]
@@ -48,6 +49,7 @@ for shopName, shopDetails in pairs(data('shops')) do
 			items = shopDetails.inventory,
 			slots = #shopDetails.inventory,
 			type = 'shop',
+			isVending = shopDetails.isVending
 		}
 		for i = 1, Shops[shopName].slots do
 			local slot = Shops[shopName].items[i]
@@ -169,7 +171,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 
 					end
 
-					return true, {data.toSlot, playerInv.items[data.toSlot], playerInv.weight}, { type = 'success', description = message }
+					return true, {data.toSlot, playerInv.items[data.toSlot], playerInv.weight}, { type = 'success', description = message, isVending = shop.isVending }
 				else
 					return false, false, { type = 'error', description = shared.locale('cannot_afford', ('%s%s'):format((currency == 'money' and shared.locale('$') or comma_value(price)), (currency == 'money' and comma_value(price) or ' '..Items(currency).label))) }
 				end

@@ -1,5 +1,7 @@
 local shops = {}
 
+vendingEntity = nil
+
 local function createShopBlip(name, data, location)
 	local blip = AddBlipForCoord(location.x, location.y, location.z)
 	SetBlipSprite(blip, data.id)
@@ -43,15 +45,18 @@ client.shops = setmetatable(data('shops'), {
 			if shop.jobs then shop.groups = shop.jobs end
 
 			if not shop.groups or client.hasGroup(shop.groups) then
-				if shared.qtarget then
+				if shared.qtarget and (shop.model or shop.targets) then
 					if shop.model then
 						exports.qtarget:AddTargetModel(shop.model, {
 							options = {
 								{
 									icon = 'fas fa-shopping-basket',
-									label = shop.label or shared.locale('open_shop', shop.name),
-									action = function()
+									label = shop.label or shared.locale((shop.isVending and 'open_shop_vending' or 'open_shop'), shop.name),
+									action = function(entity)
 										openShop({type=type})
+										if shop.isVending then
+											vendingEntity = entity
+										end
 									end
 								},
 							},

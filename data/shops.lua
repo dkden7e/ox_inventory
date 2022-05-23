@@ -20,7 +20,7 @@ return {
 			{ name = 'phone', price = 500 },
 			{ name = 'radio', price = 2000 },
 			{ name = 'boombox', price = 4000 },
-			{ name = 'tarjeta_transportes', price = 1000 },
+			{ name = 'tarjeta_transportes', metadata = { usos = 25, registered = true, serial = 'TRANSP' }, price = 750 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(190.21, -889.55, 30.71),
@@ -216,7 +216,7 @@ return {
 			{ name = 'WEAPON_HEAVYPISTOL', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
 			{ name = 'WEAPON_PUMPSHOTGUN', price = 10000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 5 },
 			{ name = 'WEAPON_CARBINERIFLE', price = 15000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 6 },
-			{ name = 'WEAPON_SMOKE', price = 200, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
+			{ name = 'WEAPON_SMOK2GRENADE', price = 200, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
 			{ name = 'WEAPON_FLASHBANG', price = 10000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 7 },
 			{ name = 'WEAPON_SMOKEGRENADE', price = 10000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 7 },
 		}, locations = {
@@ -229,7 +229,7 @@ return {
 		}
 	},
 
-	PoliceArmoury = {
+	PoliceArmoury2 = {
 		name = 'Armería FIB',
 		groups = {
 			['justice'] = 0,
@@ -258,7 +258,7 @@ return {
 			{ name = "WEAPON_CARBINERIFLE_MK2", price = 5000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 3 },
 			{ name = "WEAPON_HEAVYSHOTGUN", price = 50000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 9 },
 			{ name = "WEAPON_HEAVYSNIPER_MK2", price = 80000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 9 },
-			{ name = 'WEAPON_SMOKE', price = 200, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
+			{ name = 'WEAPON_SMOK2GRENADE', price = 200, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
 			{ name = 'WEAPON_FLASHBANG', price = 10000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 7 },
 			{ name = 'WEAPON_SMOKEGRENADE', price = 10000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 7 },
 		}, locations = {
@@ -275,8 +275,10 @@ return {
 		blip = {
 			id = 403, colour = 69, scale = 0.8
 		}, inventory = {
+			{ name = 'bandage', price = 5 },
 			{ name = 'medikit', price = 26 },
-			{ name = 'bandage', price = 5 }
+			{ name = 'wheelchair', price = 500 },
+			{ name = 'stretcher', price = 1500 },
 		}, locations = {
 			vec3(306.3687, -601.5139, 43.28406)
 		}, targets = {
@@ -317,14 +319,109 @@ return {
 	--},
 
 	VendingMachineDrinks = {
-		name = 'Maquina expendedora',
+		name = 'Maquina expendedora (Bebida)',
 		inventory = {
 			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
-			{ name = 'chocolate', price = 10 },
+			{ name = 'fanta', price = 10 },
+			{ name = 'cocacola', price = 10 },
+			{ name = 'energy', price = 10 },
+			{ name = 'redbull', price = 10 },
 		},
 		model = {
-			`prop_vend_soda_02`, `prop_vend_fridge01`, `prop_vend_water_01`, `prop_vend_soda_01`
+			`prop_vend_soda_02`, `prop_vend_soda_01`
 		}
-	}
+	},
+
+	VendingMachineWater = {
+		name = 'Maquina expendedora (Agua)',
+		inventory = {
+			{ name = 'water', price = 10 }
+		},
+		model = {
+			`prop_vend_water_01`
+		}
+	},
+
+	VendingMachineCoffe = {
+		name = 'Maquina expendedora (Cafe)',
+		inventory = {
+			{ name = 'water', price = 10 },
+			{ name = 'coffe', price = 10 },
+			{ name = 'coffebean', price = 10 },
+			{ name = 'frappuccinobean', price = 10 },
+			{ name = 'milk', price = 10 },
+		},
+		model = {
+			`prop_vend_coffe_01`
+		}
+	},
+
+	VendingMachineGumballs = {
+		name = 'Maquina expendedora (Gominolas)',
+		inventory = {
+			{ name = 'gominolas', price = 10 },
+		},
+		model = {
+			`prop_gumball_01`, `prop_gumball_02`, `prop_gumball_03`
+		}
+	},
+
+	VendingMachineSnacks = {
+		name = 'Maquina expendedora (Snacks)',
+		inventory = {
+			{ name = 'anacardos', price = 10 },
+			{ name = 'gominolas', price = 10 },
+			{ name = 'bolcacahuetes', price = 10 },
+			{ name = 'chocolate', price = 10 },
+			{ name = 'chips', price = 10 },
+			{ name = 'sandwichbean', price = 10 },
+			{ name = 'sandwichhot', price = 10 },
+			{ name = 'cupcakebean', price = 10 },
+			{ name = 'chicles', price = 10 },
+			{ name = 'donutbean', price = 10 },
+			{ name = 'jusfruit', price = 10 },
+			{ name = 'water', price = 10 },
+			{ name = 'coffe', price = 10 },
+			{ name = 'fanta', price = 10 },
+			{ name = 'cocacola', price = 10 },
+			{ name = 'energy', price = 10 },
+			{ name = 'redbull', price = 10 },
+		},
+		model = {
+			`prop_vend_snak_01`, `prop_vend_snak_01_tu`
+		}
+	},
+
+	VendingMachineWatercooler = {
+		name = 'Dispensador de agua',
+		inventory = {
+			{ name = 'water', price = 10 },
+		},
+		model = {
+			`prop_watercooler`
+		}
+	},
+
+	VendingMachineNewspaper = {
+		name = 'Dispensador de periódicos',
+		inventory = {
+			{ name = 'comic_book_1', price = 10 },
+			{ name = 'comic_book_2', price = 10 },
+
+		},
+		model = {
+			`prop_news_disp_01a`, `prop_news_disp_02a`, `prop_news_disp_02a_s`, `prop_news_disp_02b`, `prop_news_disp_02c`, `prop_news_disp_02d`, `prop_news_disp_02e`, `prop_news_disp_03a`, `prop_news_disp_03c`, `prop_news_disp_05a`, `prop_news_disp_06a`
+		}
+	},
+
+	VendingMachineTobacco = {
+		name = 'Maquina de tabaco',
+		inventory = {
+			{ name = 'cigarett', price = 10 },
+		},
+		model = {
+			`prop_vend_fags_01`
+		}
+	},
 }
+
