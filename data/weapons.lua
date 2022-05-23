@@ -183,7 +183,7 @@ return {
 			durability = 0.1,
 		},
 		['WEAPON_DBSHOTGUN'] = {
-			label = 'Escopeta de dos cañones',
+			label = 'Recortada de dos cañones',
 			description = 'Haz una cosa y hazla bien. ¿Quién necesita una cadencia de disparo elevada cuando tu primer disparo puede liquidar al otro tío?',
 			weight = 3175,
 			durability = 0.4,
@@ -662,6 +662,13 @@ return {
 			description = 'La M870 es ampliamente empleada por civiles para tiro deportivo, cacería y defensa personal. También es habitualmente empleada por agencias policiales y fuerzas armadas alrededor del mundo.',
 			weight = 3600,
 			durability = 0.1,
+			ammoname = 'ammo-shotgun'
+		},
+		['WEAPON_DOUBLEBARRELFM'] = {
+			label = 'Escopeta de caza',
+			description = 'Haz una cosa y hazla bien. ¿Quién necesita una cadencia de disparo elevada cuando tu primer disparo puede liquidar al otro tío?',
+			weight = 4000,
+			durability = 0.4,
 			ammoname = 'ammo-shotgun'
 		},
 	},
@@ -1146,6 +1153,44 @@ return {
 				usetime = 2500
 			}
 		},
+
+		-- DOS CAÑONES
+		['at_dbshotgunfm_barrel2'] = {
+			label = 'Cañón corto (escopeta de caza)',
+			type = 'barrel',
+			weight = 800,
+			client = {
+				component = {`COMPONENT_DOUBLEBARREL_BARREL_02`},
+				usetime = 2500
+			}
+		},
+		['at_dbshotgunfm_barrel3'] = {
+			label = 'Cañón recortado (escopeta de caza)',
+			type = 'barrel',
+			weight = 700,
+			client = {
+				component = {`COMPONENT_DOUBLEBARREL_BARREL_03`},
+				usetime = 2500
+			}
+		},
+		['at_dbshotgunfm_barrel4'] = {
+			label = 'Cañón largo (escopeta de caza)',
+			type = 'barrel',
+			weight = 1100,
+			client = {
+				component = {`COMPONENT_DOUBLEBARREL_BARREL_04`},
+				usetime = 2500
+			}
+		},
+		['at_dbshotgunfm_barrel5'] = {
+			label = 'Cañón de precisión (escopeta de caza)',
+			type = 'barrel',
+			weight = 1200,
+			client = {
+				component = {`COMPONENT_DOUBLEBARREL_BARREL_05`},
+				usetime = 2500
+			}
+		},
 	},
 
 	Ammo = {
@@ -1187,7 +1232,7 @@ return {
 	
 		['ammo-flare'] = {
 			label = 'Bengala',
-			description = 'Una bengala de uso manual, ¿qué necesitas que te explique?.',
+			description = 'Una bengala preparada para dispadarse de una pistola de bengalas, ¿qué necesitas que te explique?.',
 			weight = 100,
 		},
 	
