@@ -3103,4 +3103,455 @@ return {
 		description = nil
 	},
 
+	['banana_kush_bag'] = {
+		label = 'bolsa banana kush',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['banana_kush_joint'] = {
+		label = 'porro banana kush',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['banana_kush_weed'] = {
+		label = 'banana kush (1g)',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['blue_dream_bag'] = {
+		label = 'bolsa blue dream',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['blue_dream_joint'] = {
+		label = 'porro blue dream',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['blue_dream_weed'] = {
+		label = 'blue dream (1g)',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['bongo'] = {
+		label = 'bong',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['cubancigar'] = {
+		label = 'puro cubano',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['davidoffcigar'] = {
+		label = 'puro davidoff',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['liquid'] = {
+		label = 'liquid',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['marlboro'] = {
+		label = 'cajetilla malboro',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['marlborocig'] = {
+		label = 'cigarro malboro',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['ocb_paper'] = {
+		label = 'papel ocb',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['og_kush_bag'] = {
+		label = 'bolsa og kush',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['og_kush_joint'] = {
+		label = 'porro og kush',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['og_kush_weed'] = {
+		label = 'og kush (1g)',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['purple_haze_bag'] = {
+		label = 'bolsa purple haze',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['purple_haze_joint'] = {
+		label = 'porro purple haze',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['purple_haze_weed'] = {
+		label = 'purple haze (1g)',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['redw'] = {
+		label = 'cajetilla redwoord',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['redwcig'] = {
+		label = 'cigarro redwood',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['vape'] = {
+		label = 'vaper',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	-- COMIDA
+	['pescado'] = {
+	    label = 'pescado',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = 'eating',
+	        prop = { model = `a_c_fish`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x pescado'
+	    },
+	},
+
+	['sopa'] = {
+	    label = 'sopa',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = 'eating',
+	        prop = { model = `v_res_fa_tintomsoup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x sopa'
+	    },
+	},
+
+	['patatasfritas'] = {
+	    label = 'patatas fritas',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = 'eating',
+	        prop = { model = `prop_food_chips`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x patatas fritas'
+	    },
+	},
+
+	['churros'] = {
+	    label = 'churros',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = 'eating',
+	        prop = { model = `v_res_fa_bread03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x churros'
+	    },
+	},
+
+	['empanadarellena'] = {
+	    label = 'empanada rellena',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = 'eating',
+	        prop = { model = `prop_taco_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x empanada rellena'
+	    },
+	},
+
+	['donut'] = {
+	    label = 'donut',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = 'eating',
+	        prop = { model = `prop_amb_donut`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x donut'
+	    },
+	},
+
+	['barritaener'] = {
+	    label = 'barrita energética',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = 'eating',
+	        prop = { model = `prop_candy_pqs`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x barrita energética'
+	    },
+	},
+
+	-- BEBIDA
+	['chococaliente'] = {
+	    label = 'chocolate caliente',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+	        prop = { model = `ng_proc_ojbot_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x chocolate caliente'
+	    },
+	},
+
+	['batido'] = {
+	    label = 'batido',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+	        prop = { model = `ng_proc_ojbot_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x batido'
+	    },
+	},
+
+	['tecaliente'] = {
+	    label = 'té caliente',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+	        prop = { model = `prop_cs_script_bottle_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x té caliente'
+	    },
+	},
+
+	['botellajagger'] = {
+	    label = 'botella de jagger',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+	        prop = { model = `prop_rum_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x botella de jagger'
+	    },
+	},
+
+	['botellatequila'] = {
+	    label = 'botella de tequila',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+	        prop = { model = `prop_tequila_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x botella de tequila'
+	    },
+	},
+
+	['botellawhisky'] = {
+	    label = 'botella de whisky',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+	        prop = { model = `prop_whiskey_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x botella de whisky'
+	    },
+	},
+
+	['batidoproteinas'] = {
+	    label = 'batido de proteínas',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+	        prop = { model = `ng_proc_ojbot_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x batido de proteínas'
+	    },
+	},
+
+	-- ONETRAVEL
+	['ot_card'] = {
+	    label = 'Tarjeta OneTravel',
+		stack = true,
+		close = true,
+	    weight = 10,
+	},
+
+	['ot_cupon10'] = {
+	    label = 'OneTravel 10%',
+		stack = true,
+		close = true,
+	    weight = 1,
+	},
+
+	['ot_cupon15'] = {
+	    label = 'Cupón OneTravel 15%',
+		stack = true,
+		close = true,
+	    weight = 1,
+	},
+
+	['ot_cupon25'] = {
+	    label = 'Cupón OneTravel 25%',
+		stack = true,
+		close = true,
+	    weight = 1,
+	},
+
+	['ot_llave1'] = {
+	    label = 'Llave OneTravel 1',
+		stack = true,
+		close = true,
+	    weight = 50,
+
+	['ot_llave2'] = {
+	    label = 'Llave OneTravel 2',
+		stack = true,
+		close = true,
+	    weight = 50,
+	},
+
+	['ot_ticket'] = {
+	    label = 'Tícket onetravel',
+		stack = true,
+		close = true,
+	    weight = 5,
+	},
+
+	['ot_ticket_normal'] = {
+	    label = 'Tícket OneTravel normal',
+		stack = true,
+		close = true,
+	    weight = 5,
+	},
+
+	['ot_ticket_premium'] = {
+	    label = 'Tícket OneTravel premium',
+		stack = true,
+		close = true,
+	    weight = 5,
+	},
+
+	['ot_ticket_privado'] = {
+	    label = 'Tícket OneTravel privado',
+		stack = true,
+		close = true,
+	    weight = 5,
+	},
+
+	['ot_ticket_unuso'] = {
+	    label = 'Tícket OneTravel un uso',
+		stack = true,
+		close = true,
+	    weight = 5,
+	},
+
+	-- OTROS
+	['binoculars'] = {
+	    label = 'primáticos',
+		stack = true,
+		close = true,
+	    weight = 220,
+	},
+
+	['camara'] = {
+	    label = 'cámara',
+		stack = true,
+		close = true,
+	    weight = 220,
+	},
+
+	['dados'] = {
+	    label = 'dados',
+		stack = true,
+		close = true,
+	    weight = 50,
+	},
+
+	['megaphone'] = {
+	    label = 'megáfono',
+		stack = true,
+		close = true,
+	    weight = 500,
+	},
 }
