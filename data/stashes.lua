@@ -315,4 +315,14 @@ return {
 		weight = 1000000,
 		groups = {['cafe1020'] = 0}
 	},
+
+	{
+		coords = vec3(374.5, -1081.76, 29.48),
+		name =  'cafe1020',
+		label = 'Almacén del Café 10-20',
+		owner = false,
+		slots = 70,
+		weight = 1000000,
+		groups = {['cafe1020'] = 0}
+	},
 }
