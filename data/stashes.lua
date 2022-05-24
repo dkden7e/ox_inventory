@@ -317,12 +317,12 @@ return {
 	},
 
 	{
-		coords = vec3(374.5, -1081.76, 29.48),
-		name =  'cafe1020',
-		label = 'Almacén del Café 10-20',
+		coords = vec3(-433.622, 274.9451, 83.41833),
+		name =  'nuevavida1',
+		label = 'Almacén del Nueva Vida',
 		owner = false,
 		slots = 70,
 		weight = 1000000,
-		groups = {['cafe1020'] = 0}
+		groups = {['nuevavida'] = 0}
 	},
 }
