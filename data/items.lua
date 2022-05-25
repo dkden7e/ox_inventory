@@ -3483,6 +3483,7 @@ return {
 		stack = true,
 		close = true,
 	    weight = 50,
+	},
 
 	['ot_llave2'] = {
 	    label = 'Llave OneTravel 2',

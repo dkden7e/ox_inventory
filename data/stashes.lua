@@ -287,7 +287,7 @@ return {
 	},
 
 	{
-		coords = vec3(-132.20, 635.40, 168.82), -- coordenadas del inventario
+		coords = vec3(-132.20, -635.40, 168.82), -- coordenadas del inventario
 		name =  'onetravel1', -- nombre interno TIENE QUE SER ÚNICO
 		label = 'Taquillas de OneTravel', -- nombre visible del inventario PUEDE REPETIRSE
 		owner = true, -- true = inventario personal, diferente contenido para cada persona. false = compartido
