@@ -3691,4 +3691,180 @@ return {
         weight = 1,
     },
 
+
+	['ammonium_nitrate'] = {
+		label = 'ammonium nitrate',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['cannabis'] = {
+		label = 'cannabis',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['carbon'] = {
+		label = 'carbon',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['cocaine'] = {
+		label = 'cocaine',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['codeine'] = {
+		label = 'codeine',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drink_sprite'] = {
+		label = 'sprite',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drug_ecstasy'] = {
+		label = 'ecstasy',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drug_lean'] = {
+		label = 'lean',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drug_lsd'] = {
+		label = 'lsd',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drug_meth'] = {
+		label = 'meth',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['green_gelato_cannabis'] = {
+		label = 'green gelato cannabis',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['hydrogen'] = {
+		label = 'hydrogen',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['ice'] = {
+		label = 'ice',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['jolly_ranchers'] = {
+		label = 'jolly ranchers',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['liquid_sulfur'] = {
+		label = 'liquid sulfur',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['muriatic_acid'] = {
+		label = 'muriatic acid',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['nitrogen'] = {
+		label = 'nitrogen',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['opium'] = {
+		label = 'opium',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['oxygen'] = {
+		label = 'oxygen',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['pseudoefedrine'] = {
+		label = 'pseudoefedrine',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['red_sulfur'] = {
+		label = 'red sulfur',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['sodium_hydroxide'] = {
+		label = 'sodium hydroxide',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
 }
