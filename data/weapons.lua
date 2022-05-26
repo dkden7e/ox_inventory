@@ -671,6 +671,13 @@ return {
 			durability = 0.4,
 			ammoname = 'ammo-shotgun'
 		},
+		['WEAPON_M700'] = {
+			label = 'Rifle de caza',
+			description = '',
+			weight = 4000,
+			durability = 0.4,
+			ammoname = 'ammo-sniper'
+		},
 	},
 
 	Components = {
@@ -820,6 +827,16 @@ return {
 			weight = 280,
 			client = {
 				component = {`COMPONENT_COMPACTRIFLE_CLIP_03`, `COMPONENT_CARBINERIFLE_CLIP_03`, `COMPONENT_SPECIALCARBINE_CLIP_03`},
+				usetime = 2500
+			}
+		},
+
+		['w_sr_m700_mag1'] = {
+			label = 'Accesorio - Carg. extendido (Caza)',
+			type = 'magazine',
+			weight = 280,
+			client = {
+				component = {`COMPONENT_M700_CLIP_01`},
 				usetime = 2500
 			}
 		},
@@ -1191,8 +1208,29 @@ return {
 				usetime = 2500
 			}
 		},
+
+		-- RIFLE CAZA
+		['w_at_scope_m700'] = {
+			label = 'Mira de precisión',
+			type = 'sight',
+			weight = 800,
+			client = {
+				component = {`COMPONENT_AT_SCOPE_M700`},
+				usetime = 2500
+			}
+		},
+		['w_at_ar_supp_m700'] = {
+			label = 'Silenciador (Caza)',
+			type = 'barrel',
+			weight = 700,
+			client = {
+				component = {`COMPONENT_AT_AR_SUPP_M700`},
+				usetime = 2500
+			}
+		},
 	},
 
+			
 	Ammo = {
 		['ammo-22'] = {
 			label = '.22 Long Rifle',
