@@ -2028,7 +2028,7 @@ return {
 		},
 	},
 
-	['tequeños'] = {
+	['tequenos'] = {
 		label = 'La Ruleta Tequeña',
 		weight = 220,
 		client = {
@@ -3555,4 +3555,140 @@ return {
 		close = true,
 	    weight = 500,
 	},
+
+	['carnetsalud'] = {
+	    label = 'carnet de salud privada',
+		stack = true,
+		close = true,
+	    weight = 1,
+	},
+
+	['cappuccino'] = {
+		label = 'cappuccino',
+		weight = 220,
+		client = {
+			status = {hunger = 85000, thirst = 20000, drunk = -30000, },
+			anim = 'eating',
+			prop = { model = `p_ing_coffeecup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x cappuccino'
+		},
+	},
+
+	['latte_cappuccino'] = {
+		label = 'latte cappuccino',
+		weight = 220,
+		client = {
+			status = {hunger = 85000, thirst = 20000, drunk = -30000, },
+			anim = 'eating',
+			prop = { model = `p_ing_coffeecup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x latte cappuccino'
+		},
+	},
+
+	['batidofresa'] = {
+	    label = 'batido de fresa',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+	        prop = { model = `ng_proc_ojbot_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x batido de fresa'
+	    },
+	},
+
+	['batidoplatano'] = {
+	    label = 'batido de plátano',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+	        prop = { model = `ng_proc_ojbot_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x batido de plátano'
+	    },
+	},
+
+	['batidochocolate'] = {
+	    label = 'batido de chocolate',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+	        prop = { model = `ng_proc_ojbot_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x batido de chocolate'
+	    },
+	},
+
+	['baconfries'] = {
+	    label = 'patatas fritas con bacon',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = 'eating',
+	        prop = { model = `prop_food_chips`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x patatas fritas con bacon'
+	    },
+	},
+
+	['bombones'] = {
+		label = 'caja de chocolates',
+		weight = 220,
+		client = {
+			status = {hunger = 75000, thirst = -10000, drunk = -80000, },
+			anim = 'eating',
+			prop = { model = `prop_choc_ego`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x caja de chocolates'
+		},
+	},
+
+	['cookie_chips'] = {
+		label = 'galletas con chips de chocolate',
+		weight = 220,
+		client = {
+			status = {hunger = 75000, thirst = -10000, drunk = -80000, },
+			anim = 'eating',
+			prop = { model = `prop_choc_ego`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x galletas con chips de chocolate'
+		},
+	},
+
+
+	['lasagna'] = {
+	    label = 'lasagna',
+	    weight = 220,
+	    client = {
+	        status = {hunger = 125000, thirst = -15000, },
+	        anim = 'eating',
+	        prop = { model = `a_c_fish`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+	        usetime = 2500,
+	        notification = 'Consumiste 1x lasagna'
+	    },
+	},
+
+	['waffles'] = {
+		label = 'waffles',
+		weight = 220,
+		client = {
+			status = {hunger = 70000, drunk = -75000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `v_res_cakedome`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x waffles'
+		},
+	},
+
+	['motelpinkcard'] = {
+        label = 'tarjeta de acceso Motel Pink',
+        stack = true,
+        close = true,
+        weight = 1,
+    },
+
 }
