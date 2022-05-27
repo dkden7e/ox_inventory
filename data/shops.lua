@@ -266,6 +266,9 @@ return {
 
 	Weed = (isTencity and {
 		name = 'Tienda de productos de cultivo',
+		blip = {
+			id = 469, colour = 2, scale = 0.5
+		},
 		inventory = {
 			{ name = 'wateringcan', price = 100 },
 			{ name = 'plantpot', price = 100 },
@@ -279,6 +282,9 @@ return {
 		}
 	} or {
 		name = 'Tienda de productos de cultivo',
+		blip = {
+			id = 469, colour = 2, scale = 0.5
+		},
 		inventory = {
 			{ name = 'wateringcan', price = 200 },
 			{ name = 'plantpot', price = 75 },
@@ -286,8 +292,10 @@ return {
 			{ name = 'highgradefert', price = 60 },
 			{ name = 'drugscales', price = 2000 },
 			{ name = 'ziplock', price = 10 },
+			{ name = 'seed_weed', price = 100 },
 		}, locations = {
-			vec3(-38.756, 1908.21, 195.28)
+			vec3(2195.4587, 5603.1563, 53.5654)
+			--vec3(-38.756, 1908.21, 195.28)
 		}
 	}),
 
