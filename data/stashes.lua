@@ -307,9 +307,39 @@ return {
 	},
 
 	{
+		coords = vec3(-2586.52, 1882.43, 167.32),
+		name =  'onetravelWestons1',
+		label = 'Almacén de OneTravel (Westons 1)',
+		owner = false,
+		slots = 70,
+		weight = 1000000,
+		groups = {['onetravel'] = 0}
+	},
+
+	{
+		coords = vec3(-2581.43, 1890.33, 167.32),
+		name =  'onetravelWestons1',
+		label = 'Almacén de OneTravel (Westons 2)',
+		owner = false,
+		slots = 70,
+		weight = 1000000,
+		groups = {['onetravel'] = 0}
+	},
+
+	{
+		coords = vec3(-2581.4, 1892.08, 163.72),
+		name =  'onetravelWestonsTaq',
+		label = 'Taquillas de OneTravel (Westons)',
+		owner = true,
+		slots = 70,
+		weight = 120000,
+		groups = {['onetravel'] = 0}
+	},
+
+	{
 		coords = vec3(374.5, -1081.76, 29.48),
 		name =  'cafe1020',
-		label = 'Almacén del Café 10-20',
+		label = 'Almacén del ' .. (isTencity and 'Café 10-20' or 'Liquor Deli'),
 		owner = false,
 		slots = 70,
 		weight = 1000000,
@@ -324,5 +354,23 @@ return {
 		slots = 70,
 		weight = 1000000,
 		groups = {['nuevavida'] = 0}
+	},
+
+	{
+		coords = vec3(-1489.18, 841.85, 177.0),
+		name =  'resortv3-1',
+		label = 'Almacén del resort',
+		owner = false,
+		slots = 70,
+		weight = 1000000
+	},
+
+	{
+		coords = vec3(-1503.34, 838.64, 181.6),
+		name =  'resortv3-2',
+		label = 'Taquillas del resort',
+		owner = true,
+		slots = 70,
+		weight = 1000000
 	},
 }
