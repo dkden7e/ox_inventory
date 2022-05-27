@@ -286,6 +286,30 @@ return {
 			id = 469, colour = 2, scale = 0.5
 		},
 		inventory = {
+			{ name = 'wateringcan', price = 200, currency = 'black_money' },
+			{ name = 'plantpot', price = 75, currency = 'black_money' },
+			{ name = 'lowgradefert', price = 20, currency = 'black_money' },
+			{ name = 'highgradefert', price = 60, currency = 'black_money' },
+			{ name = 'drugscales', price = 2000, currency = 'black_money' },
+			{ name = 'ziplock', price = 10, currency = 'black_money' },
+			{ name = 'seed_weed', price = 100, currency = 'black_money' },
+		}, locations = {
+			vec3(2195.4587, 5603.1563, 53.5654)
+			--vec3(-38.756, 1908.21, 195.28)
+		}
+	}),
+
+	Weed2 = (isTencity and {
+		name = '',
+		inventory = {
+		}, locations = {
+		}
+	} or {
+		name = 'SMOKE ON THE WATER',
+		blip = {
+			id = 469, colour = 2, scale = 0.75
+		},
+		inventory = {
 			{ name = 'wateringcan', price = 200 },
 			{ name = 'plantpot', price = 75 },
 			{ name = 'lowgradefert', price = 20 },
@@ -294,8 +318,7 @@ return {
 			{ name = 'ziplock', price = 10 },
 			{ name = 'seed_weed', price = 100 },
 		}, locations = {
-			vec3(2195.4587, 5603.1563, 53.5654)
-			--vec3(-38.756, 1908.21, 195.28)
+			vec3(-1169.0750, -1572.7281, 4.6636)
 		}
 	}),
 

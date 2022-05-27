@@ -19,9 +19,11 @@ do
 	end
 
 	local police = table.create(0, #shared.police)
+	local police2 = police
 
 	for i = 1, #shared.police do
 		police[shared.police[i]] = 1
+		police2[shared.police[i]] = 0
 	end
 	shared.police = police
 end

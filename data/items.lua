@@ -2736,7 +2736,7 @@ return {
 	},
 
 	['ziplock'] = {
-		label = 'Bolsa ziplock',
+		label = 'Bolsa Ziplock',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2816,7 +2816,7 @@ return {
 	},
 
 	['trimmedweed'] = {
-		label = 'Hierba cortada',
+		label = 'Cogollos frescos',
 		weight = 10,
 		stack = true,
 		close = true,
@@ -2840,7 +2840,7 @@ return {
 	},
 
 	['dopebag'] = {
-		label = 'bolsa ziplock',
+		label = 'Bolsita de ' .. (isTencity and 'tabaiguana' or 'cogollos'),
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2952,7 +2952,7 @@ return {
 	},
 
 	['table'] = {
-		label = 'table',
+		label = 'Mesa',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2960,7 +2960,7 @@ return {
 	},
 
 	['tent'] = {
-		label = 'tent',
+		label = 'Caseta',
 		weight = 4,
 		stack = true,
 		close = true,
@@ -2968,7 +2968,7 @@ return {
 	},
 
 	['tent2'] = {
-		label = 'tent 2',
+		label = 'Caseta 2',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2976,7 +2976,7 @@ return {
 	},
 
 	['tent3'] = {
-		label = 'tent 3',
+		label = 'Caseta 3',
 		weight = 10,
 		stack = true,
 		close = true,
@@ -3863,6 +3863,14 @@ return {
 	['sodium_hydroxide'] = {
 		label = 'sodium hydroxide',
 		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['windowchecker'] = {
+		label = 'comprobador de lunas',
+		weight = 15,
 		stack = true,
 		close = true,
 		description = nil

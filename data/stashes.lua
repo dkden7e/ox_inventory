@@ -19,7 +19,7 @@ return {
 		owner = true,
 		slots = 70,
 		weight = 250000,
-		groups = shared.police
+		groups = shared.police2
 	},
 
 	{
