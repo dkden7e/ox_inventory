@@ -3875,4 +3875,12 @@ return {
 		close = true,
 		description = nil
 	},
+
+	['grinder'] = {
+		label = 'Grinder',
+		weight = 100,
+		stack = true,
+		close = true,
+		description = nil
+	},
 }
