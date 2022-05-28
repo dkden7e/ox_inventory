@@ -338,7 +338,7 @@ return {
 
 	{
 		coords = vec3(374.5, -1081.76, 29.48),
-		name =  'cafe1020',
+		name =  (isTencity and 'cafe1020' or 'liquordeli'),
 		label = 'Almacén del ' .. (isTencity and 'Café 10-20' or 'Liquor Deli'),
 		owner = false,
 		slots = 70,
@@ -372,5 +372,45 @@ return {
 		owner = true,
 		slots = 70,
 		weight = 1000000
+	},
+
+	{
+		coords = vec3(-569.3934, 277.5692, 94.08423),
+		name =  'tequilala1',
+		label = 'Almacén Tequila-la (azotea)',
+		owner = false,
+		slots = 70,
+		weight = 1000000,
+		groups = {['tequilala'] = 0}
+	},
+
+	{
+		coords = vec3(-433.622, 274.9451, 83.41833),
+		name =  'tequilala2',
+		label = 'Almacén Tequila-la (bar)',
+		owner = false,
+		slots = 70,
+		weight = 1000000,
+		groups = {['tequilala'] = 0}
+	},
+
+	{
+		coords = vec3(310.7414, 229.1499, 104.3716),
+		name =  'dirtyangels1',
+		label = 'Almacén del Dirty Angels',
+		owner = false,
+		slots = 70,
+		weight = 1000000,
+		groups = {['dirtyangels'] = 0}
+	},
+
+	{
+		coords = vec3(315.7451, 213.5535, 104.3717),
+		name =  'dirtyangelsTaq1',
+		label = 'Taquillas del Dirty Angels',
+		owner = true,
+		slots = 70,
+		weight = 120000,
+		groups = {['dirtyangels'] = 0}
 	},
 }

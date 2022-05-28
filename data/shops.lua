@@ -271,12 +271,19 @@ return {
 		},
 		inventory = {
 			{ name = 'wateringcan', price = 100 },
+			{ name = 'wateringcan', price = 100, currency = 'black_money' },
 			{ name = 'plantpot', price = 100 },
+			{ name = 'plantpot', price = 100, currency = 'black_money' },
 			{ name = 'lowgradefert', price = 100 },
+			{ name = 'lowgradefert', price = 100, currency = 'black_money' },
 			{ name = 'highgradefert', price = 200 },
+			{ name = 'highgradefert', price = 200, currency = 'black_money' },
 			{ name = 'drugscales', price = 2500 },
+			{ name = 'drugscales', price = 2500, currency = 'black_money' },
 			{ name = 'ziplock', price = 20 },
+			{ name = 'ziplock', price = 20, currency = 'black_money' },
 			{ name = 'seed_weed', price = 100 },
+			{ name = 'seed_weed', price = 100, currency = 'black_money' },
 		}, locations = {
 			vec3(2195.4587, 5603.1563, 53.5654)
 		}
@@ -286,13 +293,22 @@ return {
 			id = 469, colour = 2, scale = 0.5
 		},
 		inventory = {
+			{ name = 'wateringcan', price = 200 },
 			{ name = 'wateringcan', price = 200, currency = 'black_money' },
+			{ name = 'plantpot', price = 75 },
 			{ name = 'plantpot', price = 75, currency = 'black_money' },
+			{ name = 'lowgradefert', price = 20 },
 			{ name = 'lowgradefert', price = 20, currency = 'black_money' },
+			{ name = 'highgradefert', price = 60 },
 			{ name = 'highgradefert', price = 60, currency = 'black_money' },
+			{ name = 'drugscales', price = 2000 },
 			{ name = 'drugscales', price = 2000, currency = 'black_money' },
+			{ name = 'ziplock', price = 10 },
 			{ name = 'ziplock', price = 10, currency = 'black_money' },
+			{ name = 'seed_weed', price = 100 },
 			{ name = 'seed_weed', price = 100, currency = 'black_money' },
+			{ name = 'WEAPON_KNIFE', price = 5000 },
+			{ name = 'WEAPON_KNIFE', price = 5000, currency = 'black_money' },
 		}, locations = {
 			vec3(2195.4587, 5603.1563, 53.5654)
 			--vec3(-38.756, 1908.21, 195.28)
