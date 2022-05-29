@@ -3876,7 +3876,7 @@ return {
 		description = nil
 	},
 
-	['grinder'] = {
+	['smoke_grinder'] = {
 		label = 'Grinder',
 		weight = 100,
 		stack = true,

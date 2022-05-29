@@ -21,6 +21,8 @@ return {
 			{ name = 'radio', price = 2000 },
 			{ name = 'boombox', price = 4000 },
 			{ name = 'tarjeta_transportes', metadata = { usos = 25, registered = true, serial = 'TRANSP' }, price = 750 },
+			{ name = 'ocb_paper', price = 15 },
+			{ name = 'smoke_grinder', price = 1200 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(190.21, -889.55, 30.71),
@@ -333,6 +335,8 @@ return {
 			{ name = 'drugscales', price = 2000 },
 			{ name = 'ziplock', price = 10 },
 			{ name = 'seed_weed', price = 100 },
+			{ name = 'ocb_paper', price = 10 },
+			{ name = 'smoke_grinder', price = 1000 },
 		}, locations = {
 			vec3(-1169.0750, -1572.7281, 4.6636)
 		}
