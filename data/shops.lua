@@ -19,10 +19,17 @@ return {
 			{ name = 'beer', price = 50 },
 			{ name = 'phone', price = 500 },
 			{ name = 'radio', price = 2000 },
-			{ name = 'boombox', price = 4000 },
+			{ name = 'boombox', price = 1000 },
 			{ name = 'tarjeta_transportes', metadata = { usos = 25, registered = true, serial = 'TRANSP' }, price = 750 },
 			{ name = 'ocb_paper', price = 15 },
+			{ name = 'smoke_filters', price = 20 },
 			{ name = 'smoke_grinder', price = 1200 },
+			{ name = 'gameboy', price = 1500 },
+			{ name = 'cups', price = 200 },
+			{ name = 'calculator', price = 500 },
+			{ name = 'spray', price = 500 },
+            { name = 'notepad', price = 500 },
+			{ name = 'WEAPON_FLASHLIGHT', price = 600 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(190.21, -889.55, 30.71),
@@ -67,6 +74,7 @@ return {
 			{ name = 'gintonic', price = 200 },
 			{ name = 'whisky', price = 250 },
 			{ name = 'burger', price = 15 },
+			{ name = 'cups', price = 200 },
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
 			vec3(-1222.915, -906.983, 12.326),
@@ -83,6 +91,10 @@ return {
 		blip = {
 			id = 122, colour = 69, scale = 0.8
 		}, inventory = {
+			{ name = 'skateboard', price = 1000 },
+			{ name = 'WEAPON_BAT', price = 1000 },
+			{ name = 'WEAPON_GOLFCLUB', price = 1000 },
+			{ name = 'WEAPON_BALL', price = 1000 },
 		}, locations = {
 			vec3(-762.06, -618.04, 30.46),
 		}
@@ -103,6 +115,19 @@ return {
 			{ name = 'car_wheel', price = 1500 },
 			{ name = 'scrap_metal', price = 1500 },
 			{ name = 'electric_scrap', price = 2000 },
+			{ name = 'rccar', price = 1500 },
+			{ name = 'gameboy', price = 1200 },
+			{ name = 'remote', price = 1500 },
+			{ name = 'WEAPON_CROWBAR', price = 1000 },
+			{ name = 'WEAPON_HAMMER', price = 1000 },
+			{ name = 'WEAPON_HATCHET', price = 1000 },
+			{ name = 'WEAPON_WRENCH', price = 1000 },
+            { name = 'spray', price = 450 },
+            { name = 'spray_remover', price = 200 },
+            { name = 'notepad', price = 500 },
+			{ name = 'WEAPON_FIREEXTINGUISHER', price = 500 },
+			{ name = 'WEAPON_FLASHLIGHT', price = 500 },
+			{ name = 'WEAPON_PETROLCAN', price = 1000 },
 		}, locations = {
 			vec3(2746.1895, 3468.6914, 55.6731),
 			vec3(342.99, -1298.26, 32.51)
@@ -133,6 +158,7 @@ return {
 			{ name = 'aluminium', price = 75 },
 			{ name = 'copper', price = 75 },
 			{ name = 'steel', price = 75 },
+			{ name = 'WEAPON_FIREEXTINGUISHER', price = 200 },
 		}, locations = {
 			vec3(2749.6907, 3476.9788, 55.6734),
 			vec3(340.5946, -1297.3885, 32.5105),
@@ -145,10 +171,14 @@ return {
 		blip = {
 			id = 110, colour = 69, scale = 0.8
 		}, inventory = {
---			{ name = 'ammo-9', price = 5, },
+			{ name = 'WEAPON_KNUCKLE', price = 1500 },
+			{ name = 'WEAPON_KNIFE', price = 5000 },
+			{ name = 'WEAPON_FLARE', price = 250 },
+			{ name = 'ammo-9', price = 99999999, },
 --			{ name = 'WEAPON_KNIFE', price = 200 },
 --			{ name = 'WEAPON_BAT', price = 100 },
---			{ name = 'WEAPON_PISTOL', price = 1000, metadata = { registered = true }, license = 'weapon' }
+			{ name = 'WEAPON_PISTOL', price = 9999999, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'WEAPON_FLASHLIGHT', price = 400 },
 		}, locations = {
 			vec3(-662.180, -934.961, 21.829),
 			vec3(810.25, -2157.60, 29.62),
@@ -196,6 +226,7 @@ return {
 			{ name = 'WEAPON_SMOK2GRENADE', price = 200, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
 			{ name = 'WEAPON_FLASHBANG', price = 10000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 7 },
 			{ name = 'WEAPON_SMOKEGRENADE', price = 10000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 7 },
+			{ name = 'WEAPON_FIREEXTINGUISHER', price = 100 },
 		}, locations = {
 			vec3(486.1490, -995.8393, 30.6898), -- MRPD
 			vec3(-430.4039, 5999.2310, 31.7165), -- PALETO LSSD
@@ -244,6 +275,7 @@ return {
 			{ name = 'WEAPON_SMOK2GRENADE', price = 200, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
 			{ name = 'WEAPON_FLASHBANG', price = 10000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 7 },
 			{ name = 'WEAPON_SMOKEGRENADE', price = 10000, metadata = { registered = true, serial = 'FIB' }, license = 'weapon', grade = 7 },
+			{ name = 'WEAPON_FIREEXTINGUISHER', price = 100 },
 		}, locations = {
 			vec3(28.48, -935.52, 29.9), -- FIB
 		}
@@ -261,6 +293,7 @@ return {
 			{ name = 'medikit', price = 26 },
 			{ name = 'wheelchair', price = 500 },
 			{ name = 'stretcher', price = 1500 },
+			{ name = 'WEAPON_FIREEXTINGUISHER', price = 100 },
 		}, locations = {
 			vec3(306.3687, -601.5139, 43.28406)
 		}
@@ -347,20 +380,18 @@ return {
 		blip = {
 			id = 141, colour = 31, scale = 0.8
 		}, inventory = {
-			{ name = 'bandage', price = 50 },
-			{ name = 'medikit', price = 500 },
 			{ name = 'WEAPON_KNIFE', price = 500 },
 			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
 			{ name = 'radio', price = 800 },
-			{ name = 'ammo-shotgun', price = 50, license = 'weapon' },
-			{ name = 'ammo-flare', price = 200, license = 'weapon' },
+			{ name = 'ammo-shotgun', price = 99999999, license = 'weapon' },
+			{ name = 'ammo-flare', price = 99999999, license = 'weapon' },
 			{ name = 'WEAPON_FLARE', price = 250 },
-			{ name = 'WEAPON_FLAREGUN', price = 2500, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon' },
-			{ name = 'WEAPON_DOUBLEBARRELFM', price = 5000, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon' },
-			{ name = 'at_dbshotgunfm_barrel2', price = 5000, license = 'weapon' },
-			{ name = 'at_dbshotgunfm_barrel3', price = 4000, license = 'weapon' },
-			{ name = 'at_dbshotgunfm_barrel4', price = 3000, license = 'weapon' },
-			{ name = 'at_dbshotgunfm_barrel5', price = 2000, license = 'weapon' },
+			{ name = 'WEAPON_FLAREGUN', price = 99999999, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon' },
+			{ name = 'WEAPON_DOUBLEBARRELFM', price = 999999999, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon' },
+			{ name = 'at_dbshotgunfm_barrel2', price = 99999999, license = 'weapon' },
+			{ name = 'at_dbshotgunfm_barrel3', price = 99999999, license = 'weapon' },
+			{ name = 'at_dbshotgunfm_barrel4', price = 99999999, license = 'weapon' },
+			{ name = 'at_dbshotgunfm_barrel5', price = 99999999, license = 'weapon' },
 		}, locations = {
 			vec3(-675.66, 5836.44, 17.34),
 		}
@@ -536,8 +567,8 @@ return {
             { name = 'fireworks', price = 50 },
             { name = 'parachute', price = 50 },
             { name = 'WEAPON_FLARE', price = 50 },
-            { name = 'spray', price = 50 },
-            { name = 'spray_remover', price = 50 },
+            { name = 'spray', price = 300 },
+            { name = 'spray_remover', price = 300 },
             { name = 'boombox', price = 50 },
             { name = 'notepad', price = 50 },
             { name = 'skateboard', price = 50 },

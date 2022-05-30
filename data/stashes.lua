@@ -413,4 +413,32 @@ return {
 		weight = 120000,
 		groups = {['dirtyangels'] = 0}
 	},
+
+	{
+		coords = vec3(137.26 -1936.22 15.22),
+		name =  'ballas1',
+		label = 'Almacén Ballas',
+		owner = false,
+		slots = 70,
+		weight = 1000000
+	},
+
+	{
+		coords = vec3(1439.1492, -1489.0743, 66.6193),
+		name =  'big1',
+		label = 'Almacén B.I.G.',
+		owner = false,
+		slots = 70,
+		weight = 1000000
+	},
+
+	{
+		coords = vec3(3802.29, -2004.92, 2000.99),
+		name =  '52hoover1',
+		label = 'Almacén 52 Hoover',
+		owner = false,
+		slots = 70,
+		weight = 1000000
+	},
+
 }

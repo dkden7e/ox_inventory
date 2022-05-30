@@ -2566,14 +2566,14 @@ return {
 	},
 
 	['joint'] = {
-		label = 'Porro',
+		label = (isTencity and 'Torro de tabaiguana' or 'Porro'),
 		weight = 220,
 		client = {
 			status = {drunk = 75000, stress = -450000 },
 			command = 'e smokepot',
 			prop = { model = `p_cs_joint_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
-			notification = 'Consumiste 1x porro'
+			notification = 'Consumiste 1x ' .. (isTencity and 'torro de tabaiguana' or 'porro')
 		},
 	},
 
@@ -2712,7 +2712,7 @@ return {
 	},
 
 	['cups'] = {
-		label = 'cups',
+		label = 'Vasos de plástico',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2841,7 +2841,7 @@ return {
 
 	['dopebag'] = {
 		label = 'Bolsita de ' .. (isTencity and 'tabaiguana' or 'cogollos'),
-		weight = 1,
+		weight = 10,
 		stack = true,
 		close = true,
 		description = nil
@@ -2880,7 +2880,7 @@ return {
 	},
 
 	['calculator'] = {
-		label = 'calculadora',
+		label = 'Calculadora',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2888,7 +2888,7 @@ return {
 	},
 
 	['campfire'] = {
-		label = 'campfire',
+		label = 'Hoguera',
 		weight = 10,
 		stack = true,
 		close = true,
@@ -2896,7 +2896,7 @@ return {
 	},
 
 	['chair'] = {
-		label = 'chair',
+		label = 'Silla',
 		weight = 10,
 		stack = true,
 		close = true,
@@ -2904,7 +2904,7 @@ return {
 	},
 
 	['chair2'] = {
-		label = 'chair 2',
+		label = 'Silla 2',
 		weight = 10,
 		stack = true,
 		close = true,
@@ -2912,7 +2912,7 @@ return {
 	},
 
 	['comic_book_1'] = {
-		label = 'periódico',
+		label = 'Periódico',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2920,7 +2920,7 @@ return {
 	},
 
 	['comic_book_2'] = {
-		label = 'comic de batman',
+		label = 'Cómic de Batman',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2928,7 +2928,7 @@ return {
 	},
 
 	['comic_book_3'] = {
-		label = 'comic de legendary starlord',
+		label = 'Cómic de Legendary Starlord',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2936,7 +2936,7 @@ return {
 	},
 
 	['raspa'] = {
-		label = 'rasca y gana',
+		label = 'Rasca y gana',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2944,7 +2944,7 @@ return {
 	},
 
 	['sparewheel'] = {
-		label = 'rueda de repuesto',
+		label = 'Rueda de repuesto',
 		weight = 15,
 		stack = true,
 		close = true,
@@ -2983,16 +2983,8 @@ return {
 		description = nil
 	},
 
-	['sparewheel'] = {
-		label = 'rueda de repuesto',
-		weight = 15,
-		stack = true,
-		close = true,
-		description = nil
-	},
-
 	['fish'] = {
-		label = 'pescado',
+		label = 'Pescado',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3000,7 +2992,7 @@ return {
 	},
 
 	['fishbait'] = {
-		label = 'cebo de pescado',
+		label = 'Cebo de pesca',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3008,7 +3000,7 @@ return {
 	},
 
 	['fishingrod'] = {
-		label = 'caña de pescar',
+		label = 'Caña de pescar',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3016,7 +3008,7 @@ return {
 	},
 
 	['gym_membership'] = {
-		label = 'membresía gymrondón',
+		label = 'Carnet de ' .. (isTencity and 'gymrondón' or 'gimnasio'),
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3024,7 +3016,7 @@ return {
 	},
 
 	['protein_shake'] = {
-		label = 'batido de proteínas',
+		label = 'Batido de proteínas',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3032,7 +3024,7 @@ return {
 	},
 
 	['shark'] = {
-		label = 'carne de tiburón',
+		label = 'Carne de tiburón',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3040,7 +3032,7 @@ return {
 	},
 
 	['sportlunch'] = {
-		label = 'almuerzo deportivo',
+		label = 'Almuerzo deportivo',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3048,7 +3040,7 @@ return {
 	},
 
 	['turtle'] = {
-		label = 'carne de tortuga',
+		label = 'Carne de tortuga',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3056,7 +3048,7 @@ return {
 	},
 
 	['turtlebait'] = {
-		label = 'cebo de tortuga',
+		label = 'Cebo de tortuga',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3064,7 +3056,7 @@ return {
 	},
 
 	['gameboy'] = {
-		label = 'gameboy',
+		label = 'Gameboy',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3072,7 +3064,7 @@ return {
 	},
 
 	['rctransport'] = {
-		label = 'transporte vehículos aereos',
+		label = 'Transporte de vehículos aereos',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3080,7 +3072,7 @@ return {
 	},
 
 	['scratchcard'] = {
-		label = 'rasca y gana 2',
+		label = 'Rasca y gana 2',
 		weight = 15,
 		stack = true,
 		close = true,
@@ -3104,7 +3096,7 @@ return {
 	},
 
 	['banana_kush_bag'] = {
-		label = 'bolsa banana kush',
+		label = 'Bolsa Banana Kush',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3112,7 +3104,7 @@ return {
 	},
 
 	['banana_kush_joint'] = {
-		label = 'porro banana kush',
+		label = (isTencity and 'Torro ' or 'Porro ') .. 'Banana Kush',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3120,7 +3112,7 @@ return {
 	},
 
 	['banana_kush_weed'] = {
-		label = 'banana kush (1g)',
+		label = 'Banana Kush (1g)',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3128,7 +3120,7 @@ return {
 	},
 
 	['blue_dream_bag'] = {
-		label = 'bolsa blue dream',
+		label = 'Bolsa Blue Dream',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3136,7 +3128,7 @@ return {
 	},
 
 	['blue_dream_joint'] = {
-		label = 'porro blue dream',
+		label = (isTencity and 'Torro ' or 'Porro ') .. 'Blue Dream',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3144,7 +3136,7 @@ return {
 	},
 
 	['blue_dream_weed'] = {
-		label = 'blue dream (1g)',
+		label = 'Blue Dream (1g)',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3152,7 +3144,7 @@ return {
 	},
 
 	['bongo'] = {
-		label = 'bong',
+		label = 'Bong',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3160,7 +3152,7 @@ return {
 	},
 
 	['cubancigar'] = {
-		label = 'puro cubano',
+		label = 'Puro habano',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3168,7 +3160,7 @@ return {
 	},
 
 	['davidoffcigar'] = {
-		label = 'puro davidoff',
+		label = 'Puro Davidoff',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3176,7 +3168,7 @@ return {
 	},
 
 	['liquid'] = {
-		label = 'liquid',
+		label = 'Líquido',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3184,7 +3176,7 @@ return {
 	},
 
 	['marlboro'] = {
-		label = 'cajetilla malboro',
+		label = 'Cajetilla Marlboro',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3192,7 +3184,7 @@ return {
 	},
 
 	['marlborocig'] = {
-		label = 'cigarro malboro',
+		label = 'Cigarro Marlboro',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3200,7 +3192,7 @@ return {
 	},
 
 	['ocb_paper'] = {
-		label = 'papel ocb',
+		label = 'Papel OCB',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3208,7 +3200,7 @@ return {
 	},
 
 	['og_kush_bag'] = {
-		label = 'bolsa og kush',
+		label = 'Bolsa OG Kush',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3216,7 +3208,7 @@ return {
 	},
 
 	['og_kush_joint'] = {
-		label = 'porro og kush',
+		label = (isTencity and 'Torro ' or 'Porro ') .. 'OG Kush',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3224,7 +3216,7 @@ return {
 	},
 
 	['og_kush_weed'] = {
-		label = 'og kush (1g)',
+		label = 'OG Kush (1g)',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3232,7 +3224,7 @@ return {
 	},
 
 	['purple_haze_bag'] = {
-		label = 'bolsa purple haze',
+		label = 'Bolsa Purple Haze',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3240,7 +3232,7 @@ return {
 	},
 
 	['purple_haze_joint'] = {
-		label = 'porro purple haze',
+		label = (isTencity and 'Torro ' or 'Porro ') .. 'Purple Haze',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3248,7 +3240,7 @@ return {
 	},
 
 	['purple_haze_weed'] = {
-		label = 'purple haze (1g)',
+		label = 'Purple Haze (1g)',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3256,7 +3248,7 @@ return {
 	},
 
 	['redw'] = {
-		label = 'cajetilla redwoord',
+		label = 'Cajetilla Redwood',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3264,7 +3256,7 @@ return {
 	},
 
 	['redwcig'] = {
-		label = 'cigarro redwood',
+		label = 'Cigarrillo Redwood',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3272,7 +3264,7 @@ return {
 	},
 
 	['vape'] = {
-		label = 'vaper',
+		label = 'Cigarro electrónico',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3281,7 +3273,7 @@ return {
 
 	-- COMIDA
 	['pescado'] = {
-	    label = 'pescado',
+	    label = 'Pescado',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3305,7 +3297,7 @@ return {
 	},
 
 	['patatasfritas'] = {
-	    label = 'patatas fritas',
+	    label = (isTencity and 'Papas ' or 'Patatas ') .. 'fritas',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3317,7 +3309,7 @@ return {
 	},
 
 	['churros'] = {
-	    label = 'churros',
+	    label = 'Churros',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3329,7 +3321,7 @@ return {
 	},
 
 	['empanadarellena'] = {
-	    label = 'empanada rellena',
+	    label = 'Empanada rellena',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3341,7 +3333,7 @@ return {
 	},
 
 	['donut'] = {
-	    label = 'donut',
+	    label = 'Dónut',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3353,7 +3345,7 @@ return {
 	},
 
 	['barritaener'] = {
-	    label = 'barrita energética',
+	    label = 'Barrita energética',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3366,7 +3358,7 @@ return {
 
 	-- BEBIDA
 	['chococaliente'] = {
-	    label = 'chocolate caliente',
+	    label = 'Chocolate caliente',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3378,7 +3370,7 @@ return {
 	},
 
 	['batido'] = {
-	    label = 'batido',
+	    label = 'Batido',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3390,7 +3382,7 @@ return {
 	},
 
 	['tecaliente'] = {
-	    label = 'té caliente',
+	    label = 'Té caliente',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3402,7 +3394,7 @@ return {
 	},
 
 	['botellajagger'] = {
-	    label = 'botella de jagger',
+	    label = 'Botella de jagger',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3414,7 +3406,7 @@ return {
 	},
 
 	['botellatequila'] = {
-	    label = 'botella de tequila',
+	    label = 'Botella de tequila',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3426,7 +3418,7 @@ return {
 	},
 
 	['botellawhisky'] = {
-	    label = 'botella de whisky',
+	    label = 'Botella de Whisky',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3438,7 +3430,7 @@ return {
 	},
 
 	['batidoproteinas'] = {
-	    label = 'batido de proteínas',
+	    label = 'Batido de proteínas',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3529,42 +3521,42 @@ return {
 
 	-- OTROS
 	['binoculars'] = {
-	    label = 'primáticos',
+	    label = 'Primáticos',
 		stack = true,
 		close = true,
 	    weight = 220,
 	},
 
 	['camara'] = {
-	    label = 'cámara',
+	    label = 'Cámara',
 		stack = true,
 		close = true,
 	    weight = 220,
 	},
 
 	['dados'] = {
-	    label = 'dados',
+	    label = 'Dados',
 		stack = true,
 		close = true,
 	    weight = 50,
 	},
 
 	['megaphone'] = {
-	    label = 'megáfono',
+	    label = 'Megáfono',
 		stack = true,
 		close = true,
 	    weight = 500,
 	},
 
 	['carnetsalud'] = {
-	    label = 'carnet de salud privada',
+	    label = 'Carnet de salud privada',
 		stack = true,
 		close = true,
 	    weight = 1,
 	},
 
 	['cappuccino'] = {
-		label = 'cappuccino',
+		label = 'Cappuccino',
 		weight = 220,
 		client = {
 			status = {hunger = 85000, thirst = 20000, drunk = -30000, },
@@ -3576,7 +3568,7 @@ return {
 	},
 
 	['latte_cappuccino'] = {
-		label = 'latte cappuccino',
+		label = 'Latte Cappuccino',
 		weight = 220,
 		client = {
 			status = {hunger = 85000, thirst = 20000, drunk = -30000, },
@@ -3879,6 +3871,14 @@ return {
 	['smoke_grinder'] = {
 		label = 'Grinder',
 		weight = 100,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['smoke_filters'] = {
+		label = 'Filtros de tabaco',
+		weight = 50,
 		stack = true,
 		close = true,
 		description = nil
