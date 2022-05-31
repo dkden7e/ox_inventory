@@ -59,6 +59,17 @@ return {
 		}
 	},
 
+	Documentacion = {
+		name = 'Puesto de documentación, SAPD',
+		inventory = {
+			{ name = 'identification', price = 500 },
+		}, locations = {
+			vec3(450.3394, -989.3448, 30.6896), -- MRPD
+			vec3(-439.3803, 6004.5366, 36.6867), -- PALETO
+			vec3(1855.6317, 3691.1746, 34.2194), -- SANDY
+		}
+	},
+
 	Liquor = {
 		name = 'Licorería',
 		blip = {
@@ -380,18 +391,22 @@ return {
 		blip = {
 			id = 141, colour = 31, scale = 0.8
 		}, inventory = {
-			{ name = 'WEAPON_KNIFE', price = 500 },
-			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
-			{ name = 'radio', price = 800 },
-			{ name = 'ammo-shotgun', price = 99999999, license = 'weapon' },
-			{ name = 'ammo-flare', price = 99999999, license = 'weapon' },
-			{ name = 'WEAPON_FLARE', price = 250 },
-			{ name = 'WEAPON_FLAREGUN', price = 99999999, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon' },
-			{ name = 'WEAPON_DOUBLEBARRELFM', price = 999999999, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon' },
-			{ name = 'at_dbshotgunfm_barrel2', price = 99999999, license = 'weapon' },
-			{ name = 'at_dbshotgunfm_barrel3', price = 99999999, license = 'weapon' },
-			{ name = 'at_dbshotgunfm_barrel4', price = 99999999, license = 'weapon' },
-			{ name = 'at_dbshotgunfm_barrel5', price = 99999999, license = 'weapon' },
+			{ name = 'WEAPON_KNIFE', price = 500--[[, currency = 'bank']] },
+			{ name = 'WEAPON_FLASHLIGHT', price = 200--[[, currency = 'bank']] },
+			{ name = 'radio', price = 800--[[, currency = 'bank']] },
+			{ name = 'ammo-shotgun', price = 99999999, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'ammo-flare', price = 99999999, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'WEAPON_FLARE', price = 250--[[, currency = 'bank']] },
+			{ name = 'WEAPON_FLAREGUN', price = 99999999, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'WEAPON_DOUBLEBARRELFM', price = 999999999, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'at_dbshotgunfm_barrel2', price = 99999999, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'at_dbshotgunfm_barrel3', price = 99999999, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'at_dbshotgunfm_barrel4', price = 99999999, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'at_dbshotgunfm_barrel5', price = 99999999, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'WEAPON_M700', price = 999999999, metadata = { registered = true, serial = 'HUNT'}, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'at_suppressor_medium2', price = 99999999, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'at_clip_extended_sniper', price = 99999999, license = 'weapon'--[[, currency = 'bank']] },
+			{ name = 'at_scope_zoom', price = 99999999, license = 'weapon'--[[, currency = 'bank']] },
 		}, locations = {
 			vec3(-675.66, 5836.44, 17.34),
 		}

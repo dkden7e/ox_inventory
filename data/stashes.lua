@@ -135,7 +135,7 @@ return {
 	{
 		coords = vec3(-705.80, -915.14, 19.11),
 		name =  'badu1',
-		label = 'Almacén del Badulaque LTD',
+		label = 'Almacén del Badulaque LTD (abajo)',
 		owner = false,
 		slots = 70,
 		weight = 1000000,
@@ -143,7 +143,17 @@ return {
 	},
 
 	{
-		coords = vec3(306.1104, -204.3122, 54.2257),
+		coords = vec3(-703.15, -908.10, 24.03),
+		name =  'badu2',
+		label = 'Almacén del Badulaque LTD (arriba)',
+		owner = false,
+		slots = 70,
+		weight = 1000000,
+		groups = {['badu1'] = 0}
+	},
+
+	{
+		coords = vec3(306.14, -204.31, 54.22),
 		name =  'taquillamotel1',
 		label = 'Taquilla Pinkage (hab. 1)',
 		owner = true,
@@ -152,7 +162,7 @@ return {
 	},
 
 	{
-		coords = vec3(310.0483, -194.4396, 54.21753),
+		coords = vec3(310.05, -194.44, 54.217),
 		name =  'taquillamotelpink2',
 		label = 'Taquilla Pinkage (hab. 2)',
 		owner = true,
@@ -343,7 +353,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 1000000,
-		groups = {['cafe1020'] = 0}
+		groups = {[(isTencity and 'cafe1020' or 'liquordeli')] = 0}
 	},
 
 	{
@@ -385,7 +395,7 @@ return {
 	},
 
 	{
-		coords = vec3(-433.622, 274.9451, 83.41833),
+		coords = vec3(-562.0352, 289.1736, 82.17139),
 		name =  'tequilala2',
 		label = 'Almacén Tequila-la (bar)',
 		owner = false,
@@ -415,7 +425,7 @@ return {
 	},
 
 	{
-		coords = vec3(137.26 -1936.22 15.22),
+		coords = vec3(137.26, -1936.22, 15.22),
 		name =  'ballas1',
 		label = 'Almacén Ballas',
 		owner = false,
@@ -433,7 +443,7 @@ return {
 	},
 
 	{
-		coords = vec3(3802.29, -2004.92, 2000.99),
+		coords = vec3(531.1359, -1779.7941, 28.4379),
 		name =  '52hoover1',
 		label = 'Almacén 52 Hoover',
 		owner = false,
@@ -441,4 +451,12 @@ return {
 		weight = 1000000
 	},
 
+	{
+		coords = vec3(-136.83, 1608.65, 35.03),
+		name =  'RollingFamilies1',
+		label = 'Almacén The Rolling Families',
+		owner = false,
+		slots = 70,
+		weight = 1000000
+	},
 }

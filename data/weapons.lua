@@ -381,14 +381,14 @@ return {
 			description = 'Tanto cerca como lejos, esta arma hará el trabajo. Una herramienta de rango múltiple que podría usar hasta un idiota.',
 			weight = 7500,
 			durability = 0.4,
-			ammoname = 'ammo-sniper'
+			ammoname = 'ammo-rifle3'
 		},
 		['WEAPON_MARKSMANRIFLE_MK2'] = {
 			label = 'Fusil de tirador Mk II',
 			description = 'Este conjunto de modificaciones, al que los militares llaman "El dislocador", destrozará tanto al objetivo como tu hombro, en ese orden.',
 			weight = 4000,
 			durability = 0.4,
-			ammoname = 'ammo-sniper'
+			ammoname = 'ammo-rifle3'
 		},
 		['WEAPON_MG'] = {
 			label = 'Ametralladora',
@@ -534,7 +534,7 @@ return {
 		['WEAPON_RPG'] = {
 			label = 'Lanzacohetes',
 			description = 'El clásico RPG soviético utilizado en guerras en todo el mundo, y que ves en las películas, solo que este es de verdad.',
-			weight = 5000,
+			weight = 6500,
 			durability = 0.02,
 			ammoname = 'ammo-rocket'
 		},
@@ -667,16 +667,16 @@ return {
 		['WEAPON_DOUBLEBARRELFM'] = {
 			label = 'Escopeta de caza',
 			description = 'Haz una cosa y hazla bien. ¿Quién necesita una cadencia de disparo elevada cuando tu primer disparo puede liquidar al otro tío?',
-			weight = 4000,
+			weight = 5000,
 			durability = 0.4,
 			ammoname = 'ammo-shotgun'
 		},
 		['WEAPON_M700'] = {
 			label = 'Rifle de caza',
 			description = '',
-			weight = 4000,
+			weight = 6000,
 			durability = 0.4,
-			ammoname = 'ammo-sniper'
+			ammoname = 'ammo-rifle3'
 		},
 	},
 
@@ -706,7 +706,17 @@ return {
 			weight = 320,
 			type = 'barrel',
 			client = {
-				component = {`COMPONENT_AT_AR_SUPP`, `COMPONENT_AT_AR_SUPP_02`, `COMPONENT_AT_SR_SUPP` },
+				component = {`COMPONENT_AT_AR_SUPP`, `COMPONENT_AT_AR_SUPP_02` },
+				usetime = 2500
+			}
+		},
+	
+		['at_suppressor_medium2'] = {
+			label = 'Accesorio - Silenciador (L)',
+			weight = 320,
+			type = 'barrel',
+			client = {
+				component = {`COMPONENT_AT_SR_SUPP`, `COMPONENT_AT_AR_SUPP_M700` },
 				usetime = 2500
 			}
 		},
@@ -796,7 +806,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-				component = {`COMPONENT_MARKSMANRIFLE_CLIP_02`, `COMPONENT_HEAVYSNIPER_MK2_CLIP_02`, `COMPONENT_MARKSMANRIFLE_MK2_CLIP_02`},
+				component = {`COMPONENT_MARKSMANRIFLE_CLIP_02`, `COMPONENT_HEAVYSNIPER_MK2_CLIP_02`, `COMPONENT_MARKSMANRIFLE_MK2_CLIP_02`, `COMPONENT_M700_CLIP_01`},
 				usetime = 2500
 			}
 		},
@@ -827,16 +837,6 @@ return {
 			weight = 280,
 			client = {
 				component = {`COMPONENT_COMPACTRIFLE_CLIP_03`, `COMPONENT_CARBINERIFLE_CLIP_03`, `COMPONENT_SPECIALCARBINE_CLIP_03`},
-				usetime = 2500
-			}
-		},
-
-		['w_sr_m700_mag1'] = {
-			label = 'Accesorio - Carg. extendido (Caza)',
-			type = 'magazine',
-			weight = 280,
-			client = {
-				component = {`COMPONENT_M700_CLIP_01`},
 				usetime = 2500
 			}
 		},
@@ -936,7 +936,7 @@ return {
 			type = 'sight',
 			weight = 280,
 			client = {
-				component = {`COMPONENT_AT_SCOPE_LARGE_MK2`},
+				component = {`COMPONENT_AT_SCOPE_LARGE_MK2`, `COMPONENT_AT_SCOPE_M700`},
 				usetime = 2500
 			}
 		},
@@ -1209,27 +1209,7 @@ return {
 			}
 		},
 
-		-- RIFLE CAZA
-		['w_at_scope_m700'] = {
-			label = 'Mira de precisión',
-			type = 'sight',
-			weight = 800,
-			client = {
-				component = {`COMPONENT_AT_SCOPE_M700`},
-				usetime = 2500
-			}
-		},
-		['w_at_ar_supp_m700'] = {
-			label = 'Silenciador (Caza)',
-			type = 'barrel',
-			weight = 700,
-			client = {
-				component = {`COMPONENT_AT_AR_SUPP_M700`},
-				usetime = 2500
-			}
-		},
 	},
-
 			
 	Ammo = {
 		['ammo-22'] = {
