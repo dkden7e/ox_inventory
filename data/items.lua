@@ -3883,4 +3883,288 @@ return {
 		close = true,
 		description = nil
 	},
+
+	['fernetcoca'] = {
+		label = 'Fernet con Coca',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 fernet con coca'
+		},
+	},
+	
+	['whiscola'] = {
+		label = 'Whiscola',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 whiscola'
+		},
+	},
+		
+	['cubalibre'] = {
+		label = 'Cuba libre',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 cuba libre'
+		},
+	},
+	
+	['vasotequila'] = {
+		label = 'Vaso de tequila',
+		weight = 220,
+		client = {
+			status = {hunger = -30000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 vaso de tequila'
+		},
+	},
+	
+	['caipirina'] = {
+		label = 'Caipiriña',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 caipiriña'
+		},
+	},
+	
+	['caipirinafresa'] = {
+		label = 'Caipiriña con fresa',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 caipiriña con fresa'
+		},
+	},
+	
+	['cocoloco'] = {
+		label = 'Coco loco',
+		weight = 220,
+		client = {
+			status = {hunger = -3000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_pinacolada`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 coco loco'
+		},
+	},
+	
+	['vasoagua'] = {
+		label = 'Vaso de agua',
+		weight = 500,
+		client = {
+			status = { thirst = 150000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_cs_paper_cup`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
+			usetime = 2500,
+			cancel = true,
+			notification = 'Te has bebido x1 vaso de agua'
+		}
+	},
+	
+	['vasocerveza'] = {
+		label = 'Vaso de cerveza',
+		weight = 220,
+		client = {
+			status = {hunger = -30000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 vaso de tequila'
+		},
+	},
+	
+	--Botellas--
+	
+	['fernet'] = {
+		label = 'Fernet',
+		weight = 220,
+		client = {
+			status = {hunger = -30000, drunk = 350000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_bottle_cognac`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x botella de Fernet'
+		},
+	},
+	
+	['cocavidrio'] = {
+		label = 'Coca de vidrio',
+		weight = 220,
+		client = {
+			status = {hunger = 20000, thirst = 100000, drunk = -100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ng_proc_beerbottle_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 Coca de vidrio'
+		},
+	},
+	
+	['spritevidrio'] = {
+		label = 'Sprite de vidrio',
+		weight = 220,
+		client = {
+			status = {hunger = 20000, thirst = 100000, drunk = -100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ng_proc_beerbottle_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 Sprite de vidrio'
+		},
+	},
+	
+	['fantavidrio'] = {
+		label = 'Fanta de vidrio',
+		weight = 220,
+		client = {
+			status = {hunger = 20000, thirst = 100000, drunk = -100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ng_proc_beerbottle_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 Fanta de vidrio'
+		},
+	},
+	
+	['botellavino'] = {
+		label = 'Botella de vino',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_bottle_macbeth`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x botella de vino'
+		},
+	},
+	
+	['botellaron'] = {
+		label = 'Botella de ron',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_bottle_brandy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x botella de ron'
+		},
+	},
+	
+	--Bebidas sin alcohol--
+	
+	['zumofresa'] = {
+		label = 'vaso de zumo de fresa',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, thirst = 180000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de zumo de fresa'
+		},
+	},
+	
+		['zumonaranja'] = {
+		label = 'vaso de zumo de naranja',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, thirst = 180000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de zumo de naranja'
+		},
+	},
+	
+	--Otros-- 
+	
+	['medialuna'] = {
+		label = 'Medialuna de mantequilla',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000,},
+			anim = 'eating',
+			prop = { model = `ng_proc_food_nana1a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x medialuna de mantequilla'
+		},
+	},
+	
+	['brownie'] = {
+		label = 'Brownie',
+		weight = 220,
+		client = {
+			status = {hunger = 50000, thirst = -5000, drunk = -75000, },
+			anim = 'eating',
+			prop = { model = `prop_donut_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x brownie'
+		},
+	},
+	
+	['rebanadapizza'] = {
+		label = 'Rebanada de pizza',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -10000, },
+			anim = 'eating',
+			prop = { model = `prop_sandwich_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x rebanada de pizza'
+		},
+	},
+	
+	['tostados'] = {
+		label = 'Tostados de jamón y queso',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -10000, },
+			anim = 'eating',
+			prop = { model = `v_res_fa_bread03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x tostados de jamón y queso'
+		},
+	},
+	
+	['mani'] = {
+		label = 'Maní salado',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -30000, },
+			anim = 'eating',
+			prop = { model = `ng_proc_food_chips01c`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x maní salado'
+		},
+	},
+	
+	['picada'] = {
+		label = 'Tabla de jamón y queso',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `ng_proc_food_chips01c`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Picada'
+		},
+	},
+
 }
