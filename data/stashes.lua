@@ -452,7 +452,7 @@ return {
 	},
 
 	{
-		coords = vec3(-136.83, 1608.65, 35.03),
+		coords = vec3(-136.83, -1608.65, 35.03),
 		name =  'RollingFamilies1',
 		label = 'Almacén The Rolling Families',
 		owner = false,

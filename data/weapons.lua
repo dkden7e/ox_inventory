@@ -673,11 +673,53 @@ return {
 		},
 		['WEAPON_M700'] = {
 			label = 'Rifle de caza',
-			description = '',
+			description = 'Fusil de precisión y calibre 7.62x51mm con características enfocadas principalmente a la práctica cinegética',
 			weight = 6000,
 			durability = 0.4,
 			ammoname = 'ammo-rifle3'
 		},
+		['WEAPON_CAN'] = {
+			label = 'Lata',
+			description = 'Una lata.',
+			weight = 500,
+			throwable = true,
+		},
+		['WEAPON_THROWABLEBOTTLE'] = {
+			label = 'Botella lanzable',
+			description = 'Una botella.',
+			weight = 600,
+			throwable = true,
+		},
+		['WEAPON_BRICK'] = {
+			label = 'Ladrillo',
+			description = 'Un ladrillo.',
+			weight = 1500,
+			throwable = true,
+		},
+		['WEAPON_SHOE'] = {
+			label = 'Zapato',
+			description = 'Un zapato.',
+			weight = 400,
+			throwable = true,
+		},
+		['WEAPON_CASH'] = {
+			label = 'Fajo de efectivo',
+			description = 'Un gran fajo plastificado de dinero en efectivo.',
+			weight = 100,
+			throwable = true,
+		},
+		['WEAPON_BOOK'] = {
+			label = 'Libro gordo',
+			description = 'Un libro gordo.',
+			weight = 300,
+			throwable = true,
+		},
+		['WEAPON_NOTES7'] = {
+			label = 'Galaxy Note S7 roto',
+			description = 'Un teléfono Samsung Galaxy Note S7 de gran tamaño roto.',
+			weight = 200,
+			throwable = true,
+		}
 	},
 
 	Components = {

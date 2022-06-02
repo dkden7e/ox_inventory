@@ -34,5 +34,17 @@ return {
 			minZ = 29.09,
 			maxZ = 31.89
 		}
+	},
+	{
+		coords = vec3(1856.24, 3691.06, 29.82), -- LSSD Sandy
+		target = { -- qtarget support
+			name = 'lssd_evidence', -- name of zone must be uniuqe
+			loc = vec3(1856.24, 3691.06, 29.82),
+			length = 1.4,
+			width = 3.2,
+			heading = 0,
+			minZ = 29.09,
+			maxZ = 31.89
+		}
 	}
 }

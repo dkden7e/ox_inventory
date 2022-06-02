@@ -4167,4 +4167,36 @@ return {
 		},
 	},
 
+	['racing_tablet'] = {
+		label = 'tablet de competiciones',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['hoja_cocaina'] = {
+		label = 'Hoja de cocaína',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = 'Extraida de la planta Erythroxylum coca'
+	},
+	
+	['hongo'] = {
+		label = 'Hongo',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = 'Hongo alucinógeno'
+	},
+	
+	['tijera'] = {
+		label = 'tijera',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
 }
