@@ -4199,4 +4199,36 @@ return {
 		description = ''
 	},
 
+
+	['air_suspension'] = {
+		label = 'air suspension',
+		weight = 2500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['suspension_control'] = {
+		label = 'air suspension control',
+		weight = 80,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['a4sheets'] = {
+		label = 'paquete de folios',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['printerdocument'] = {
+		label = 'documento impreso',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
 }

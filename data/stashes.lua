@@ -112,6 +112,16 @@ return {
 		groups = {['mesonservando'] = 0}
 	},
 
+    {
+        coords = vec3(-1833.178, -1193.763, 19.18677),
+        name =  'mesonservando2',
+        label = 'Despensa del Mesón de Servando',
+        owner = false,
+        slots = 70,
+        weight = 1000000,
+        groups = {['mesonservando'] = 0}
+    },
+
 	{
 		coords = vec3(-316.74, -129.51, 39.02),
 		name =  'lscustoms1',
