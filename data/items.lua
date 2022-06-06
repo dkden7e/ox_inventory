@@ -486,16 +486,16 @@ return {
 	},
 
 	['casino_chips'] = {
-		label = 'fichas del diamond',
-		weight = 0,
+		label = 'Fichas del casino',
+		weight = 5,
 		stack = true,
 		close = true,
 		description = nil
 	},
 
 	['casino_ticket'] = {
-		label = 'tícket de la suerte diamond',
-		weight = 0,
+		label = 'Tícket de la suerte Diamond',
+		weight = 50,
 		stack = true,
 		close = true,
 		description = nil
@@ -4227,6 +4227,14 @@ return {
 	['printerdocument'] = {
 		label = 'documento impreso',
 		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['detector'] = {
+		label = 'detector de metales',
+		weight = 15,
 		stack = true,
 		close = true,
 		description = nil

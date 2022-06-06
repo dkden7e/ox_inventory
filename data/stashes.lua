@@ -469,4 +469,13 @@ return {
 		slots = 70,
 		weight = 1000000
 	},
+
+	{
+		coords = vec3(367.1430, -2039.5082, 22.3949),
+		name =  'Rancho1',
+		label = 'Almacén del Rancho',
+		owner = false,
+		slots = 70,
+		weight = 1000000
+	},
 }
