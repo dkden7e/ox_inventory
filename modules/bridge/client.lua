@@ -3,11 +3,6 @@ function client.setPlayerData(key, value)
 	OnPlayerData(key, value)
 end
 
-local staffMode = false
-AddEventHandler("esx_status:innmunity", function(toggle)
-	inventory.player.groups["admin"] = toggle and 1 or nil
-end)
-
 function client.hasGroup(group)
 	if PlayerData.loaded then
 		if type(group) == 'table' then

@@ -1,19 +1,9 @@
-local staffMode = {}
-AddEventHandler("tag_ids:set1", function(source, status)
-	print(source, type(source))
-    staffMode[source] = status
-end)
-
 function server.hasGroup(inv, group)
 	if type(group) == 'table' then
 		for name, rank in pairs(group) do
-			if name == "admin" and staffMode[inv.id] then
-				return group, 1
-			else
-				local groupRank = inv.player.groups[name]
-				if groupRank and groupRank >= (rank or 0) then
-					return name, groupRank
-				end
+			local groupRank = inv.player.groups[name]
+			if groupRank and groupRank >= (rank or 0) then
+				return name, groupRank
 			end
 		end
 	else
