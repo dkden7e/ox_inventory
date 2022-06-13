@@ -4169,7 +4169,7 @@ return {
 
 	['racing_tablet'] = {
 		label = 'tablet de competiciones',
-		weight = 1,
+		weight = 100,
 		stack = true,
 		close = true,
 		description = nil
@@ -4193,7 +4193,7 @@ return {
 	
 	['tijera'] = {
 		label = 'tijera',
-		weight = 1,
+		weight = 80,
 		stack = true,
 		close = true,
 		description = ''
@@ -4218,7 +4218,7 @@ return {
 
 	['a4sheets'] = {
 		label = 'paquete de folios',
-		weight = 1,
+		weight = 500,
 		stack = true,
 		close = true,
 		description = nil
@@ -4234,7 +4234,7 @@ return {
 
 	['detector'] = {
 		label = 'detector de metales',
-		weight = 15,
+		weight = 500,
 		stack = true,
 		close = true,
 		description = nil
@@ -4243,6 +4243,14 @@ return {
 	['eventcalendar'] = {
 		label = 'calendario de eventos',
 		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['jewels'] = {
+		label = 'Joyas variadas',
+		weight = 50,
 		stack = true,
 		close = true,
 		description = nil
