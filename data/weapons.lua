@@ -200,19 +200,19 @@ return {
 			label = 'Bidón de fertilizante',
 			description = 'Huele mal, pero a las plantas parece que les encanta, deberías probarlo?',
 			weight = 1500,
-			durability = 1.0,
+			durability = 0.01,
 		},
 		['WEAPON_FIREEXTINGUISHER'] = {
 			label = 'Extintor',
 			description = 'Un fantástico y humeante extintor convencional, creo que todo el mundo sabe para qué sirve.',
 			weight = 8616,
-			durability = 0.8,
+			durability = 0.01,
 		},
 		['WEAPON_FIREWORK'] = {
 			label = 'Cañón de pirotecnia',
 			description = 'Pon un poco de color en tu vida con este cañón, que garantiza unos cuantos "oh" y "ah" del público.',
 			weight = 1000,
-			durability = 0.5,
+			durability = 0.75,
 		},
 		['WEAPON_FLARE'] = {
 			label = 'Bengala',
@@ -224,7 +224,7 @@ return {
 			label = 'Pistola de bengalas',
 			description = 'Utilizada como señal de auxilio o diversión de borrachos. Apuntar a un individuo puede causar combustión espontánea.',
 			weight = 1000,
-			durability = 0.5,
+			durability = 0.75,
 			ammoname = 'ammo-flare'
 		},
 		['WEAPON_FLASHLIGHT'] = {
@@ -334,7 +334,7 @@ return {
 			label = 'Fusil de francot. pesado Mk II',
 			description = 'Lejano, pero siempre íntimo: si buscas una base segura para esa relación a distancia, la has encontrado.',
 			weight = 10432,
-			durability = 0.5,
+			durability = 0.4,
 			ammoname = 'ammo-heavysniper'
 		},
 		['WEAPON_HOMINGLAUNCHER'] = {
@@ -373,21 +373,21 @@ return {
 			label = 'Pistola de tirador',
 			description = 'No apta para aquellos a los que no les guste el riesgo. Haz que cada bala cuente: vas a recargar casi tanto como disparar.',
 			weight = 1588,
-			durability = 0.5,
+			durability = 0.25,
 			ammoname = 'ammo-22'
 		},
 		['WEAPON_MARKSMANRIFLE'] = {
 			label = 'Fusil de tirador',
 			description = 'Tanto cerca como lejos, esta arma hará el trabajo. Una herramienta de rango múltiple que podría usar hasta un idiota.',
 			weight = 7500,
-			durability = 0.4,
+			durability = 0.3,
 			ammoname = 'ammo-rifle3'
 		},
 		['WEAPON_MARKSMANRIFLE_MK2'] = {
 			label = 'Fusil de tirador Mk II',
 			description = 'Este conjunto de modificaciones, al que los militares llaman "El dislocador", destrozará tanto al objetivo como tu hombro, en ese orden.',
 			weight = 4000,
-			durability = 0.4,
+			durability = 0.2,
 			ammoname = 'ammo-rifle3'
 		},
 		['WEAPON_MG'] = {
@@ -415,7 +415,7 @@ return {
 			label = 'Minigun',
 			description = 'Ametralladora rotatoria de muy alta tasa de disparo con calibre 7.62mm, modificada para poder ser utilizada desde la cadera.',
 			weight = 10000,
-			durability = 0.2,
+			durability = 0.002,
 			ammoname = 'ammo-rifle3'
 		},
 		['WEAPON_MINISMG'] = {
@@ -455,7 +455,7 @@ return {
 			label = 'Bidón de gasolina',
 			description = 'Bidón especialmente diseñado para cargar combustible de forma segura y fácil de llevar.',
 			weight = 5000,
-			durability = 0.9,
+			durability = 0.01,
 		},
 		['WEAPON_PIPEBOMB'] = {
 			label = 'Bomba casera',
@@ -481,7 +481,7 @@ return {
 			label = 'Pistola Mk II',
 			description = 'Equilibrio, sencillez y precisión: nada mantiene la paz como un cañón extendido en la boca del otro tipo.',
 			weight = 970,
-			durability = 0.5,
+			durability = 0.05,
 			ammoname = 'ammo-9'
 		},
 		['WEAPON_POOLCUE'] = {
@@ -514,7 +514,7 @@ return {
 			label = 'Fusil electromagnético',
 			description = 'Lo único que necesitas saber es que usa imanes y que hace cosas horribles a lo que apuntas.',
 			weight = 1100,
-			durability = 0.1,
+			durability = 0.9,
 			ammoname = 'ammo-railgunslugs'
 		},
 		['WEAPON_REVOLVER'] = {
@@ -549,7 +549,7 @@ return {
 			label = 'Subfusil',
 			description = 'Recuerdo a varios agentes portando este tipo de arma en las paradas de metro, parece que les agrada llevarla, creo que será por su estabilidad y fiabilidad, sí, es por eso.',
 			weight = 3084,
-			durability = 0.8,
+			durability = 0.06,
 			ammoname = 'ammo-9'
 		},
 		['WEAPON_SMG_MK2'] = {
@@ -668,14 +668,14 @@ return {
 			label = 'Escopeta de caza',
 			description = 'Haz una cosa y hazla bien. ¿Quién necesita una cadencia de disparo elevada cuando tu primer disparo puede liquidar al otro tío?',
 			weight = 5000,
-			durability = 0.4,
+			durability = 0.5,
 			ammoname = 'ammo-shotgun'
 		},
 		['WEAPON_M700'] = {
 			label = 'Rifle de caza',
 			description = 'Fusil de precisión y calibre 7.62x51mm con características enfocadas principalmente a la práctica cinegética',
 			weight = 6000,
-			durability = 0.4,
+			durability = 0.8,
 			ammoname = 'ammo-rifle3'
 		},
 		['WEAPON_CAN'] = {

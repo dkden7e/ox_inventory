@@ -2567,7 +2567,7 @@ return {
 
 	['joint'] = {
 		label = (isTencity and 'Torro de tabaiguana' or 'Porro'),
-		weight = 220,
+		weight = 10,
 		client = {
 			status = {drunk = 75000, stress = -450000 },
 			command = 'e smokepot',
@@ -4235,6 +4235,14 @@ return {
 	['detector'] = {
 		label = 'detector de metales',
 		weight = 15,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['eventcalendar'] = {
+		label = 'calendario de eventos',
+		weight = 1,
 		stack = true,
 		close = true,
 		description = nil

@@ -73,7 +73,7 @@ return {
 	},
 
 	{
-		coords = vec3(-176.38, 311.27, 97.99),
+		coords = vec3(-176.38, 311.27, 97.99), -- TENDERETE
 		name = 'palaciowei1',
 		label = 'Despensa del Palacio Wei',
 		owner = false,
@@ -83,7 +83,7 @@ return {
 	},
 
 	{
-		coords = vec3(826.66, -110.68, 79.77),
+		coords = vec3(826.66, -110.68, 79.77), -- TENDERETE
 		name = 'cocktailbar1',
 		label = 'Despensa del Cocktail Bar',
 		owner = false,
@@ -103,7 +103,7 @@ return {
 	},
 
 	{
-		coords = vec3(-1844.05, -1189.74, 14.31),
+		coords = vec3(-1844.05, -1189.74, 14.31), -- TENDERETE
 		name =  'mesonservando1',
 		label = 'Despensa del Mesón de Servando',
 		owner = false,
@@ -367,7 +367,7 @@ return {
 	},
 
 	{
-		coords = vec3(-433.622, 274.9451, 83.41833),
+		coords = vec3(-433.622, 274.9451, 83.41833), -- TENDERETE
 		name =  'nuevavida1',
 		label = 'Almacén del Nueva Vida',
 		owner = false,
@@ -391,7 +391,7 @@ return {
 		label = 'Taquillas del resort',
 		owner = true,
 		slots = 70,
-		weight = 1000000
+		weight = 120000
 	},
 
 	{
@@ -439,7 +439,7 @@ return {
 		name =  'ballas1',
 		label = 'Almacén Ballas',
 		owner = false,
-		slots = 70,
+		slots = 75,
 		weight = 1000000
 	},
 
@@ -448,7 +448,7 @@ return {
 		name =  'big1',
 		label = 'Almacén B.I.G.',
 		owner = false,
-		slots = 70,
+		slots = 75,
 		weight = 1000000
 	},
 
@@ -457,7 +457,7 @@ return {
 		name =  '52hoover1',
 		label = 'Almacén 52 Hoover',
 		owner = false,
-		slots = 70,
+		slots = 75,
 		weight = 1000000
 	},
 
@@ -466,12 +466,12 @@ return {
 		name =  'RollingFamilies1',
 		label = 'Almacén The Rolling Families',
 		owner = false,
-		slots = 70,
+		slots = 85,
 		weight = 1000000
 	},
 
 	{
-		coords = vec3(367.1430, -2039.5082, 22.3949),
+		coords = vec3(367.1430, -2039.5082, 22.3949), -- TENDERETE
 		name =  'Rancho1',
 		label = 'Almacén del Rancho',
 		owner = false,

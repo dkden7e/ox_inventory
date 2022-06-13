@@ -215,8 +215,8 @@ function Items.Metadata(inv, item, metadata, count)
 			end
 		elseif item.name == 'tarjeta_transportes' then
 			metadata.usos = tonumber(metadata.usos) and tonumber(metadata.usos) or 25
-			metadata.registered = type(metadata.registered) == 'string' and metadata.registered or inv.player.name
-			metadata.serial = GenerateSerial(metadata.serial)
+			metadata.registered = type(metadata.registered) == 'string' and metadata.registered or (inv?.player?.name and inv.player.name or 'unknown')
+			metadata.serial = GenerateSerial(metadata.serial and metadata.serial or "TRANSP")
 		elseif item.name == 'garbage' then
 			local trashType = trash[math.random(1, #trash)]
 			metadata.image = trashType.image

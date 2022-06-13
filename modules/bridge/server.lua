@@ -1,9 +1,19 @@
+local staffMode = {}
+AddEventHandler("tag_ids:set1", function(source, status)
+	print(source, type(source))
+    staffMode[source] = status
+end)
+
 function server.hasGroup(inv, group)
 	if type(group) == 'table' then
 		for name, rank in pairs(group) do
-			local groupRank = inv.player.groups[name]
-			if groupRank and groupRank >= (rank or 0) then
-				return name, groupRank
+			if name == "admin" and staffMode[inv.id] then
+				return group, 1
+			else
+				local groupRank = inv.player.groups[name]
+				if groupRank and groupRank >= (rank or 0) then
+					return name, groupRank
+				end
 			end
 		end
 	else
@@ -49,6 +59,7 @@ if shared.framework == 'esx' then
 	server.accounts = {
 		money = 0,
 		black_money = 0,
+		casino_chips = 0,
 	}
 
 	function server.setPlayerData(player)

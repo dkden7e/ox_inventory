@@ -71,7 +71,7 @@ lib.callback.register('ox_inventory:openInventory', function(source, inv, data)
 				right = Inventory(data.id)
 				if not right then
 					local vehicle = Vehicles[inv]['models'][data.model] or Vehicles[inv][data.class]
-					right = Inventory.Create(data.id, Inventory.GetPlateFromId(data.id), inv, vehicle[1], 0, vehicle[2], false)
+					right = Inventory.Create(data.id, Inventory.GetPlateFromId(data.id), inv, vehicle[1], 0, vehicle[2], false, nil, nil, source)
 				end
 			elseif inv == 'drop' then
 				right = Inventory(data.id)
@@ -84,14 +84,20 @@ lib.callback.register('ox_inventory:openInventory', function(source, inv, data)
 				data = ('evidence-%s'):format(data)
 				right = Inventory(data)
 				if not right then
-					right = Inventory.Create(data, shared.locale('police_evidence'), inv, 100, 0, 100000, false)
+					right = Inventory.Create(data, shared.locale('police_evidence'), inv, 100, 0, 100000, false, nil, nil, source)
 				end
 			end
 
 		elseif inv == 'dumpster' then
 			right = Inventory(data)
 			if not right then
-				right = Inventory.Create(data, shared.locale('dumpster'), inv, 15, 0, 100000, false)
+				right = Inventory.Create(data, shared.locale('dumpster'), inv, 15, 0, 100000, false, nil, nil, source)
+			end
+
+		elseif inv == 'trashbin' then
+			right = Inventory(data)
+			if not right then
+				right = Inventory.Create(data, shared.locale('trashbin'), inv, 15, 0, 100000, false, nil, nil, source)
 			end
 
 		elseif inv == 'container' then
@@ -102,7 +108,7 @@ lib.callback.register('ox_inventory:openInventory', function(source, inv, data)
 				right = Inventory(data.metadata.container)
 
 				if not right then
-					right = Inventory.Create(data.metadata.container, data.label, inv, data.metadata.size[1], 0, data.metadata.size[2], false)
+					right = Inventory.Create(data.metadata.container, data.label, inv, data.metadata.size[1], 0, data.metadata.size[2], false, nil, nil, source)
 				end
 			else left.containerSlot = nil end
 
