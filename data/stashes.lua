@@ -478,4 +478,13 @@ return {
 		slots = 70,
 		weight = 1000000
 	},
-}
+
+	{
+		coords = vec3(234.05, -1698.78, 29.29), -- MANCOS - PURPLE ICE
+		name =  'PurpleIce1',
+		label = 'Almacén de Purple Ice',
+		owner = false,
+		slots = 70,
+		weight = 1000000
+	},
+} --
