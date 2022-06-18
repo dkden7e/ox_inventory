@@ -4255,4 +4255,316 @@ return {
 		close = true,
 		description = nil
 	},
+
+	['beachbrella'] = {
+		label = 'sombrilla',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachfire'] = {
+		label = 'hoguera',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachfloaty'] = {
+		label = 'flotador',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachfloaty2'] = {
+		label = 'flotador 2',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachgazebo'] = {
+		label = 'carpa',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachkayak'] = {
+		label = 'kayak',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachshovel'] = {
+		label = 'pala',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachtowel'] = {
+		label = 'toalla de playa',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachvolley'] = {
+		label = 'pelota de voleibol',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['crabcage'] = {
+		label = 'nasa de pesca',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['crabs'] = {
+		label = 'cangrejos',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['shrimps'] = {
+		label = 'camarones',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['stancerkit'] = {
+		label = 'stancer',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	["boat_license"] = {
+		label = "Licencia de patrón náutico [N]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["dmv_license"] = {
+		label = "Certificado teórico [T]",
+		description = 'Este documento certifica la aprobación del examen teórico de conducción.',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["drive_license"] = {
+		label = "Carnet de conducir [B]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["drive_bike_license"] = {
+		label = "Carnet de ciclomotores [A]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["drive_truck_license"] = {
+		label = "Carnet de camión [C]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["flightdmv_license"] = {
+		label = "Cert. teórico de piloto [Y]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["pilot_light_license"] = {
+		label = "Carnet de piloto básico [V]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["pilot_commercial_license"] = {
+		label = "Carnet de piloto comercial [X]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["pilot_heavy_license"] = {
+		label = "Carnet de piloto de aeronaves pesadas [Z]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["pilot_heli_license"] = {
+		label = "Carnet de piloto de helicóptero [H]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["pilot_military_license"] = {
+		label = "Carnet de piloto militar [M]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["weapon_license"] = {
+		label = "Licencia de armas personal [U]",
+		description = 'Esta licencia certifica la superación de los prerrequisitos legales y autoriza la posesión, transporte y porte oculto en la vía pública de pistolas semiautomáticas para protección no profesional de la propia persona, domicilio y propiedades, además del transporte y posesión de escopetas de corredera y rifles de cerrojo para uso exclusivo de caza deportiva, caza profesional y protección del domicilio y propiedades, observando el cumplimiento del resto de obligaciones legales para la seguridad de su almacenamiento, porte y uso.',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["weapon_license2"] = {
+		label = "Licencia de armas profesional [S]",
+		description = 'Esta licencia certifica la superación de los prerrequisitos legales y autoriza la posesión, transporte y porte de armamento semiautomático para la protección personal y de la propiedad y la prestación de servicios de seguridad privada, observando el cumplimiento del resto de obligaciones legales para la seguridad de su almacenamiento, porte y uso.',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["weed_processing"] = {
+		label = "Licencia de consumo propio (de )" .. (isTencity and "Tabaiguana" or "Cannabis") .. ") [W]",
+		description = 'Autoriza la posesión y producción para el autoconsumo de hasta 3 plantas de ' .. (isTencity and "Tabaiguana" or "Cannabis") .. '  en el domicilio personal y posesión de hasta 5g de sustancia controlada en la vía pública. El consumo en la vía pública está prohibido salvo en espacios expresamente autorizados por la ley.',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	['dmv'] = {
+		label = 'theory drive license',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['driver_bike'] = {
+		label = 'bike drive license',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['driver_car'] = {
+		label = 'car drive license',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['driver_truck'] = {
+		label = 'truck drive license',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['rugbyball'] = {
+		label = 'pelota de rugby',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
 }
