@@ -734,7 +734,7 @@ return {
 		label = 'magdalena bean especial',
 		weight = 220,
 		client = {
-			status = {hunger = 70000, drunk = -75000, },
+			status = {hunger = 70000, thirst = -1000, drunk = -75000, },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 			prop = { model = `v_res_cakedome`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
@@ -770,7 +770,7 @@ return {
 		label = 'café',
 		weight = 220,
 		client = {
-			status = {hunger = 85000, thirst = 20000, drunk = -30000, },
+			status = {hunger = 80000, thirst = 100000, drunk = -30000, },
 			anim = 'eating',
 			prop = { model = `p_ing_coffeecup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
@@ -856,7 +856,7 @@ return {
 		label = 'jugo de frutas',
 		weight = 220,
 		client = {
-			status = {hunger = 150000, thirst = 20000, drunk = -25000, },
+			status = {hunger = 20000, thirst = 150000, drunk = -25000, },
 			anim = 'eating',
 			prop = { model = `prop_cs_paper_cup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
@@ -954,7 +954,7 @@ return {
 		label = 'dona bean especial',
 		weight = 220,
 		client = {
-			status = {hunger = 70000, drunk = -75000, },
+			status = {hunger = 70000, drunk = -20000, },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 			prop = { model = `prop_donut_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
@@ -2045,7 +2045,7 @@ return {
 		label = 'chocolate',
 		weight = 220,
 		client = {
-			status = {hunger = 75000, thirst = -10000, drunk = -80000, },
+			status = {hunger = 70000, thirst = -10000, drunk = -80000, },
 			anim = 'eating',
 			prop = { model = `prop_choc_ego`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
@@ -2096,7 +2096,7 @@ return {
 		label = 'bolsa de papas',
 		weight = 220,
 		client = {
-			status = {hunger = 75000, thirst = -10000, },
+			status = {hunger = 75000, thirst = -80000, },
 			anim = 'eating',
 			prop = { model = `v_ret_ml_chips3`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
@@ -2545,7 +2545,7 @@ return {
 		label = 'Chicles',
 		weight = 220,
 		client = {
-			status = {hunger = 5000, thirst = 4000, drunk = -10000, stress = -120000 },
+			status = {hunger = 5000, thirst = -1000, drunk = -10000, stress = -120000 },
 			anim = 'eating',
 			prop = { model = `prop_candy_pqs`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
@@ -3735,9 +3735,13 @@ return {
 	['drink_sprite'] = {
 		label = 'sprite',
 		weight = 1,
-		stack = true,
-		close = true,
-		description = nil
+		client = {
+			status = {hunger = 20000, thirst = 100000, drunk = -100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ng_proc_sodacup_01c`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x sprite'
+		},
 	},
 
 	['drug_ecstasy'] = {
@@ -3797,11 +3801,15 @@ return {
 	},
 
 	['jolly_ranchers'] = {
-		label = 'jolly ranchers',
+		label = 'Caramelo jolly ranchers',
 		weight = 1,
-		stack = true,
-		close = true,
-		description = nil
+		client = {
+			status = {hunger = 10000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `prop_candy_pqs`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x caramelo'
+		},
 	},
 
 	['liquid_sulfur'] = {
