@@ -154,6 +154,7 @@ const InventorySlot: React.FC<SlotProps> = ({ inventory, item, setCurrentItem })
               <>
                 {item?.currency !== 'money' &&
                 item?.currency !== 'black_money' &&
+                item?.currency !== 'casino_chips' &&
                 item.price > 0 &&
                 item?.currency ? (
                   <div className="item-price" style={{ color: '#2ECC71' }}>

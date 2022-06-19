@@ -64,7 +64,8 @@ return {
 	['cannot_use'] = "No puedes usar %s",
 	['shop_nostock'] = "Item sin stock",
 	['identification'] = "Sexo: %s  \nFecha de Nacimiento: %s",
-	['search_dumpster'] = "Buscar en el Basurero",
+	['search_dumpster'] = "Buscar en el contenedor",
+	['search_trash'] = "Buscar en la papelera",
 	['open_shop'] = "Abrir %s",
 	['open_shop_vending'] = "Usar %s",
 	['purchased_for'] = "Has comprado %s %s por %s%s",
@@ -85,5 +86,6 @@ return {
 	['no_durability'] = "¡La durabilidad del item se ha agotado!",
 	['cannot_give'] = "No se pudo dar %s %s al objetivo",
 	['evidence_cannot_take'] = "Rango insuficiente para retirar evidencias", -- ACCURATE TRANSLATION NEEDED
-	['dumpster'] = "Contenedor de basura"
+	['dumpster'] = "Contenedor de basura",
+	['trashbin'] = "Papelera",
 }

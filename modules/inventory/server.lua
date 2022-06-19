@@ -201,7 +201,7 @@ end
 ---@param items? table
 --- This should only be utilised internally!
 --- To create a stash, please use `exports[shared.resource]:RegisterStash` instead.
-function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, items, groups)
+function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, items, groups, source)
 	if maxWeight then
 		local self = {
 			id = id,
@@ -232,7 +232,7 @@ function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, i
 		end
 
 		if not self.items then
-			self.items, self.weight, self.datastore = Inventory.Load(self.dbId, self.type, self.owner)
+			self.items, self.weight, self.datastore = Inventory.Load(self.dbId, self.type, self.owner, source)
 		elseif self.weight == 0 and next(self.items) then
 			self.weight = Inventory.CalculateWeight(self.items)
 		end
@@ -288,10 +288,10 @@ local function randomItem(loot, items, size)
 	return item
 end
 
-local function randomLoot(loot)
+local function randomLoot(loot, total)
 	local items = {}
-	local size = #loot
-	for i = 1, math.random(0, 3) do
+	local size = loot and #loot or 0
+	for i = 1, math.random(0, total or 3) do
 		if i > size then return items end
 		local item = randomItem(loot, items, size)
 		if math.random(1, 100) <= (item[4] or 80) then
@@ -308,12 +308,52 @@ end
 ---@param invType string
 ---@param items? table
 ---@return table returnData, number totalWeight, boolean true
-local function generateItems(inv, invType, items)
+local function generateItems(inv, invType, items, source)
 	if items == nil then
+		if source then
+			math.randomseed(os.time()+tonumber(source))
+		end
+		local chance, text = math.random(10,30), nil
 		if invType == 'dumpster' then
-			items = randomLoot(server.dumpsterloot)
+			items = randomLoot(server.dumpsterloot, 4)
+			text = "Ha llegado un aviso de que alguien está rebuscando en un contenedor de basura (ACTIVIDAD NO NECESARIAMENTE ILEGAL)"
+		elseif invType == 'trashbin' then
+			items = randomLoot(server.trashbinloot, 3)
+			text = "Ha llegado un aviso de que alguien está rebuscando en una papelera (ACTIVIDAD NO NECESARIAMENTE ILEGAL)"
 		elseif invType == 'vehicle' then
-			items = randomLoot(server.vehicleloot)
+			items = randomLoot(server.vehicleloot, 4)
+			chance = math.random(25,50)
+			text = "Ha llegado un aviso de que alguien está saqueando un coche que no es suyo"
+		end
+		if source and text then
+			if math.random(1,100) <= chance then
+				local coords = GetEntityCoords(GetPlayerPed(source))
+				local jobs = {'police',"police2", "sheriff", "sheriff2", "justice", "fib"}
+				TriggerEvent('esx_service:TriggerEventToAllInService', 'cd_dispatch:AddNotification', 'police', {
+					job_table = jobs, 
+					coords = coords,
+					title = "Denuncia ciudadana recibida (automático)",
+					message = text, 
+					flash = 1,
+					unique_id = tostring(math.random(0000000,9999999)),
+					blip = {
+						sprite = 66, 
+						scale = 0.75, 
+						colour = 1,
+						flashes = false, 
+						text = "Denuncia ciudadana",
+						time = (5*60*1000),
+						sound = 0,
+					}
+				})
+				if math.random(1,3) < 3 then
+					TriggerClientEvent('okokNotify:Alert', source, "¡CUIDADO! MIRADAS SOSPECHOSAS...", "Es posible que ese ciudadano que te ha estado mirando raro haya llamado a la policía, ¡cuidado no vayas a tener un problema" .. ((invType == 'vehicle') and "!" or "por algo que ni es ilegal!"), 8000, 'warning')
+				end
+			else
+				if math.random(1,10) == 10 then
+					TriggerClientEvent('okokNotify:Alert', source, "¡CUIDADO! MIRADAS SOSPECHOSAS...", "Es posible que ese ciudadano que te ha estado mirando raro haya llamado a la policía, ¡cuidado no vayas a tener un problema por algo que ni es ilegal!" .. ((invType == 'vehicle') and "!" or "por algo que ni es ilegal!"), 8000, 'warning')
+				end
+			end
 		end
 	end
 
@@ -337,22 +377,27 @@ end
 ---@param id string|number
 ---@param invType string
 ---@param owner string
-function Inventory.Load(id, invType, owner)
+function Inventory.Load(id, invType, owner, source)
 	local datastore, result
 
 	if id and invType then
-		if invType == 'dumpster' then
+		if invType == 'dumpster' or invType == "trashbin" then
 			if server.randomloot then
-				return generateItems(id, invType)
+				return generateItems(id, invType, nil, source)
 			else
 				datastore = true
 			end
 		elseif invType == 'trunk' or invType == 'glovebox' then
-			result = invType == 'trunk' and MySQL:loadTrunk( Inventory.GetPlateFromId(id) ) or MySQL:loadGlovebox( Inventory.GetPlateFromId(id) )
+			local plate = Inventory.GetPlateFromId(id)
+			result = invType == 'trunk' and MySQL:loadTrunk( plate ) or MySQL:loadGlovebox( plate )
 
 			if not result then
 				if server.randomloot then
-					return generateItems(id, 'vehicle')
+					if exports["cd_garage"]:hasKeys(plate) then
+						datastore = true
+					else
+						return generateItems(id, 'vehicle', nil, source)
+					end
 				else
 					datastore = true
 				end
@@ -1658,3 +1703,8 @@ server.loguearMySQL = function(isMoney, steam, object, change, amount, extra)
 		})
 	end
 end
+
+lib.addCommand('group.admin', 'setweapondurability', function(source, args)
+	local weapon = args.slot and { slot = args.slot } or Inventory.GetCurrentWeapon(args.target)
+	Inventory.SetDurability(source, weapon.slot, args.count or 100)
+end, {'target:number', 'count:?number', 'slot:?number'})

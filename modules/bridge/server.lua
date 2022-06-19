@@ -49,6 +49,7 @@ if shared.framework == 'esx' then
 	server.accounts = {
 		money = 0,
 		black_money = 0,
+		casino_chips = 0,
 	}
 
 	function server.setPlayerData(player)

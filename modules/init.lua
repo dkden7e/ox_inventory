@@ -77,6 +77,13 @@ if IsDuplicityVersion then
 				["burger", 1, 1]
 			]
 		]])),
+		trashbinloot = json.decode(GetConvar('inventory:trashbinloot', [[
+			[
+				["mustard", 1, 1],
+				["garbage", 1, 3],
+				["burger", 1, 1]
+			]
+		]])),
 	}
 else
 	PlayerData = {}

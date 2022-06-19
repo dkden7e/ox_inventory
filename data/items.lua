@@ -486,16 +486,16 @@ return {
 	},
 
 	['casino_chips'] = {
-		label = 'fichas del diamond',
-		weight = 0,
+		label = 'Fichas del casino',
+		weight = 5,
 		stack = true,
 		close = true,
 		description = nil
 	},
 
 	['casino_ticket'] = {
-		label = 'tícket de la suerte diamond',
-		weight = 0,
+		label = 'Tícket de la suerte Diamond',
+		weight = 50,
 		stack = true,
 		close = true,
 		description = nil
@@ -2566,14 +2566,14 @@ return {
 	},
 
 	['joint'] = {
-		label = 'Porro',
-		weight = 220,
+		label = (isTencity and 'Torro de tabaiguana' or 'Porro'),
+		weight = 10,
 		client = {
 			status = {drunk = 75000, stress = -450000 },
 			command = 'e smokepot',
 			prop = { model = `p_cs_joint_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
-			notification = 'Consumiste 1x porro'
+			notification = 'Consumiste 1x ' .. (isTencity and 'torro de tabaiguana' or 'porro')
 		},
 	},
 
@@ -2712,7 +2712,7 @@ return {
 	},
 
 	['cups'] = {
-		label = 'cups',
+		label = 'Vasos de plástico',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2841,7 +2841,7 @@ return {
 
 	['dopebag'] = {
 		label = 'Bolsita de ' .. (isTencity and 'tabaiguana' or 'cogollos'),
-		weight = 1,
+		weight = 10,
 		stack = true,
 		close = true,
 		description = nil
@@ -2880,7 +2880,7 @@ return {
 	},
 
 	['calculator'] = {
-		label = 'calculadora',
+		label = 'Calculadora',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2888,7 +2888,7 @@ return {
 	},
 
 	['campfire'] = {
-		label = 'campfire',
+		label = 'Hoguera',
 		weight = 10,
 		stack = true,
 		close = true,
@@ -2896,7 +2896,7 @@ return {
 	},
 
 	['chair'] = {
-		label = 'chair',
+		label = 'Silla',
 		weight = 10,
 		stack = true,
 		close = true,
@@ -2904,7 +2904,7 @@ return {
 	},
 
 	['chair2'] = {
-		label = 'chair 2',
+		label = 'Silla 2',
 		weight = 10,
 		stack = true,
 		close = true,
@@ -2912,7 +2912,7 @@ return {
 	},
 
 	['comic_book_1'] = {
-		label = 'periódico',
+		label = 'Periódico',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2920,7 +2920,7 @@ return {
 	},
 
 	['comic_book_2'] = {
-		label = 'comic de batman',
+		label = 'Cómic de Batman',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2928,7 +2928,7 @@ return {
 	},
 
 	['comic_book_3'] = {
-		label = 'comic de legendary starlord',
+		label = 'Cómic de Legendary Starlord',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2936,7 +2936,7 @@ return {
 	},
 
 	['raspa'] = {
-		label = 'rasca y gana',
+		label = 'Rasca y gana',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -2944,7 +2944,7 @@ return {
 	},
 
 	['sparewheel'] = {
-		label = 'rueda de repuesto',
+		label = 'Rueda de repuesto',
 		weight = 15,
 		stack = true,
 		close = true,
@@ -2983,16 +2983,8 @@ return {
 		description = nil
 	},
 
-	['sparewheel'] = {
-		label = 'rueda de repuesto',
-		weight = 15,
-		stack = true,
-		close = true,
-		description = nil
-	},
-
 	['fish'] = {
-		label = 'pescado',
+		label = 'Pescado',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3000,7 +2992,7 @@ return {
 	},
 
 	['fishbait'] = {
-		label = 'cebo de pescado',
+		label = 'Cebo de pesca',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3008,7 +3000,7 @@ return {
 	},
 
 	['fishingrod'] = {
-		label = 'caña de pescar',
+		label = 'Caña de pescar',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3016,7 +3008,7 @@ return {
 	},
 
 	['gym_membership'] = {
-		label = 'membresía gymrondón',
+		label = 'Carnet de ' .. (isTencity and 'gymrondón' or 'gimnasio'),
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3024,7 +3016,7 @@ return {
 	},
 
 	['protein_shake'] = {
-		label = 'batido de proteínas',
+		label = 'Batido de proteínas',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3032,7 +3024,7 @@ return {
 	},
 
 	['shark'] = {
-		label = 'carne de tiburón',
+		label = 'Carne de tiburón',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3040,7 +3032,7 @@ return {
 	},
 
 	['sportlunch'] = {
-		label = 'almuerzo deportivo',
+		label = 'Almuerzo deportivo',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3048,7 +3040,7 @@ return {
 	},
 
 	['turtle'] = {
-		label = 'carne de tortuga',
+		label = 'Carne de tortuga',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3056,7 +3048,7 @@ return {
 	},
 
 	['turtlebait'] = {
-		label = 'cebo de tortuga',
+		label = 'Cebo de tortuga',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3064,7 +3056,7 @@ return {
 	},
 
 	['gameboy'] = {
-		label = 'gameboy',
+		label = 'Gameboy',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3072,7 +3064,7 @@ return {
 	},
 
 	['rctransport'] = {
-		label = 'transporte vehículos aereos',
+		label = 'Transporte de vehículos aereos',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3080,7 +3072,7 @@ return {
 	},
 
 	['scratchcard'] = {
-		label = 'rasca y gana 2',
+		label = 'Rasca y gana 2',
 		weight = 15,
 		stack = true,
 		close = true,
@@ -3104,7 +3096,7 @@ return {
 	},
 
 	['banana_kush_bag'] = {
-		label = 'bolsa banana kush',
+		label = 'Bolsa Banana Kush',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3112,7 +3104,7 @@ return {
 	},
 
 	['banana_kush_joint'] = {
-		label = 'porro banana kush',
+		label = (isTencity and 'Torro ' or 'Porro ') .. 'Banana Kush',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3120,7 +3112,7 @@ return {
 	},
 
 	['banana_kush_weed'] = {
-		label = 'banana kush (1g)',
+		label = 'Banana Kush (1g)',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3128,7 +3120,7 @@ return {
 	},
 
 	['blue_dream_bag'] = {
-		label = 'bolsa blue dream',
+		label = 'Bolsa Blue Dream',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3136,7 +3128,7 @@ return {
 	},
 
 	['blue_dream_joint'] = {
-		label = 'porro blue dream',
+		label = (isTencity and 'Torro ' or 'Porro ') .. 'Blue Dream',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3144,7 +3136,7 @@ return {
 	},
 
 	['blue_dream_weed'] = {
-		label = 'blue dream (1g)',
+		label = 'Blue Dream (1g)',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3152,7 +3144,7 @@ return {
 	},
 
 	['bongo'] = {
-		label = 'bong',
+		label = 'Bong',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3160,7 +3152,7 @@ return {
 	},
 
 	['cubancigar'] = {
-		label = 'puro cubano',
+		label = 'Puro habano',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3168,7 +3160,7 @@ return {
 	},
 
 	['davidoffcigar'] = {
-		label = 'puro davidoff',
+		label = 'Puro Davidoff',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3176,7 +3168,7 @@ return {
 	},
 
 	['liquid'] = {
-		label = 'liquid',
+		label = 'Líquido',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3184,7 +3176,7 @@ return {
 	},
 
 	['marlboro'] = {
-		label = 'cajetilla malboro',
+		label = 'Cajetilla Marlboro',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3192,7 +3184,7 @@ return {
 	},
 
 	['marlborocig'] = {
-		label = 'cigarro malboro',
+		label = 'Cigarro Marlboro',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3200,7 +3192,7 @@ return {
 	},
 
 	['ocb_paper'] = {
-		label = 'papel ocb',
+		label = 'Papel OCB',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3208,7 +3200,7 @@ return {
 	},
 
 	['og_kush_bag'] = {
-		label = 'bolsa og kush',
+		label = 'Bolsa OG Kush',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3216,7 +3208,7 @@ return {
 	},
 
 	['og_kush_joint'] = {
-		label = 'porro og kush',
+		label = (isTencity and 'Torro ' or 'Porro ') .. 'OG Kush',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3224,7 +3216,7 @@ return {
 	},
 
 	['og_kush_weed'] = {
-		label = 'og kush (1g)',
+		label = 'OG Kush (1g)',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3232,7 +3224,7 @@ return {
 	},
 
 	['purple_haze_bag'] = {
-		label = 'bolsa purple haze',
+		label = 'Bolsa Purple Haze',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3240,7 +3232,7 @@ return {
 	},
 
 	['purple_haze_joint'] = {
-		label = 'porro purple haze',
+		label = (isTencity and 'Torro ' or 'Porro ') .. 'Purple Haze',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3248,7 +3240,7 @@ return {
 	},
 
 	['purple_haze_weed'] = {
-		label = 'purple haze (1g)',
+		label = 'Purple Haze (1g)',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3256,7 +3248,7 @@ return {
 	},
 
 	['redw'] = {
-		label = 'cajetilla redwoord',
+		label = 'Cajetilla Redwood',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3264,7 +3256,7 @@ return {
 	},
 
 	['redwcig'] = {
-		label = 'cigarro redwood',
+		label = 'Cigarrillo Redwood',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3272,7 +3264,7 @@ return {
 	},
 
 	['vape'] = {
-		label = 'vaper',
+		label = 'Cigarro electrónico',
 		weight = 1,
 		stack = true,
 		close = true,
@@ -3281,7 +3273,7 @@ return {
 
 	-- COMIDA
 	['pescado'] = {
-	    label = 'pescado',
+	    label = 'Pescado',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3305,7 +3297,7 @@ return {
 	},
 
 	['patatasfritas'] = {
-	    label = 'patatas fritas',
+	    label = (isTencity and 'Papas ' or 'Patatas ') .. 'fritas',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3317,7 +3309,7 @@ return {
 	},
 
 	['churros'] = {
-	    label = 'churros',
+	    label = 'Churros',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3329,7 +3321,7 @@ return {
 	},
 
 	['empanadarellena'] = {
-	    label = 'empanada rellena',
+	    label = 'Empanada rellena',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3341,7 +3333,7 @@ return {
 	},
 
 	['donut'] = {
-	    label = 'donut',
+	    label = 'Dónut',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3353,7 +3345,7 @@ return {
 	},
 
 	['barritaener'] = {
-	    label = 'barrita energética',
+	    label = 'Barrita energética',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3366,7 +3358,7 @@ return {
 
 	-- BEBIDA
 	['chococaliente'] = {
-	    label = 'chocolate caliente',
+	    label = 'Chocolate caliente',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3378,7 +3370,7 @@ return {
 	},
 
 	['batido'] = {
-	    label = 'batido',
+	    label = 'Batido',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3390,7 +3382,7 @@ return {
 	},
 
 	['tecaliente'] = {
-	    label = 'té caliente',
+	    label = 'Té caliente',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3402,7 +3394,7 @@ return {
 	},
 
 	['botellajagger'] = {
-	    label = 'botella de jagger',
+	    label = 'Botella de jagger',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3414,7 +3406,7 @@ return {
 	},
 
 	['botellatequila'] = {
-	    label = 'botella de tequila',
+	    label = 'Botella de tequila',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3426,7 +3418,7 @@ return {
 	},
 
 	['botellawhisky'] = {
-	    label = 'botella de whisky',
+	    label = 'Botella de Whisky',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3438,7 +3430,7 @@ return {
 	},
 
 	['batidoproteinas'] = {
-	    label = 'batido de proteínas',
+	    label = 'Batido de proteínas',
 	    weight = 220,
 	    client = {
 	        status = {hunger = 125000, thirst = -15000, },
@@ -3529,42 +3521,42 @@ return {
 
 	-- OTROS
 	['binoculars'] = {
-	    label = 'primáticos',
+	    label = 'Primáticos',
 		stack = true,
 		close = true,
 	    weight = 220,
 	},
 
 	['camara'] = {
-	    label = 'cámara',
+	    label = 'Cámara',
 		stack = true,
 		close = true,
 	    weight = 220,
 	},
 
 	['dados'] = {
-	    label = 'dados',
+	    label = 'Dados',
 		stack = true,
 		close = true,
 	    weight = 50,
 	},
 
 	['megaphone'] = {
-	    label = 'megáfono',
+	    label = 'Megáfono',
 		stack = true,
 		close = true,
 	    weight = 500,
 	},
 
 	['carnetsalud'] = {
-	    label = 'carnet de salud privada',
+	    label = 'Carnet de salud privada',
 		stack = true,
 		close = true,
 	    weight = 1,
 	},
 
 	['cappuccino'] = {
-		label = 'cappuccino',
+		label = 'Cappuccino',
 		weight = 220,
 		client = {
 			status = {hunger = 85000, thirst = 20000, drunk = -30000, },
@@ -3576,7 +3568,7 @@ return {
 	},
 
 	['latte_cappuccino'] = {
-		label = 'latte cappuccino',
+		label = 'Latte Cappuccino',
 		weight = 220,
 		client = {
 			status = {hunger = 85000, thirst = 20000, drunk = -30000, },
@@ -3879,6 +3871,706 @@ return {
 	['windowchecker'] = {
 		label = 'comprobador de lunas',
 		weight = 15,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['smoke_grinder'] = {
+		label = 'Grinder',
+		weight = 100,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['smoke_filters'] = {
+		label = 'Filtros de tabaco',
+		weight = 50,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['fernetcoca'] = {
+		label = 'Fernet con Coca',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 fernet con coca'
+		},
+	},
+	
+	['whiscola'] = {
+		label = 'Whiscola',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 whiscola'
+		},
+	},
+		
+	['cubalibre'] = {
+		label = 'Cuba libre',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 cuba libre'
+		},
+	},
+	
+	['vasotequila'] = {
+		label = 'Vaso de tequila',
+		weight = 220,
+		client = {
+			status = {hunger = -30000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 vaso de tequila'
+		},
+	},
+	
+	['caipirina'] = {
+		label = 'Caipiriña',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 caipiriña'
+		},
+	},
+	
+	['caipirinafresa'] = {
+		label = 'Caipiriña con fresa',
+		weight = 220,
+		client = {
+			status = {hunger = -9000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b_bar`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 caipiriña con fresa'
+		},
+	},
+	
+	['cocoloco'] = {
+		label = 'Coco loco',
+		weight = 220,
+		client = {
+			status = {hunger = -3000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_pinacolada`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 coco loco'
+		},
+	},
+	
+	['vasoagua'] = {
+		label = 'Vaso de agua',
+		weight = 500,
+		client = {
+			status = { thirst = 150000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_cs_paper_cup`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
+			usetime = 2500,
+			cancel = true,
+			notification = 'Te has bebido x1 vaso de agua'
+		}
+	},
+	
+	['vasocerveza'] = {
+		label = 'Vaso de cerveza',
+		weight = 220,
+		client = {
+			status = {hunger = -30000, drunk = 300000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 vaso de tequila'
+		},
+	},
+	
+	--Botellas--
+	
+	['fernet'] = {
+		label = 'Fernet',
+		weight = 220,
+		client = {
+			status = {hunger = -30000, drunk = 350000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_bottle_cognac`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x botella de Fernet'
+		},
+	},
+	
+	['cocavidrio'] = {
+		label = 'Coca de vidrio',
+		weight = 220,
+		client = {
+			status = {hunger = 20000, thirst = 100000, drunk = -100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ng_proc_beerbottle_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 Coca de vidrio'
+		},
+	},
+	
+	['spritevidrio'] = {
+		label = 'Sprite de vidrio',
+		weight = 220,
+		client = {
+			status = {hunger = 20000, thirst = 100000, drunk = -100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ng_proc_beerbottle_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 Sprite de vidrio'
+		},
+	},
+	
+	['fantavidrio'] = {
+		label = 'Fanta de vidrio',
+		weight = 220,
+		client = {
+			status = {hunger = 20000, thirst = 100000, drunk = -100000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ng_proc_beerbottle_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Te has bebido x1 Fanta de vidrio'
+		},
+	},
+	
+	['botellavino'] = {
+		label = 'Botella de vino',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_bottle_macbeth`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x botella de vino'
+		},
+	},
+	
+	['botellaron'] = {
+		label = 'Botella de ron',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, drunk = 200000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_bottle_brandy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x botella de ron'
+		},
+	},
+	
+	--Bebidas sin alcohol--
+	
+	['zumofresa'] = {
+		label = 'vaso de zumo de fresa',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, thirst = 180000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de zumo de fresa'
+		},
+	},
+	
+		['zumonaranja'] = {
+		label = 'vaso de zumo de naranja',
+		weight = 220,
+		client = {
+			status = {hunger = -20000, thirst = 180000, },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_plastic_cup_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x vaso de zumo de naranja'
+		},
+	},
+	
+	--Otros-- 
+	
+	['medialuna'] = {
+		label = 'Medialuna de mantequilla',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -15000,},
+			anim = 'eating',
+			prop = { model = `ng_proc_food_nana1a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x medialuna de mantequilla'
+		},
+	},
+	
+	['brownie'] = {
+		label = 'Brownie',
+		weight = 220,
+		client = {
+			status = {hunger = 50000, thirst = -5000, drunk = -75000, },
+			anim = 'eating',
+			prop = { model = `prop_donut_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x brownie'
+		},
+	},
+	
+	['rebanadapizza'] = {
+		label = 'Rebanada de pizza',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -10000, },
+			anim = 'eating',
+			prop = { model = `prop_sandwich_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x rebanada de pizza'
+		},
+	},
+	
+	['tostados'] = {
+		label = 'Tostados de jamón y queso',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -10000, },
+			anim = 'eating',
+			prop = { model = `v_res_fa_bread03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x tostados de jamón y queso'
+		},
+	},
+	
+	['mani'] = {
+		label = 'Maní salado',
+		weight = 220,
+		client = {
+			status = {hunger = 100000, thirst = -30000, },
+			anim = 'eating',
+			prop = { model = `ng_proc_food_chips01c`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x maní salado'
+		},
+	},
+	
+	['picada'] = {
+		label = 'Tabla de jamón y queso',
+		weight = 220,
+		client = {
+			status = {hunger = 200000, thirst = -15000, },
+			anim = 'eating',
+			prop = { model = `ng_proc_food_chips01c`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Consumiste 1x Picada'
+		},
+	},
+
+	['racing_tablet'] = {
+		label = 'tablet de competiciones',
+		weight = 100,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['hoja_cocaina'] = {
+		label = 'Hoja de cocaína',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = 'Extraida de la planta Erythroxylum coca'
+	},
+	
+	['hongo'] = {
+		label = 'Hongo',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = 'Hongo alucinógeno'
+	},
+	
+	['tijera'] = {
+		label = 'tijera',
+		weight = 80,
+		stack = true,
+		close = true,
+		description = ''
+	},
+
+
+	['air_suspension'] = {
+		label = 'air suspension',
+		weight = 2500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['suspension_control'] = {
+		label = 'air suspension control',
+		weight = 80,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['a4sheets'] = {
+		label = 'paquete de folios',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['printerdocument'] = {
+		label = 'documento impreso',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['detector'] = {
+		label = 'detector de metales',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['eventcalendar'] = {
+		label = 'calendario de eventos',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['jewels'] = {
+		label = 'Joyas variadas',
+		weight = 50,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachbrella'] = {
+		label = 'sombrilla',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachfire'] = {
+		label = 'hoguera',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachfloaty'] = {
+		label = 'flotador',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachfloaty2'] = {
+		label = 'flotador 2',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachgazebo'] = {
+		label = 'carpa',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachkayak'] = {
+		label = 'kayak',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachshovel'] = {
+		label = 'pala',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachtowel'] = {
+		label = 'toalla de playa',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['beachvolley'] = {
+		label = 'pelota de voleibol',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['crabcage'] = {
+		label = 'nasa de pesca',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['crabs'] = {
+		label = 'cangrejos',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['shrimps'] = {
+		label = 'camarones',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['stancerkit'] = {
+		label = 'stancer',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	["boat_license"] = {
+		label = "Licencia de patrón náutico [N]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["dmv_license"] = {
+		label = "Certificado teórico [T]",
+		description = 'Este documento certifica la aprobación del examen teórico de conducción.',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["drive_license"] = {
+		label = "Carnet de conducir [B]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["drive_bike_license"] = {
+		label = "Carnet de ciclomotores [A]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["drive_truck_license"] = {
+		label = "Carnet de camión [C]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["flightdmv_license"] = {
+		label = "Cert. teórico de piloto [Y]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["pilot_light_license"] = {
+		label = "Carnet de piloto básico [V]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["pilot_commercial_license"] = {
+		label = "Carnet de piloto comercial [X]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["pilot_heavy_license"] = {
+		label = "Carnet de piloto de aeronaves pesadas [Z]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["pilot_heli_license"] = {
+		label = "Carnet de piloto de helicóptero [H]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["pilot_military_license"] = {
+		label = "Carnet de piloto militar [M]",
+		description = '',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["weapon_license"] = {
+		label = "Licencia de armas personal [U]",
+		description = 'Esta licencia certifica la superación de los prerrequisitos legales y autoriza la posesión, transporte y porte oculto en la vía pública de pistolas semiautomáticas para protección no profesional de la propia persona, domicilio y propiedades, además del transporte y posesión de escopetas de corredera y rifles de cerrojo para uso exclusivo de caza deportiva, caza profesional y protección del domicilio y propiedades, observando el cumplimiento del resto de obligaciones legales para la seguridad de su almacenamiento, porte y uso.',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["weapon_license2"] = {
+		label = "Licencia de armas profesional [S]",
+		description = 'Esta licencia certifica la superación de los prerrequisitos legales y autoriza la posesión, transporte y porte de armamento semiautomático para la protección personal y de la propiedad y la prestación de servicios de seguridad privada, observando el cumplimiento del resto de obligaciones legales para la seguridad de su almacenamiento, porte y uso.',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	["weed_processing"] = {
+		label = "Licencia de consumo propio (de )" .. (isTencity and "Tabaiguana" or "Cannabis") .. ") [W]",
+		description = 'Autoriza la posesión y producción para el autoconsumo de hasta 3 plantas de ' .. (isTencity and "Tabaiguana" or "Cannabis") .. '  en el domicilio personal y posesión de hasta 5g de sustancia controlada en la vía pública. El consumo en la vía pública está prohibido salvo en espacios expresamente autorizados por la ley.',
+		weight = 50,
+		stack = false,
+		close = true,
+		consume = 0,
+		client = {
+			export = 'bcs_licensemanager.showCard',
+		}
+	},
+
+	['dmv'] = {
+		label = 'theory drive license',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['driver_bike'] = {
+		label = 'bike drive license',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['driver_car'] = {
+		label = 'car drive license',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['driver_truck'] = {
+		label = 'truck drive license',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['rugbyball'] = {
+		label = 'pelota de rugby',
+		weight = 1,
 		stack = true,
 		close = true,
 		description = nil

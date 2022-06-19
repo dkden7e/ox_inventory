@@ -76,6 +76,10 @@ function client.openInventory(inv, data)
 		return lib.notify({ type = 'error', description = shared.locale('inventory_right_access') })
 	end
 
+	if inv == 'trashbin' and cache.vehicle then
+		return lib.notify({ type = 'error', description = shared.locale('inventory_right_access') })
+	end
+
 	if canOpenInventory() then
 		local left, right
 
@@ -499,7 +503,10 @@ local function registerCommands()
 					local vehicle, position
 					if not shared.qtarget then
 						if type == 2 then vehicle, position = entity, GetEntityCoords(entity)
-						elseif type == 3 and table.contains(Inventory.Dumpsters, GetEntityModel(entity)) then
+						elseif type == 3 then
+							local isDumpster = table.contains(Inventory.Dumpsters, GetEntityModel(entity))
+							local isTrashbin = not isDumpster and (table.contains(Inventory.Trashbins, GetEntityModel(entity)) or false)
+							if not isDumpster and not isTrashbin then return end
 							local netId = NetworkGetEntityIsNetworked(entity) and NetworkGetNetworkIdFromEntity(entity)
 
 							if not netId then
@@ -510,7 +517,7 @@ local function registerCommands()
 								SetNetworkIdCanMigrate(netId, true)
 							end
 
-							return client.openInventory('dumpster', 'dumpster'..netId)
+							return client.openInventory(isDumpster and 'dumpster' or 'trashbin', isDumpster and 'dumpster' or 'trashbin'..netId)
 						end
 					elseif type == 2 then
 						vehicle, position = entity, GetEntityCoords(entity)

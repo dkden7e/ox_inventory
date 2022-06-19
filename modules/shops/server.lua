@@ -38,7 +38,7 @@ for shopName, shopDetails in pairs(data('shops')) do
 						slot = j,
 						weight = Item.weight,
 						count = slot.count,
-						price = (server.randomprices and not currency or currency == 'money') and (math.ceil(slot.price * (math.random(80, 120)/100))) or slot.price,
+						price = (server.randomprices and not currency or currency == 'money') and (math.ceil(slot.price * (math.random(95, 105)/100))) or slot.price,
 						metadata = slot.metadata,
 						license = slot.license,
 						currency = slot.currency,
@@ -74,7 +74,7 @@ for shopName, shopDetails in pairs(data('shops')) do
 					slot = i,
 					weight = Item.weight,
 					count = slot.count,
-					price = (server.randomprices and not currency or currency == 'money') and (math.ceil(slot.price * (math.random(90, 110)/100))) or slot.price,
+					price = (server.randomprices and not currency or currency == 'money') and (math.ceil(slot.price * (math.random(95, 105)/100))) or slot.price,
 					metadata = slot.metadata,
 					license = slot.license,
 					currency = slot.currency,
@@ -199,7 +199,7 @@ Citizen.CreateThread(function()
 	Citizen.Wait(0)
 	local ItemList = shared.items
 
-	local allItemsShop, labelToName, excluded, step = {}, {}, { money = true, black_money = true }, 0
+	local allItemsShop, labelToName, excluded, step = {}, {}, { money = true, black_money = true, casino_chips = true }, 0
 	repeat
 		local temp = {}
 		for _, v in pairs(ItemList) do

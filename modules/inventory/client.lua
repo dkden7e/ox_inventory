@@ -1,6 +1,9 @@
 local Inventory = {}
 
-Inventory.Dumpsters = {218085040, 666561306, -58485588, -206690185, 1511880420, 682791951}
+Inventory.Dumpsters = {`prop_dumpster_t`, `prop_cs_dumpster_01a` ,`prop_dumpster_01a`, `prop_dumpster_02a`, `prop_dumpster_02b`, `prop_dumpster_3a`, `prop_dumpster_4a`, `prop_dumpster_4b`, `prop_snow_dumpster_01`, `prop_bin_13a`, `prop_bin_14a`, `prop_bin_14b`}
+
+Inventory.Trashbins = {`prop_bin_01a`, `prop_bin_02a` ,`prop_bin_03a`, `prop_bin_04a`, `prop_bin_05a`, `prop_bin_06a`, `prop_bin_07a`, `prop_bin_07b`, `prop_bin_07c`, `prop_bin_07d`, `prop_bin_08a`, `prop_bin_08open`, `prop_bin_09a`, `prop_bin_10a`, `prop_bin_10b`, `prop_bin_11a`, `prop_bin_11b`, `prop_bin_12a`, `prop_bin_beach_01a`, `prop_bin_beach_01d`, `prop_bin__delpiero`, `prop_bin__delpiero_b`, `zprop_bin_01a_old`, `prop_cs_bin_02`}
+
 
 if shared.qtarget then
 	local function OpenDumpster(entity)
@@ -18,6 +21,22 @@ if shared.qtarget then
 		client.openInventory('dumpster', 'dumpster'..netId)
 	end
 
+
+	local function OpenTrashbin(entity)
+		local netId = NetworkGetEntityIsNetworked(entity) and NetworkGetNetworkIdFromEntity(entity)
+
+		if not netId then
+			NetworkRegisterEntityAsNetworked(entity)
+			SetEntityAsMissionEntity(entity)
+			netId = NetworkGetNetworkIdFromEntity(entity)
+			NetworkUseHighPrecisionBlending(netId, false)
+			SetNetworkIdExistsOnAllMachines(netId, true)
+			SetNetworkIdCanMigrate(netId, true)
+		end
+
+		client.openInventory('trashbin', 'trashbin'..netId)
+	end
+
 	exports.qtarget:AddTargetModel(Inventory.Dumpsters, {
 		options = {
 			{
@@ -25,6 +44,19 @@ if shared.qtarget then
 				label = shared.locale('search_dumpster'),
 				action = function(entity)
 					OpenDumpster(entity)
+				end
+			},
+		},
+		distance = 2
+	})
+
+	exports.qtarget:AddTargetModel(Inventory.Trashbins, {
+		options = {
+			{
+				icon = 'fas fa-trash',
+				label = shared.locale('search_trash'),
+				action = function(entity)
+					OpenTrashbin(entity)
 				end
 			},
 		},
